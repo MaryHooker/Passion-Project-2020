@@ -1,3 +1,4 @@
-Dreamer
+Dreamer Project Goals/Requirements
 
-The Dreamer application is designed to give users the ability to record, save, post, learn and discuss dreams with like minded people in order get as much out of their dream life as one might their waking.
+https://docs.google.com/document/d/1pvgKNSxxO-JoQ6jWmJBXyUka48_FMbGLf59t0bDAbMo/edit#
+

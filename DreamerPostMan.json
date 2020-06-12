@@ -1,0 +1,482 @@
+{
+	"info": {
+		"_postman_id": "1f41f742-8ca8-4bee-9790-5b13fbf6f881",
+		"name": "Dreamer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Dream Queen",
+			"item": [
+				{
+					"name": "Admin",
+					"item": [
+						{
+							"name": "Register admin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Autumn\",\n    \"email\": \"autumn@dreamer.com\",\n    \"password\": \"autumn\",\n    \"role\": \"Admin\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:1991/dreamers/register",
+									"host": [
+										"localhost"
+									],
+									"port": "1991",
+									"path": [
+										"dreamers",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Login admin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"mary@dreamer.com\",\n    \"password\":\"mary\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:1991/dreamers/login",
+									"host": [
+										"localhost"
+									],
+									"port": "1991",
+									"path": [
+										"dreamers",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "View specific admin by email",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:1991/dreamers/admin/view/mary@dreamer.com",
+									"host": [
+										"localhost"
+									],
+									"port": "1991",
+									"path": [
+										"dreamers",
+										"admin",
+										"view",
+										"mary@dreamer.com"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete admin by email",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:1991/dreamers/admin/autumn@dreamer.com",
+									"host": [
+										"localhost"
+									],
+									"port": "1991",
+									"path": [
+										"dreamers",
+										"admin",
+										"autumn@dreamer.com"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "View all admin",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:1991/dreamers/admin",
+									"host": [
+										"localhost"
+									],
+									"port": "1991",
+									"path": [
+										"dreamers",
+										"admin"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Customer",
+					"item": [
+						{
+							"name": "View specific dreamer by email",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:1991/dreamers/customer/view/trudy@aol.com",
+									"host": [
+										"localhost"
+									],
+									"port": "1991",
+									"path": [
+										"dreamers",
+										"customer",
+										"view",
+										"trudy@aol.com"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete dreamer by email",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:1991/dreamers/customer/trudy@aol.com",
+									"host": [
+										"localhost"
+									],
+									"port": "1991",
+									"path": [
+										"dreamers",
+										"customer",
+										"trudy@aol.com"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "View all dreamers/customers",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:1991/dreamers/customers",
+									"host": [
+										"localhost"
+									],
+									"port": "1991",
+									"path": [
+										"dreamers",
+										"customers"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Dreams",
+					"item": [
+						{
+							"name": "View one Dream by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:1991/api/dream/view/5ee3a6b8a579ae7297173e00",
+									"host": [
+										"localhost"
+									],
+									"port": "1991",
+									"path": [
+										"api",
+										"dream",
+										"view",
+										"5ee3a6b8a579ae7297173e00"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "View all dreams",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:1991/api/dreams",
+									"host": [
+										"localhost"
+									],
+									"port": "1991",
+									"path": [
+										"api",
+										"dreams"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Dreamers",
+			"item": [
+				{
+					"name": "Customer",
+					"item": [
+						{
+							"name": "Register dreamer",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {}
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/plain",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Trudy\",\n    \"email\": \"trudy@aol.com\",\n    \"password\": \"trudy\",\n    \"role\": \"Customer\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:1991/dreamers/register",
+									"host": [
+										"localhost"
+									],
+									"port": "1991",
+									"path": [
+										"dreamers",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Login dreamer",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"trudy@aol.com\",\n    \"password\":\"trudy\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:1991/dreamers/login",
+									"host": [
+										"localhost"
+									],
+									"port": "1991",
+									"path": [
+										"dreamers",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Edit dreamer by email",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Trudyy\",\n    \"email\": \"trudy@aol.com\",\n    \"password\": \"trudy\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:1991/dreamers/customer/trudy@aol.com",
+									"host": [
+										"localhost"
+									],
+									"port": "1991",
+									"path": [
+										"dreamers",
+										"customer",
+										"trudy@aol.com"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Dreams",
+					"item": [
+						{
+							"name": "Create dream",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "    {\n        \"type\":\"Nightmare\",\n        \"dreamDescription\":\"I was locked in a dark room and could hear people screaming on the outside.\"\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:1991/api/dream/relate/trudy@aol.com",
+									"host": [
+										"localhost"
+									],
+									"port": "1991",
+									"path": [
+										"api",
+										"dream",
+										"relate",
+										"trudy@aol.com"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Edit dream by id",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "   {    \n        \"type\": \"Lucid\",\n        \"dreamDescription\": \"I flew all around town and ate all of the ice cream I wanted\",\n        \"date\": \"2020-06-12T16:00:56.965Z\"\n   }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:1991/api/dream/5ee3a6b8a579ae7297173e00",
+									"host": [
+										"localhost"
+									],
+									"port": "1991",
+									"path": [
+										"api",
+										"dream",
+										"5ee3a6b8a579ae7297173e00"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete dream by id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:1991/api/dream/5ee3b5b3958b855671905bfe",
+									"host": [
+										"localhost"
+									],
+									"port": "1991",
+									"path": [
+										"api",
+										"dream",
+										"5ee3b5b3958b855671905bfe"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "View one Dream by id Copy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:1991/api/dream/view/5ee3a6b8a579ae7297173e00",
+									"host": [
+										"localhost"
+									],
+									"port": "1991",
+									"path": [
+										"api",
+										"dream",
+										"view",
+										"5ee3a6b8a579ae7297173e00"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "View all dreams by dreamer",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

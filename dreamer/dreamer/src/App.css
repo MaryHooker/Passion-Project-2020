@@ -1,6 +1,6 @@
 body{
-  background-color: rgb(209, 162, 209);
-  color: rgb(94, 26, 94);
+  background-color: rgb(233, 179, 233);
+  color: rgb(128, 43, 123);
   font-family: serif;
   text-align: center;
 }
@@ -12,9 +12,9 @@ span{
 }
 
 button{
-  background-color: rgb(94, 26, 94);
+  background-color: rgb(128, 43, 123);
   color: rgb(209, 162, 209);
-  border: 3px solid rgb(94, 26, 94);
+  border: 3px solid rgb(128, 43, 123);
   border-radius: 3%;
   margin-top: 3%;
   font-family: serif;
@@ -23,9 +23,9 @@ button{
 }
 
 button:hover{
-  background-color: rgb(200, 27, 206);
+  background-color:rgb(92, 27, 87);
   color: rgb(209, 162, 209);
-  border: 3px solid rgb(200, 27, 206);
+  border: 3px solid rgb(92, 27, 87);
   border-radius: 3%;
   margin-top: 3%;
   font-family: serif;
@@ -34,7 +34,7 @@ button:hover{
 }
 
 input{
-  background-color: rgb(209, 162, 209);
+  background-color: rgb(233, 179, 233);
   color: rgb(94, 26, 94);
   border: 1px solid rgb(94, 26, 94);
   border-radius: 4%;
@@ -64,35 +64,105 @@ hr{
   width: 90px;
 }
 
+/* ///////////////////////// */
+/*   Opening Home Page  */
+/* ///////////////////////// */
+
+.homeContainer{
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+
+}
+
+.homeTitle{
+  grid-column: 6/8;
+  grid-row: 1;
+}
+
+.registerLink{
+  grid-column: 10;
+  grid-row: 1;
+}
+
+.loginLink{
+  grid-column: 11;
+  grid-row: 1;
+}
+
+.logoutButton{
+  grid-column: 11;
+  grid-row: 1;
+}
+
+.logoutStyle{
+  border: 0px;
+  background-color: rgb(233, 179, 233);
+  color: rgb(128, 43, 123);
+  font-size: 18px;
+}
+
+.logoutStyle:hover{
+  border: 0px;
+  background-color: rgb(233, 179, 233);
+  color: rgb(128, 43, 123);
+  font-size: 20px;
+}
+
+.registerComponent{
+  grid-column: 5/9;
+  grid-row: 2;
+}
+
+.loginComponent{
+  grid-column: 5/9;
+  grid-row: 2;
+}
+
 /* //////////////////////// */
-/*     Links */
+/*    Opening Home Page Links */
 /* //////////////////////// */
 
 .noLine{
   text-decoration: none;
-  color: rgb(200, 27, 206);
+  color: rgb(128, 43, 123);
   font-weight: bold;
   font-size: 18px;
 }
 
 .noLine:hover{
   text-decoration: none;
-  color: rgb(94, 26, 94);
   font-weight: bold;
-  font-size: 18px;
+  font-size: 20px;
+}
+
+.noLineHome{
+ color: rgb(128, 43, 123);
+ text-decoration: none;
+ font-size: 34px;
+ font-weight: bold;
+ padding: 2%;
+}
+
+.noLineHome:hover{
+  color: rgb(74, 74, 136);
 }
 
 /* //////////////////////// */
-/*     Register/Login */
+/*    Admin Home Page */
 /* //////////////////////// */
 
-
-.regLogContainer{
-  display: grid;
-  grid-template-columns: repeat(12,1fr);
+.adminHomeContainer{
+ display: grid;
+ grid-template-columns: auto auto auto;
+ grid-template-rows: auto auto auto auto;
 }
 
-.formP{
-  grid-column: 5/9;
+.adminTitle{
+  grid-column: 2;
+  grid-row: 1;
 }
 
+.dreamersLink{
+  grid-column: 2;
+  grid-row: 2;
+}

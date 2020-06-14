@@ -192,10 +192,30 @@ router.put('/customer/:email', (req, res) => {
 })
 
 /////////////////////////////////////////////////////////////////////
-//    Verify
+//    Verify Route
 /////////////////////////////////////////////////////////////////////
 
-// Verify token
+// POST: verify user
+router.post("/verify", verifyToken, (req, res) => {
+    jwt.verify(req.token, secretKey, (error, results) => {
+      error
+        ? res.status(500).json({ error: "verificaiton error!!!" })
+        : res.json({ message: results });
+    });
+  });
+  
+  // verify user token
+  function verifyToken(req, res, next) {
+    const bearerHeader = req.headers["authorization"];
+    if (bearerHeader) {
+      const bearer = bearerHeader.split(" ");
+      const bearerToken = bearer[1];
+      req.token = bearerToken;
+      next();
+    } else {
+      res.status(403).json({ error: "Fobbiden" });
+    }
+  }
 
 //Export Routes
 module.exports = router;

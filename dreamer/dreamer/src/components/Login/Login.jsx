@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Redirect } from "react-router-dom";
 
 export default class Login extends Component {
   constructor(props) {
@@ -8,6 +9,7 @@ export default class Login extends Component {
       email: "",
       password: "",
       token: "",
+      redirect: false,
     };
   }
   //handle changes in the input fields
@@ -33,15 +35,20 @@ export default class Login extends Component {
     }
     this.setState({ token: json.token });
     console.log(this.state.token);
-    // this.props.getToken(json.token);
+    this.props.getToken(json.token);
   };
 
   render() {
+    if (this.props.tokenUser.name) {
+      if (this.props.tokenUser.role === "Admin") {
+        return <Redirect to='/adminHome' />
+      } else if (this.props.tokenUser.role === "Customer") {
+        return <Redirect to='/customerHome' />
+      }}
     return (
-      <div className='regLogContainer'>
-        <div className='formP'>
+      <div>
           {/* <h5>Login</h5> */}
-          <form action="" className='formP'>
+          <form >
             <div className="form-group" className='labelPositions'>
               <label htmlFor="email" className='loginPage'><span>Email</span> </label>
               <input
@@ -68,7 +75,6 @@ export default class Login extends Component {
               <button onClick={this.handleSubmission}>Submit</button>
             </div>
           </form>
-        </div>
       </div>
     );
   }

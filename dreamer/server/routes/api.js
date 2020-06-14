@@ -104,5 +104,22 @@ router.get('/dreams/:id', (req, res) => {
     .populate('dreamer')
 })
 
+/////////////////////////////////////////////////////////////////////
+//    Meanings
+/////////////////////////////////////////////////////////////////////
+
+// Create a meaning
+
+// View one meaning by id
+
+// Update one meaning
+
+// Delete one meaning
+
+// View all meanings
+
+// View all meanings by
+
+
 //Export Routes
 module.exports = router;

@@ -4,7 +4,9 @@ import {Link} from 'react-router-dom';
 class MyDreams extends Component {
     constructor(props) {
         super(props);
-        this.state = {  }
+        this.state = { 
+            dreams:[],
+         }
     }
 
     //Run inner function when component mounts
@@ -14,7 +16,18 @@ class MyDreams extends Component {
 
     // Fetch method to load specific users dreams
     loadDreams = async() => {
-
+        let response = await fetch(`/api/dreams/${this.props.tokenUser.id}`,{
+            method:"GET"
+        })
+        let json = await response.json();
+        //sanity
+        console.table(json);
+        //place in state
+        this.setState({
+            dreams:json
+        })
+        //sanity
+        console.log(`My Dreams state ${JSON.stringify(json)}`)
     }
 
     render() { 
@@ -22,20 +35,20 @@ class MyDreams extends Component {
             <div>
                 <h3 className='dreamersPageTitle'>My Dreams</h3>
                 <br/>
-                {/* <div className='dreamersContainer'>
+                <div className='dreamersContainer'>
                 {
                     this.state.dreams.map((dream) => {
                         return(
-                            <div className='dreamersDisplay'>
-                                <Link to='/dream/view/one' className='linkLink'>
-                                <p className='listedData'>{dreamer.name}</p>
-                                <p className='listedData'>{dreamer.email}</p>
-                                </Link>
+                            <div key={dream._id} className='dreamersDisplay'>
+                               
+                                <p className='listedData'>{dream.type}</p>
+                                <p className='listedData'>{dream.dreamDescription}</p>
+                                
                             </div>
                         )
                     })
                 }
-                </div> */}
+                </div>
             </div>
          );
     }

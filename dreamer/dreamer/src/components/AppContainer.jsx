@@ -20,6 +20,7 @@ class AppContainer extends Component {
     this.state = {
       token: "",
       tokenUser: {
+        id:"",
         name: "",
         email: "",
         role: ""
@@ -129,8 +130,7 @@ class AppContainer extends Component {
                 { /* Customer Routes */ }
                 <Route path='/customerHome' exact component={() => <CustomerHome/> }/>
                 {/* Dreams */}
-                <Route path='/myDreams' exact component={() => <MyDreams/> }/>
-
+                <Route path='/myDreams' exact component={() => <MyDreams tokenUser={this.state.tokenUser}/> }/>
                
                 </Router>
             </div>

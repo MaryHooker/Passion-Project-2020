@@ -101,7 +101,7 @@ router.get('/dreams', (req, res) => {
   }).populate('dreamer')
 })
 
-//View all dreams by dreamer
+//View all dreams by dreamers id
 router.get('/dreams/:id', (req, res) => {
   console.log(`Viewing all Dreams`);
   // res.send(`Viewing all Dreams`);

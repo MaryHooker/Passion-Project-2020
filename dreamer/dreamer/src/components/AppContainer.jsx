@@ -11,6 +11,7 @@ import Dreamers from './Admin/Dreamers/Dreamers';
 import CustomerHome from './Customer/CustomerHome';
 import ViewOneDreamer from './Admin/Dreamers/ViewOneDreamer';
 import MyDreams from './Customer/MyDreams';
+import EditDreamer from './Admin/Dreamers/EditDreamer';
 
 
 class AppContainer extends Component {
@@ -120,7 +121,9 @@ class AppContainer extends Component {
                 <Route path='/adminHome' exact component={() => <AdminHome/> }/>
                 { /* Dreamers/Customers */ }
                 <Route path='/view/dreamers' exact component={() => <Dreamers/> }/>
-                <Route path='/dreamers/view/one' exact component={() => <ViewOneDreamer/> }/>
+                <Route path='/dreamers/view/one' exact component={() => <ViewOneDreamer/> }
+                />
+                <Route path='/dreamers/edit' exact component={() => <EditDreamer/>}/>
 
 
                 { /* Customer Routes */ }

@@ -197,13 +197,19 @@ router.post('/links',(req,res) => {
 //Read one link bgy id
 router.get('/links/:id',(req,res) => {
   console.log('Viewing one link');
-  res.send('Viewing one link');
+  // res.send('Viewing one link');
+  LinkCollection.findOne({_id:req.params.id}, (errors,results) => {
+    errors ? res.send(errors) : res.send(results);
+  })
 })
 
 //Update a link by id
 router.put('/links/:id',(req,res) => {
   console.log('Updating one link');
-  res.send('Updating one link');
+  // res.send('Updating one link');
+  LinkCollection.findOneAndUpdate({_id:req.params.id}, req.body, {new:true}, (errors,results) => {
+    errors ? res.send(errors) : res.send(results);
+  })
 })
 
 //Delete a link by id

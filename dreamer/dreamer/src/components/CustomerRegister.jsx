@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {Redirect} from 'react-router-dom';
 
 
 class CustomerRegister extends Component {
@@ -8,7 +9,8 @@ class CustomerRegister extends Component {
       name: "",
       email: "",
       password: "",
-      role: "Customer"
+      role: "Customer",
+      redirect:false
     };
   }
 
@@ -44,11 +46,16 @@ class CustomerRegister extends Component {
     //sanity
     console.log(`Registration Form ${JSON.stringify(json)}`)
     //Setting redirect to true 
+    this.setState({
+      redirect:true
+    })
 
   }
 
   render() {
-
+    if(this.state.redirect){
+      return <Redirect to='/login'/>
+    }
     return (
       <div>
        

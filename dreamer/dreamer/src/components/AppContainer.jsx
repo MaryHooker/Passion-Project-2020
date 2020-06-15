@@ -6,9 +6,11 @@ import CustomerRegister from './CustomerRegister';
 import Login from './Login/Login';
 // Admin imports
 import AdminHome from './Admin/AdminHome';
-import Dreamers from './Admin/Dreamers';
+import Dreamers from './Admin/Dreamers/Dreamers';
 // Customer imports
 import CustomerHome from './Customer/CustomerHome';
+import ViewOneDreamer from './Admin/Dreamers/ViewOneDreamer';
+import MyDreams from './Customer/MyDreams';
 
 
 class AppContainer extends Component {
@@ -64,8 +66,14 @@ class AppContainer extends Component {
   render() {
     let register,
       login,
-      logout;
+      logout, homePage;
     if (this.state.token) {
+      if (this.state.tokenUser.role === "Admin") {
+        homePage = "/adminHome";
+    } else if (this.state.tokenUser.role === "Customer") {
+        homePage = "/customerHome";
+    
+    }
       register = <Link to='/register' className='noLine' hidden>Register</Link>
       login = <Link to='/login' className='noLine' hidden>Login</Link>
       logout = <button onClick={this.logOut} className='logoutStyle'>Logout</button>
@@ -79,7 +87,7 @@ class AppContainer extends Component {
         <Router>
           <div className='homeContainer'>
                 <div className='homeTitle'>
-                 <Link to="/" className='noLineHome'>Dreamer</Link>
+                 <Link to={homePage} className='noLineHome'>Dreamer</Link>
                 </div>
                   { /* Home Links */ }
                   <div className='registerLink'>
@@ -112,9 +120,14 @@ class AppContainer extends Component {
                 <Route path='/adminHome' exact component={() => <AdminHome/> }/>
                 { /* Dreamers/Customers */ }
                 <Route path='/view/dreamers' exact component={() => <Dreamers/> }/>
+                <Route path='/dreamers/view/one' exact component={() => <ViewOneDreamer/> }/>
+
 
                 { /* Customer Routes */ }
                 <Route path='/customerHome' exact component={() => <CustomerHome/> }/>
+                {/* Dreams */}
+                <Route path='/myDreams' exact component={() => <MyDreams/> }/>
+
                
                 </Router>
             </div>

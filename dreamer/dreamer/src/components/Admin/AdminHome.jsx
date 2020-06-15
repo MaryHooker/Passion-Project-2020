@@ -13,9 +13,8 @@ class AdminHome extends Component {
                 <h3>Admin Home</h3>
                 </div>
                 <div className='dreamersLink'>
-                <Link to='/view/dreamers'>Dreamers</Link>
-                </div>
-                
+                <Link to='/view/dreamers' className='dreamersLink'>Dreamers</Link>
+                </div> 
             </div>
          );
     }

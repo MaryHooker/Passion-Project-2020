@@ -73,7 +73,7 @@ router.put('/dream/:id', (req, res) => {
   })
 })
 
-//Delete dream by id
+//Delete dream by id from dream collection & then find the dream inside of the dreamers collection and delete it from their dream array
 router.delete('/dream/:id', async(req, res) => {
   console.log(`Deleting Dream`);
   // res.send(`Deleting Dream`);
@@ -169,6 +169,16 @@ router.get('/meanings/view/:letter',(req,res) => {
     errors ? res.send(errors) : res.send(results);
   })
 })
+
+// View one meaning by name/ for customer searchbar
+router.get('/meanings/word/:word',(req,res) => {
+  console.log(`Viewing all meanings by letter!`);
+  // res.send(`Viewing all meanings by letter!`);
+  MeaningCollection.findOne({word:req.params.word},(errors,results) => {
+    errors ? res.send(errors) : res.send(results);
+  })
+})
+
 
 //Export Routes
 module.exports = router;

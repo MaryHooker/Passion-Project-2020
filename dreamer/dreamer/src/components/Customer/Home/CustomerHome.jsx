@@ -11,7 +11,7 @@ class CustomerHome extends Component {
     render() { 
         return ( 
             <div>
-                <h3>Customer Home</h3>
+                <h2>Welcome back {this.props.tokenUser.name}!</h2>
                 <br/>
                 <div className='dreamersLink'>
                 <Link to='/myDreams' className='dreamersLink'>My Dreams</Link>

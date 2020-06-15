@@ -35,7 +35,7 @@ class ViewOneDreamer extends Component {
         return ( 
             <div>
                 <h4>Dreamer</h4>
-                <Link to={`/dreamers/dreams/view/:id/${this.state.dreamer.id}`}><button>View {this.state.dreamer.name}'s' Dreams</button></Link>
+                <Link to={`/dreamers/dreams/view/${this.state.dreamer.id}`}><button>View {this.state.dreamer.name}'s' Dreams</button></Link>
                 <br/>
                 <br/>
                 <br/>

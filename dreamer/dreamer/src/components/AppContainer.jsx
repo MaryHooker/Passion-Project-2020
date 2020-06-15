@@ -3,17 +3,17 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 // Home Page imports
 import CustomerRegister from './CustomerRegister';
-import Login from './Login/Login';
+import Login from './Login';
 ////////// Admin imports ///////////
 //Home
-import AdminHome from './Admin/AdminHome';
+import AdminHome from './Admin/Home/AdminHome';
 //Dreamers
 import Dreamers from './Admin/Dreamers/Dreamers';
 import EditDreamer from './Admin/Dreamers/EditDreamer';
 import DreamersDreams from './Admin/Dreams/DreamersDreams';
 ////////// Customer imports /////////
 //Home
-import CustomerHome from './Customer/CustomerHome';
+import CustomerHome from './Customer/Home/CustomerHome';
 //Dreamer
 import ViewOneDreamer from './Admin/Dreamers/ViewOneDreamer';
 //Dreams
@@ -107,7 +107,7 @@ class AppContainer extends Component {
         <Router>
           <div className='homeContainer'>
                 <div className='homeTitle'>
-                 <Link to={homePage} className='noLineHome'>Dreamer</Link>
+                 <Link to={{homePage}} className='noLineHome'>Dreamer</Link>
                 </div>
                   { /* Home Links */ }
                   <div className='registerLink'>
@@ -138,9 +138,9 @@ class AppContainer extends Component {
 
                 { /*//////// Home ////////*/ }
                 { /* Admin  */ }
-                <Route path='/adminHome' exact component={() => <AdminHome/> }/>
+                <Route path='/adminHome' exact component={() => <AdminHome tokenUser={this.state.tokenUser}/> }/>
                 { /* Customer */ }
-                <Route path='/customerHome' exact component={() => <CustomerHome/> }/>
+                <Route path='/customerHome' exact component={() => <CustomerHome tokenUser={this.state.tokenUser}/> }/>
 
                 { /*/////// Dreamers ///////*/ }
                   { /* Admin */ }

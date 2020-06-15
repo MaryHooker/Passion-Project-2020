@@ -10,7 +10,7 @@ class AdminHome extends Component {
         return ( 
             <div className='adminHomeContainer'>
                 <div className='adminTitle'>
-                <h3>Admin Home</h3>
+                <h3>Welcome back {this.props.tokenUser.name}!</h3>
                 </div>
                 <div className='dreamersLink'>
                 <Link to='/view/dreamers' className='dreamersLink'>Dreamers</Link>

@@ -49,7 +49,7 @@ export default class Login extends Component {
       <div>
           {/* <h5>Login</h5> */}
           <form >
-            <div className="form-group" className='labelPositions'>
+            <div className='labelPositions'>
               <label htmlFor="email" className='loginPage'><span>Email</span> </label>
               <input
                 type="email"
@@ -60,7 +60,7 @@ export default class Login extends Component {
                 onChange={this.handleChange}
               />
             </div>
-            <div className="form-group" className='labelPositions'>
+            <div className='labelPositions'>
               <label htmlFor="password" className='loginPage'><span>Password</span> </label>
               <input
                 type="password"

@@ -11,7 +11,7 @@ let DreamSchema = new Schema(
         dreamer:[{type:mongoose.Schema.Types.ObjectId,ref:"dreamers"}],
         date:{type:Date, default:Date.now},
         meanings:[],
-
+        
     }
 )
 

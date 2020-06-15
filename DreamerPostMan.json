@@ -240,6 +240,267 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "Delete dream by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Meanings",
+					"item": [
+						{
+							"name": "Create Meaning",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": " {\n        \"letter\":\"D\",\n        \"word\":\"Dragon\",\n        \"meaning\":\"Basic meaning of seeing a dragon in your dream.\"\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:1991/api/meanings",
+									"host": [
+										"localhost"
+									],
+									"port": "1991",
+									"path": [
+										"api",
+										"meanings"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "View one meaning",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:1991/api/meanings/one/5ee6e654fda8542c32fd9fea",
+									"host": [
+										"localhost"
+									],
+									"port": "1991",
+									"path": [
+										"api",
+										"meanings",
+										"one",
+										"5ee6e654fda8542c32fd9fea"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update meaning by id",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"letter\": \"D\",\n    \"word\": \"Diamond\",\n    \"meaning\": \"Basic meaning of seeing a diamond in your dream.\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:1991/api/meanings/5ee6e654fda8542c32fd9fea",
+									"host": [
+										"localhost"
+									],
+									"port": "1991",
+									"path": [
+										"api",
+										"meanings",
+										"5ee6e654fda8542c32fd9fea"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete meaning by id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:1991/api/meanings/5ee6e654fda8542c32fd9fea",
+									"host": [
+										"localhost"
+									],
+									"port": "1991",
+									"path": [
+										"api",
+										"meanings",
+										"5ee6e654fda8542c32fd9fea"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "View all meanings",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:1991/api/meanings",
+									"host": [
+										"localhost"
+									],
+									"port": "1991",
+									"path": [
+										"api",
+										"meanings"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "View all meanings by letter",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:1991/api/meanings/view/B",
+									"host": [
+										"localhost"
+									],
+									"port": "1991",
+									"path": [
+										"api",
+										"meanings",
+										"view",
+										"B"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Tips, Tricks, & Tellings",
+					"item": [
+						{
+							"name": "Create link",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "localhost:1991/api/links",
+									"host": [
+										"localhost"
+									],
+									"port": "1991",
+									"path": [
+										"api",
+										"links"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "View one link by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:1991/api/links/id",
+									"host": [
+										"localhost"
+									],
+									"port": "1991",
+									"path": [
+										"api",
+										"links",
+										"id"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update link by id",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "localhost:1991/api/links/id",
+									"host": [
+										"localhost"
+									],
+									"port": "1991",
+									"path": [
+										"api",
+										"links",
+										"id"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete link by id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:1991/api/links/id",
+									"host": [
+										"localhost"
+									],
+									"port": "1991",
+									"path": [
+										"api",
+										"links",
+										"id"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "View all links",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:1991/api/links",
+									"host": [
+										"localhost"
+									],
+									"port": "1991",
+									"path": [
+										"api",
+										"links"
+									]
+								}
+							},
+							"response": []
 						}
 					],
 					"protocolProfileBehavior": {},
@@ -366,7 +627,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "    {\n        \"type\":\"Nightmare\",\n        \"dreamDescription\":\"I was locked in a dark room and could hear people screaming on the outside.\"\n    }",
+									"raw": "    {\n        \"type\":\"Whatever\",\n        \"dreamDescription\":\"It was whatever\"\n    }",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -374,7 +635,7 @@
 									}
 								},
 								"url": {
-									"raw": "localhost:1991/api/dream/relate/trudy@aol.com",
+									"raw": "localhost:1991/api/dream/relate/louie@aol.com",
 									"host": [
 										"localhost"
 									],
@@ -383,7 +644,7 @@
 										"api",
 										"dream",
 										"relate",
-										"trudy@aol.com"
+										"louie@aol.com"
 									]
 								}
 							},
@@ -424,7 +685,7 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "localhost:1991/api/dream/5ee3b5b3958b855671905bfe",
+									"raw": "localhost:1991/api/dream/5ee3d0be3a11280bf3f6a200",
 									"host": [
 										"localhost"
 									],
@@ -432,19 +693,19 @@
 									"path": [
 										"api",
 										"dream",
-										"5ee3b5b3958b855671905bfe"
+										"5ee3d0be3a11280bf3f6a200"
 									]
 								}
 							},
 							"response": []
 						},
 						{
-							"name": "View one Dream by id Copy",
+							"name": "View one Dream by id ",
 							"request": {
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "localhost:1991/api/dream/view/5ee3a6b8a579ae7297173e00",
+									"raw": "localhost:1991/api/dream/view/5ee795122a505d2bdbe77556",
 									"host": [
 										"localhost"
 									],
@@ -453,7 +714,7 @@
 										"api",
 										"dream",
 										"view",
-										"5ee3a6b8a579ae7297173e00"
+										"5ee795122a505d2bdbe77556"
 									]
 								}
 							},
@@ -465,7 +726,105 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": ""
+									"raw": "localhost:1991/api/dreams/5ee3002c88f9955552430339",
+									"host": [
+										"localhost"
+									],
+									"port": "1991",
+									"path": [
+										"api",
+										"dreams",
+										"5ee3002c88f9955552430339"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Meanings",
+					"item": [
+						{
+							"name": "View all meanings by letter",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:1991/api/meanings/view/B",
+									"host": [
+										"localhost"
+									],
+									"port": "1991",
+									"path": [
+										"api",
+										"meanings",
+										"view",
+										"B"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "View all meanings",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:1991/api/meanings",
+									"host": [
+										"localhost"
+									],
+									"port": "1991",
+									"path": [
+										"api",
+										"meanings"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "View one meaning",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:1991/api/meanings/one/5ee6e599fda8542c32fd9fe0",
+									"host": [
+										"localhost"
+									],
+									"port": "1991",
+									"path": [
+										"api",
+										"meanings",
+										"one",
+										"5ee6e599fda8542c32fd9fe0"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "View meaning by the word",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:1991/api/meanings/word/Apple",
+									"host": [
+										"localhost"
+									],
+									"port": "1991",
+									"path": [
+										"api",
+										"meanings",
+										"word",
+										"Apple"
+									]
 								}
 							},
 							"response": []

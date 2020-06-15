@@ -14,6 +14,7 @@ const secretKey = require('../config/keys').secretOrKey;
 const DreamCollection = require('../models/DreamSchema');
 const DreamerCollection = require('../models/DreamerSchema');
 const MeaningCollection = require('../models/MeaningSchema');
+const LinkCollection = require('../models/LinkSchema');
 
 /////////////////////////////////////////////////////////////////////
 //    Dreams
@@ -179,6 +180,43 @@ router.get('/meanings/word/:word',(req,res) => {
   })
 })
 
+
+/////////////////////////////////////////////////////////////////////
+//      Tips, Tricks, & Tellings / Links
+/////////////////////////////////////////////////////////////////////
+
+//Create a link
+router.post('/links',(req,res) => {
+  console.log('Link created');
+  // res.send('Link created');
+  LinkCollection.create(req.body, (errors,results) => {
+    errors ? res.send(errors) : res.send(results);
+  })
+})
+
+//Read one link bgy id
+router.get('/links/:id',(req,res) => {
+  console.log('Viewing one link');
+  res.send('Viewing one link');
+})
+
+//Update a link by id
+router.put('/links/:id',(req,res) => {
+  console.log('Updating one link');
+  res.send('Updating one link');
+})
+
+//Delete a link by id
+router.delete('/links/:id',(req,res) => {
+  console.log('Deleting link');
+  res.send('Deleting link');
+})
+
+//View all links
+router.get('/links',(req,res) => {
+  console.log('Viewing all links');
+  res.send('Viewing all links');
+})
 
 //Export Routes
 module.exports = router;

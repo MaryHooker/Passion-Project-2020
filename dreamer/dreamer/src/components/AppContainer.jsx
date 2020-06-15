@@ -121,7 +121,7 @@ class AppContainer extends Component {
                 <Route path='/adminHome' exact component={() => <AdminHome/> }/>
                 { /* Dreamers/Customers */ }
                 <Route path='/view/dreamers' exact component={() => <Dreamers/> }/>
-                <Route path='/dreamers/view/one' exact component={() => <ViewOneDreamer/> }
+                <Route path='/dreamers/view/one/:email' exact component={(props) => <ViewOneDreamer {...props} /> }
                 />
                 <Route path='/dreamers/edit' exact component={() => <EditDreamer/>}/>
 

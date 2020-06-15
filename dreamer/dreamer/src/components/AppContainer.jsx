@@ -4,23 +4,31 @@ import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 // Home Page imports
 import CustomerRegister from './CustomerRegister';
 import Login from './Login/Login';
-// Admin imports
+////////// Admin imports ///////////
+//Home
 import AdminHome from './Admin/AdminHome';
+//Dreamers
 import Dreamers from './Admin/Dreamers/Dreamers';
-// Customer imports
-import CustomerHome from './Customer/CustomerHome';
-import ViewOneDreamer from './Admin/Dreamers/ViewOneDreamer';
-import MyDreams from './Customer/MyDreams';
 import EditDreamer from './Admin/Dreamers/EditDreamer';
+import DreamersDreams from './Admin/Dreams/DreamersDreams';
+////////// Customer imports /////////
+//Home
+import CustomerHome from './Customer/CustomerHome';
+//Dreamer
+import ViewOneDreamer from './Admin/Dreamers/ViewOneDreamer';
+//Dreams
+import MyDreams from './Customer/MyDreams';
 
 
 class AppContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      //Authorization for user to access certain components
       token: "",
+      //Payload to hold onto
       tokenUser: {
-        id:"",
+        id: "",
         name: "",
         email: "",
         role: ""
@@ -33,6 +41,7 @@ class AppContainer extends Component {
     this.setState({
       token: token
     })
+    //sanity
     console.log(this.state);
     const response = await fetch('/dreamers/verify', {
       method: "POST",
@@ -41,6 +50,7 @@ class AppContainer extends Component {
       }
     });
     const json = await response.json();
+    //sanity
     console.log(json);
     if (json.error) {
       // window.alert(json.error);
@@ -53,32 +63,40 @@ class AppContainer extends Component {
           role: json.message.role
         },
       });
+      //sanity
       console.log(this.state.tokenUser);
     }
   };
 
   // logout the user
   logOut = () => {
+    //set token to empty
     this.setState({
       token: ""
     });
+    //brute force redirect back to home
     window.location = "/"
   };
 
   render() {
+    //variables made for value of state to be conditionally rendered
     let register,
       login,
-      logout, homePage;
+      logout,
+      homePage;
+    //If the customer or admin have succesfully logged in and been assigned a token, hide the register, login components & show the the logout component
     if (this.state.token) {
-      if (this.state.tokenUser.role === "Admin") {
-        homePage = "/adminHome";
-    } else if (this.state.tokenUser.role === "Customer") {
-        homePage = "/customerHome";
-    
-    }
       register = <Link to='/register' className='noLine' hidden>Register</Link>
       login = <Link to='/login' className='noLine' hidden>Login</Link>
       logout = <button onClick={this.logOut} className='logoutStyle'>Logout</button>
+      //If the role of the user logged in is Admin, render the Admin's homepage
+      if (this.state.tokenUser.role === "Admin") {
+        homePage = "/adminHome";
+      //Else if the role of the user logged in is Customer, render the Customer's homepage
+      } else if (this.state.tokenUser.role === "Customer") {
+        homePage = "/customerHome";
+      }
+      //Else if the user is not logged in, render the register, login components and hide the logout
     } else {
       register = <Link to='/register' className='noLine' >Register</Link>
       login = <Link to='/login' className='noLine' >Login</Link>
@@ -106,7 +124,7 @@ class AppContainer extends Component {
                   <br/>
                   <br/>
 
-                  { /* Register/Login Routes*/ }
+                  { /*/////// Register & Login Routes ///////*/ }
                   <div>
                   <Route path='/register' exact component={() => <CustomerRegister/> }/>
                   </div>
@@ -118,20 +136,25 @@ class AppContainer extends Component {
                 { /* Routes */ }
                 
 
-                { /* Admin Routes */ }
+                { /*//////// Home ////////*/ }
+                { /* Admin  */ }
                 <Route path='/adminHome' exact component={() => <AdminHome/> }/>
-                { /* Dreamers/Customers */ }
-                <Route path='/view/dreamers' exact component={() => <Dreamers/> }/>
-                <Route path='/dreamers/view/one/:email' exact component={(props) => <ViewOneDreamer {...props} /> }
-                />
-                <Route path='/dreamers/edit' exact component={() => <EditDreamer/>}/>
-
-
-                { /* Customer Routes */ }
+                { /* Customer */ }
                 <Route path='/customerHome' exact component={() => <CustomerHome/> }/>
-                {/* Dreams */}
-                <Route path='/myDreams' exact component={() => <MyDreams tokenUser={this.state.tokenUser}/> }/>
-               
+
+                { /*/////// Dreamers ///////*/ }
+                  { /* Admin */ }
+                  <Route path='/view/dreamers' exact component={() => <Dreamers/> }/>
+                  <Route path='/dreamers/view/one/:email' exact component={(props) => <ViewOneDreamer {...props} /> }/>
+                  <Route path='/dreamers/edit' exact component={() => <EditDreamer/>}/>
+                  { /* Customer */ }
+                
+                { /*/////// Dreams ///////*/ }
+                   { /* Admin */ }
+                   <Route path='/dreamers/dreams/view/:id' exact component={() => <DreamersDreams/>}/>
+                   { /* Customer */ }
+                   <Route path='/myDreams' exact component={() => <MyDreams tokenUser={this.state.tokenUser}/> }/>
+             
                 </Router>
             </div>
       );

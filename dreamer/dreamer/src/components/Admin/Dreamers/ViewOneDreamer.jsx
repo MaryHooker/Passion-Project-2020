@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+import {Link} from 'react-router-dom';
 
 class ViewOneDreamer extends Component {
     constructor(props) {
@@ -34,7 +35,7 @@ class ViewOneDreamer extends Component {
         return ( 
             <div>
                 <h4>Dreamer</h4>
-                <button>View {this.state.dreamer.name}'s' Dreams</button>
+                <Link to={`/dreamers/dreams/view/:id/${this.state.dreamer.id}`}><button>View {this.state.dreamer.name}'s' Dreams</button></Link>
                 <br/>
                 <br/>
                 <br/>

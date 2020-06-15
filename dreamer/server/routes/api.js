@@ -215,13 +215,19 @@ router.put('/links/:id',(req,res) => {
 //Delete a link by id
 router.delete('/links/:id',(req,res) => {
   console.log('Deleting link');
-  res.send('Deleting link');
+  // res.send('Deleting link');
+  LinkCollection.findOneAndDelete({_id:req.params.id}, (errors,results) => {
+    errors ? res.send(errors) : res.send(results);
+  })
 })
 
 //View all links
 router.get('/links',(req,res) => {
   console.log('Viewing all links');
-  res.send('Viewing all links');
+  // res.send('Viewing all links');
+  LinkCollection.find({}, (errors,results) => {
+    errors ? res.send(errors) : res.send(results);
+  })
 })
 
 //Export Routes

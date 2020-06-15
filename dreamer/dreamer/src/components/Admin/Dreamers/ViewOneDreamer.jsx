@@ -5,6 +5,17 @@ class ViewOneDreamer extends Component {
         super(props);
         this.state = {  }
     }
+
+    // //When component mounts, run inner function
+    // componentDidMount(){
+    //     this.dreamData();
+    // }
+
+    // //Function to run fetch method in order to view specific dream to update or delete
+    // dreamData = async() => {
+    //     let response = await fetch(`/api/dream/view/`)
+    // }
+
     render() { 
         return ( 
             <div>

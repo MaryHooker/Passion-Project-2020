@@ -251,10 +251,16 @@ router.get('/dreams/all/posted/true', (req, res) => {
 //      Spotlight
 /////////////////////////////////////////////////////////////////////
 
-//View al spotlighted dreams
+//View all spotlighted dreams
 router.get('/dreams/all/spotlight/true', (req, res) => {
   console.log(`Viewing all spotlighted Dreams`);
-  res.send(`Viewing all spotlighted Dreams`);
+  // res.send(`Viewing all spotlighted Dreams`);
+  DreamCollection.find({
+    spotlight: "true"
+  }, (errors, results) => {
+    errors ? res.send(errors) : res.send(results);
+  }).populate('dreams')
+    .populate('dreamer')
 })
 
 /////////////////////////////////////////////////////////////////////

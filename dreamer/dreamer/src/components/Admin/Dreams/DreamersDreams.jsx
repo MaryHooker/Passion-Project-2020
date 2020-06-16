@@ -32,14 +32,13 @@ class DreamersDreams extends Component {
     render() { 
         return ( 
             <div>
-                <h3 className='dreamersPageTitle'>My Dreams</h3>
+                <h3 className='dreamersPageTitle'>Dreams</h3>
                 <br/>
                 <div className='dreamersContainer'>
                 {
                     this.state.dreams.map((dream) => {
                         return(
-                            <div key={dream._id} className='dreamersDisplay'>
-                               
+                            <div className='dreamersDisplay'>
                                 <p className='listedData'>{dream.type}</p>
                                 <p className='listedData'>{dream.dreamDescription}</p>
                                 

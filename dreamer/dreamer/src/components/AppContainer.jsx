@@ -107,7 +107,7 @@ class AppContainer extends Component {
         <Router>
           <div className='homeContainer'>
                 <div className='homeTitle'>
-                 <Link to={{homePage}} className='noLineHome'>Dreamer</Link>
+                 <Link to={homePage} className='noLineHome'>Dreamer</Link>
                 </div>
                   { /* Home Links */ }
                   <div className='registerLink'>
@@ -146,12 +146,12 @@ class AppContainer extends Component {
                   { /* Admin */ }
                   <Route path='/view/dreamers' exact component={() => <Dreamers/> }/>
                   <Route path='/dreamers/view/one/:email' exact component={(props) => <ViewOneDreamer {...props} /> }/>
-                  <Route path='/dreamers/edit' exact component={() => <EditDreamer/>}/>
+                  <Route path='/dreamers/edit/:email' exact component={(props) => <EditDreamer {...props}/>}/>
                   { /* Customer */ }
                 
                 { /*/////// Dreams ///////*/ }
                    { /* Admin */ }
-                   <Route path='/dreamers/dreams/view/:id' exact component={() => <DreamersDreams/>}/>
+                   <Route path='/dreamers/dreams/view/:id' exact component={(props) => <DreamersDreams {...props}/>}/>
                    { /* Customer */ }
                    <Route path='/myDreams' exact component={() => <MyDreams tokenUser={this.state.tokenUser}/> }/>
              

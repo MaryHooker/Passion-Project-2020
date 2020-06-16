@@ -29,13 +29,24 @@ class ViewOneDreamer extends Component {
                 dreamer:json
             }
         )
+        console.log(this.state.dreamer._id)
+    }
+
+    //Function to delete a dreamer from the database
+    deleteDreamer = async() => {
+        let response = await fetch(`/dreamers/customer/${this.state.dreamer.email}`,{
+            method:"DELETE",
+        })
+        let json = await response.json();
+        //sanity
+        console.log(`Deleting Dreamer ${JSON.stringify(json)}`);
     }
 
     render() { 
         return ( 
             <div>
                 <h4>Dreamer</h4>
-                <Link to={`/dreamers/dreams/view/${this.state.dreamer.id}`}><button>View {this.state.dreamer.name}'s' Dreams</button></Link>
+                <Link to={`/dreamers/dreams/view/${this.state.dreamer._id}`}><button>View {this.state.dreamer.name}'s' Dreams</button></Link>
                 <br/>
                 <br/>
                 <br/>
@@ -43,7 +54,8 @@ class ViewOneDreamer extends Component {
                 <p className='listedData'>{this.state.dreamer.name}</p>
                 <p className='listedData'>{this.state.dreamer.email}</p>
                 </div>
-                <button>Edit</button> <button>Delete</button>
+                <Link to={`/dreamers/edit/${this.state.dreamer.email}`}><button>Edit</button></Link>
+                <button onClick={this.deleteDreamer}>Delete</button>
             </div>
          );
     }

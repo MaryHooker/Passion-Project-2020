@@ -236,13 +236,13 @@ router.get('/links',(req,res) => {
 //View all dreams with a flagged platform
 router.get('/dreams/all/true', (req, res) => {
   console.log(`Viewing all posted Dreams`);
-  res.send(`Viewing all posted Dreams`);
-  // DreamCollection.find({
-  //   platform: "true"
-  // }, (errors, results) => {
-  //   errors ? res.send(errors) : res.send(results);
-  // }).populate('dreams')
-  //   .populate('dreamer')
+  // res.send(`Viewing all posted Dreams`);
+  DreamCollection.find({
+    posted: "true"
+  }, (errors, results) => {
+    errors ? res.send(errors) : res.send(results);
+  }).populate('dreams')
+    .populate('dreamer')
 })
 
 

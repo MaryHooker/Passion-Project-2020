@@ -2,7 +2,7 @@
 let mongoose = require('mongoose');
 let Schema = mongoose.Schema;
 
-
+ 
 //Create new instance
 let DreamSchema = new Schema(
     {
@@ -13,8 +13,8 @@ let DreamSchema = new Schema(
         meanings:[],
         likes:{},
         comments:[],
-        spotlight:{},
-        posted:{}
+        spotlight:{type:Boolean},
+        posted:{type:Boolean}
     }
 )
 

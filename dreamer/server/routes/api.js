@@ -186,7 +186,7 @@ router.get('/meanings/word/:word',(req,res) => {
 /////////////////////////////////////////////////////////////////////
 
 //Create a link
-router.post('/links',(req,res) => {
+router.post('/links',,(req,res) => {
   console.log('Link created');
   // res.send('Link created');
   LinkCollection.create(req.body, (errors,results) => {
@@ -229,6 +229,46 @@ router.get('/links',(req,res) => {
     errors ? res.send(errors) : res.send(results);
   })
 })
+
+
+/////////////////////////////////////////////////////////////////////
+//      Authentication Token Route
+/////////////////////////////////////////////////////////////////////
+
+//AUthorize route middleware
+function authenticateToken(req,res,next){
+  //pull encrypted token from header
+  let header = req.heqaders["authorization"];
+  //if token passed in to header
+  if(header){
+    //pull encrypted token from bearer token
+    token = header.split(" ")[1];
+    //decrypt and verify token is valid
+    jwt.verify(token,secretKey, (errors,results) => {
+      //if errors 
+      if(errors){
+        //send errors
+        res.status(500).json({
+          error:errorsa
+        });
+      } //if there are no errors
+      else {
+        //set property of request to decrypted token
+        req.user = results;
+        //continue with functionality of route calling
+        next();
+      }
+    })
+  }
+  //if token is not passed into the header
+  else{
+    //send forbidden message
+    res.status(403).json({
+      error: "PLease sign in to access this page",
+    });
+  }
+}
+
 
 //Export Routes
 module.exports = router;

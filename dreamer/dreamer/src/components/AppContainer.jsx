@@ -8,16 +8,17 @@ import Login from './Login';
 //Home
 import AdminHome from './Admin/Home/AdminHome';
 //Dreamers
-import Dreamers from './Admin/Dreamers/Dreamers';
-import EditDreamer from './Admin/Dreamers/EditDreamer';
+import Dreamers from './Admin/Users/Dreamers/Dreamers';
+import EditDreamer from './Admin/Users/Dreamers/EditDreamer';
 import DreamersDreams from './Admin/Dreams/DreamersDreams';
 ////////// Customer imports /////////
 //Home
 import CustomerHome from './Customer/Home/CustomerHome';
 //Dreamer
-import ViewOneDreamer from './Admin/Dreamers/ViewOneDreamer';
+import ViewOneDreamer from './Admin/Users/Dreamers/ViewOneDreamer';
 //Dreams
-import MyDreams from './Customer/MyDreams';
+import MyDreams from './Customer/Dreams/MyDreams';
+import ViewOneDream from './Customer/Dreams/ViewOneDream';
 
 
 class AppContainer extends Component {
@@ -152,8 +153,10 @@ class AppContainer extends Component {
                 { /*/////// Dreams ///////*/ }
                    { /* Admin */ }
                    <Route path='/dreamers/dreams/view/:id' exact component={(props) => <DreamersDreams {...props}/>}/>
+                   
                    { /* Customer */ }
                    <Route path='/myDreams' exact component={() => <MyDreams tokenUser={this.state.tokenUser}/> }/>
+                   <Route path='/dreamers/dreams/view/one/:id' exact component={() => <ViewOneDream/>}/>
              
                 </Router>
             </div>

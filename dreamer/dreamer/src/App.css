@@ -239,3 +239,18 @@ hr{
   width: 15%;
   box-shadow: 5px 10px 8px #8a6292;
 }
+
+/* ///////////////////////////// */
+/* Admin View Dreamer's Dreams  */
+/* ///////////////////////////// */
+
+.dreamDisplay{
+  background-color: rgb(74, 74, 136);
+  color: rgb(233, 179, 233);
+  border: 5px solid rgb(74, 74, 136);
+  border-radius: 5%;
+  margin-left: 10%;
+  margin-right:15%;
+  width: 75%;
+  box-shadow: 5px 10px 8px #8a6292;
+}

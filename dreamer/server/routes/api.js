@@ -231,10 +231,11 @@ router.get('/links',(req,res) => {
 })
 
 /////////////////////////////////////////////////////////////////////
-//      Platfrom
+//      Platform
 /////////////////////////////////////////////////////////////////////
-//View all dreams with a flagged platform
-router.get('/dreams/all/true', (req, res) => {
+
+//View all posted dreams 
+router.get('/dreams/all/posted/true', (req, res) => {
   console.log(`Viewing all posted Dreams`);
   // res.send(`Viewing all posted Dreams`);
   DreamCollection.find({
@@ -250,7 +251,11 @@ router.get('/dreams/all/true', (req, res) => {
 //      Spotlight
 /////////////////////////////////////////////////////////////////////
 
-//Viewing
+//View al spotlighted dreams
+router.get('/dreams/all/spotlight/true', (req, res) => {
+  console.log(`Viewing all spotlighted Dreams`);
+  res.send(`Viewing all spotlighted Dreams`);
+})
 
 /////////////////////////////////////////////////////////////////////
 //      Authentication Token Route

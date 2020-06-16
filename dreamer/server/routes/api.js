@@ -186,7 +186,7 @@ router.get('/meanings/word/:word',(req,res) => {
 /////////////////////////////////////////////////////////////////////
 
 //Create a link
-router.post('/links',,(req,res) => {
+router.post('/links',(req,res) => {
   console.log('Link created');
   // res.send('Link created');
   LinkCollection.create(req.body, (errors,results) => {

@@ -35,7 +35,8 @@
 										"dreamers",
 										"register"
 									]
-								}
+								},
+								"description": "This post request is for registering a new Admin by another Admin. \n\nSuccess: If successful, the new Admin should be added to the dreamer database in order to have the ability to login.\n\nError: \n    - If one of the required properties is left empty, User will not be added to database\n    - If the user already exists, error message'User with ${req.body.email} already exists'\n    - If the password was not hashed, error message'Password has not been hashed "
 							},
 							"response": []
 						},
@@ -63,7 +64,8 @@
 										"dreamers",
 										"login"
 									]
-								}
+								},
+								"description": "This post request is for logging in as an Admin.\n\nSuccess: If successful, the new Admin will be assigned a token that grants them access to certain components and routes.\n\nError: \n    - If the email or password is the user enters is incorrect, error message'Email/Password is incorrect'\n   "
 							},
 							"response": []
 						},
@@ -84,7 +86,8 @@
 										"view",
 										"mary@dreamer.com"
 									]
-								}
+								},
+								"description": "This get request is giving Admin the ability to view their own information.\n\nSuccess: If successful, the Admin will see their own data.\n\nError: \n    - If there is no token present, then...\n   "
 							},
 							"response": []
 						},
@@ -104,7 +107,8 @@
 										"admin",
 										"autumn@dreamer.com"
 									]
-								}
+								},
+								"description": "This delete request is giving Admin the ability to delete their own information.\n\nSuccess: If successful, the Admin will be deleted from the collection in MongoDB.\n\nError: \n    - If there is no token present, then the Admin will still be present in database.\n   "
 							},
 							"response": []
 						},
@@ -123,7 +127,8 @@
 										"dreamers",
 										"admin"
 									]
-								}
+								},
+								"description": "This delete request is giving Admin the ability to delete their own information.\n\nSuccess: If successful, the Admin will be deleted from the collection in MongoDB.\n\nError: \n    - If there is no token present..."
 							},
 							"response": []
 						}
@@ -151,7 +156,8 @@
 										"view",
 										"trudy@aol.com"
 									]
-								}
+								},
+								"description": "This get request is for the Admin to be able to view a specific dreamer from the database by their unique email.\n\nSuccess: If token is present, Admin will see all information of that specific dreamer.\n\nError: \n    - If there is no token present..."
 							},
 							"response": []
 						},
@@ -171,7 +177,8 @@
 										"customer",
 										"trudy@aol.com"
 									]
-								}
+								},
+								"description": "This delete request is giving Admin the ability to delete a specific customer/dreamer if need be.\n\nSuccess: If successful, the Customer/Dreamer will be deleted from the Dreamer collection in MongoDB.\n\nError: \n    - If there is no token present..."
 							},
 							"response": []
 						},
@@ -190,7 +197,8 @@
 										"dreamers",
 										"customers"
 									]
-								}
+								},
+								"description": "This get request is giving Admin the ability to view all dreamers/customers in the collection.\n\nSuccess: \n\nError: \n    - If there is no token present..."
 							},
 							"response": []
 						}
@@ -218,7 +226,8 @@
 										"view",
 										"5ee3a6b8a579ae7297173e00"
 									]
-								}
+								},
+								"description": "This get request is giving Admin the ability to view a specific dream\n\nSuccess: If successful,\nError: \n    - "
 							},
 							"response": []
 						},
@@ -237,7 +246,8 @@
 										"api",
 										"dreams"
 									]
-								}
+								},
+								"description": "This get request is giving Admin the ability to view all dreams in the database.\n\nError: \n    - "
 							},
 							"response": []
 						},
@@ -283,7 +293,8 @@
 										"api",
 										"meanings"
 									]
-								}
+								},
+								"description": "This post request is giving Admin the ability add a Dream symbol meaning/description into the Meanings Collection in MongoDB.\n\nError: \n    - If there is no token present, "
 							},
 							"response": []
 						},
@@ -304,7 +315,8 @@
 										"one",
 										"5ee6e654fda8542c32fd9fea"
 									]
-								}
+								},
+								"description": "This get request is giving Admin the ability view a specific Dream symbol meaning/description from the Meanings Collection in MongoDB.\n\nError: \n    - If there is no token present, "
 							},
 							"response": []
 						},
@@ -333,7 +345,8 @@
 										"meanings",
 										"5ee6e654fda8542c32fd9fea"
 									]
-								}
+								},
+								"description": "This put request is giving Admin the ability to update a specific Dream symbol meaning/description by their id from the Meanings Collection in MongoDB.\n\nError: \n    - If there is no token present, "
 							},
 							"response": []
 						},
@@ -353,7 +366,8 @@
 										"meanings",
 										"5ee6e654fda8542c32fd9fea"
 									]
-								}
+								},
+								"description": "This delete request is giving Admin the ability to delete a specific Dream symbol meaning/description by their id from the Meanings Collection in MongoDB.\n\nError: \n    - If there is no token present, "
 							},
 							"response": []
 						},
@@ -372,7 +386,8 @@
 										"api",
 										"meanings"
 									]
-								}
+								},
+								"description": "This get request is giving Admin the ability view all Dream symbol meanings/descriptions in the Meanings Collection in MongoDB.\n\nError: \n    - If there is no token present, "
 							},
 							"response": []
 						},
@@ -393,7 +408,8 @@
 										"view",
 										"B"
 									]
-								}
+								},
+								"description": "This get request is giving Admin the ability view all Dream symbol meanings/descriptions under a certain letter (ex.\"A\") in the Meanings Collection in MongoDB.\n\nError: \n    - If there is no token present, "
 							},
 							"response": []
 						}
@@ -409,6 +425,15 @@
 							"request": {
 								"method": "POST",
 								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\":\"Whatever\",\n    \"link\":\"whatever.com\",\n    \"author\":\"Whoever\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": {
 									"raw": "localhost:1991/api/links",
 									"host": [
@@ -419,7 +444,8 @@
 										"api",
 										"links"
 									]
-								}
+								},
+								"description": "This post request is giving Admin the ability add a Dream link into the Links Collection in MongoDB.\n\nError: \n    - If there is no token present, "
 							},
 							"response": []
 						},
@@ -429,7 +455,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "localhost:1991/api/links/id",
+									"raw": "localhost:1991/api/links/5ee7be63fff8f23ca6fa832e",
 									"host": [
 										"localhost"
 									],
@@ -437,9 +463,10 @@
 									"path": [
 										"api",
 										"links",
-										"id"
+										"5ee7be63fff8f23ca6fa832e"
 									]
-								}
+								},
+								"description": "This get request is giving Admin the ability view a specific Dream link by their id from the Links Collection in MongoDB.\n\nError: \n    - If there is no token present, "
 							},
 							"response": []
 						},
@@ -448,8 +475,17 @@
 							"request": {
 								"method": "PUT",
 								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\":\"Whateverrr\",\n    \"link\":\"whatever.commm\",\n    \"author\":\"Whoeverrr\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": {
-									"raw": "localhost:1991/api/links/id",
+									"raw": "localhost:1991/api/links/5ee7be63fff8f23ca6fa832e",
 									"host": [
 										"localhost"
 									],
@@ -457,9 +493,10 @@
 									"path": [
 										"api",
 										"links",
-										"id"
+										"5ee7be63fff8f23ca6fa832e"
 									]
-								}
+								},
+								"description": "This put request is giving Admin the ability to update a specific Dream link by their id from the Links Collection in MongoDB.\n\nError: \n    - If there is no token present, "
 							},
 							"response": []
 						},
@@ -479,7 +516,8 @@
 										"links",
 										"id"
 									]
-								}
+								},
+								"description": "This delete request is giving Admin the ability to delete a specific Dream link by their id from the Links Collection in MongoDB.\n\nError: \n    - If there is no token present, "
 							},
 							"response": []
 						},
@@ -498,7 +536,8 @@
 										"api",
 										"links"
 									]
-								}
+								},
+								"description": "This get request is giving Admin the ability view all Dream links in the Links Collection in MongoDB.\n\nError: \n    - If there is no token present, "
 							},
 							"response": []
 						}
@@ -552,7 +591,8 @@
 										"dreamers",
 										"register"
 									]
-								}
+								},
+								"description": "This post request is for giving the user the ability to register as a customer/dreamer. \n\nSuccess: If successful, the new Customer should be added to the dreamer database in order to have the ability to login.\n\nError: \n    - If one of the required properties is left empty, User will not be added to database\n    - If the user already exists, error message'User with ${req.body.email} already exists'\n    - If the password was not hashed, error message'Password has not been hashed "
 							},
 							"response": []
 						},
@@ -580,7 +620,8 @@
 										"dreamers",
 										"login"
 									]
-								}
+								},
+								"description": "This post request is for logging in as a Customer.\n\nSuccess: If successful, the new Customer will be assigned a token that grants them access to certain components and routes.\n\nError: \n    - If the email or password is the user enters is incorrect, error message'Email/Password is incorrect'\n   "
 							},
 							"response": []
 						},
@@ -609,7 +650,8 @@
 										"customer",
 										"trudy@aol.com"
 									]
-								}
+								},
+								"description": "This put request is giving Dreamer the ability to edit their own information.\n\nSuccess: If successful, the updated Dreamer will be visible in the Dreamer collection.\n\nError:"
 							},
 							"response": []
 						}
@@ -646,7 +688,8 @@
 										"relate",
 										"louie@aol.com"
 									]
-								}
+								},
+								"description": "This post request is giving the customer the ability to record/create a dream that they have had.\n\nSuccess: If token is present, recorded dream will be added to the Dream Collection in MongoDB.\n\nError: If token is not present, "
 							},
 							"response": []
 						},
@@ -675,7 +718,8 @@
 										"dream",
 										"5ee3a6b8a579ae7297173e00"
 									]
-								}
+								},
+								"description": "This put request is giving the customer the ability to edit a previously recorded dream by that dreams id.\n\nSuccess: If token is present, recorded dream will be updated in the Dream Collection in MongoDB.\n\nError: If token is not present, "
 							},
 							"response": []
 						},
@@ -695,7 +739,8 @@
 										"dream",
 										"5ee3d0be3a11280bf3f6a200"
 									]
-								}
+								},
+								"description": "This delete request is giving the customer the ability to delete a previously recorded dream by that dreams id.\n\nSuccess: If token is present, recorded dream will be deleted in the Dream Collection in MongoDB.\n\nError: If token is not present, "
 							},
 							"response": []
 						},
@@ -716,7 +761,8 @@
 										"view",
 										"5ee795122a505d2bdbe77556"
 									]
-								}
+								},
+								"description": "This get request is giving the customer the ability to view a specific dream of theirs by that dreams id.\n\n\nError: If token is not present, "
 							},
 							"response": []
 						},
@@ -736,7 +782,8 @@
 										"dreams",
 										"5ee3002c88f9955552430339"
 									]
-								}
+								},
+								"description": "This get request is giving the customer the ability to view all of their recorded dreams in the database.\n\n\nError: If token is not present, "
 							},
 							"response": []
 						}
@@ -764,7 +811,8 @@
 										"view",
 										"B"
 									]
-								}
+								},
+								"description": "This get request is giving the customer the ability to view all dream symbol meanings associated with a certain letter.\n\nError: If no token is present upon request, "
 							},
 							"response": []
 						},
@@ -783,7 +831,8 @@
 										"api",
 										"meanings"
 									]
-								}
+								},
+								"description": "This get request is giving the customer the ability to view all dream symbol meanings that are currently in the database.\n\nError: If no token is present upon request, "
 							},
 							"response": []
 						},
@@ -804,7 +853,8 @@
 										"one",
 										"5ee6e599fda8542c32fd9fe0"
 									]
-								}
+								},
+								"description": "This get request is giving the customer the ability to view a specific dream symbol meaning from the Meanings Collection.\n\nError: If no token is present upon request, "
 							},
 							"response": []
 						},
@@ -825,7 +875,8 @@
 										"word",
 										"Apple"
 									]
-								}
+								},
+								"description": "This get request is giving the customer the ability to view a dream symbol meaning by the symbol or word itself. This will be implemented in teh front end by providing a search bar.\n\nError: If no token is present upon request, "
 							},
 							"response": []
 						}

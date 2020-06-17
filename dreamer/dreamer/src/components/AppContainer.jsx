@@ -7,6 +7,9 @@ import Login from './Login';
 ////////// Admin imports ///////////
 //Home
 import AdminHome from './Admin/Home/AdminHome';
+//Admin
+import ViewAllAdmin from './Admin/Users/Admin/ViewAllAdmin';
+import ViewOneAdmin from './Admin/Users/Admin/ViewOneAdmin';
 //Dreamers
 import Dreamers from './Admin/Users/Dreamers/Dreamers';
 import EditDreamer from './Admin/Users/Dreamers/EditDreamer';
@@ -19,7 +22,6 @@ import ViewOneDreamer from './Admin/Users/Dreamers/ViewOneDreamer';
 //Dreams
 import MyDreams from './Customer/Dreams/MyDreams';
 import ViewOneDream from './Customer/Dreams/ViewOneDream';
-
 
 class AppContainer extends Component {
   constructor(props) {
@@ -142,6 +144,11 @@ class AppContainer extends Component {
                 <Route path='/adminHome' exact component={() => <AdminHome tokenUser={this.state.tokenUser}/> }/>
                 { /* Customer */ }
                 <Route path='/customerHome' exact component={() => <CustomerHome tokenUser={this.state.tokenUser}/> }/>
+
+                {/* ///////// Admin /////////*/}
+                <Route path='/admin/view/all' exact component={() => <ViewAllAdmin/> }/>
+                <Route path='/admin/view/one/:email' exact component={(props) => <ViewOneAdmin {...props} /> }/>
+
 
                 { /*/////// Dreamers ///////*/ }
                   { /* Admin */ }

@@ -162,10 +162,42 @@ hr{
   grid-row: 1;
 }
 
-.dreamersLink{
+.dreamersLinkP{
   grid-column: 2;
   grid-row: 2;
 }
+
+.dreamersLink{
+  text-decoration: none;
+  color: rgb(234, 19, 241);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.dreamersLink:hover{
+  text-decoration: none;
+  color: rgb(74, 74, 136);
+  font-weight: bold;
+}
+
+.adminLinkP{
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.adminLink{
+  text-decoration: none;
+  color: rgb(234, 19, 241);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.adminLink:hover{
+  text-decoration: none;
+  color: rgb(74, 74, 136);
+  font-weight: bold;
+}
+
 
 /* //////////////////////// */
 /* Admin View All Dreamers  */
@@ -201,20 +233,6 @@ hr{
 .dreamersPageTitle{
   font-size: 20px;
   color: rgb(74, 74, 136);
-}
-
-.dreamersLink{
-  text-decoration: none;
-  color: rgb(74, 74, 136);
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.dreamersLink:hover{
-  text-decoration: none;
-  color: rgb(74, 74, 136);
-  font-size: 18px;
-  font-weight: bold;
 }
 
 .listedData{

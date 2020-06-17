@@ -20,6 +20,9 @@ class AdminHome extends Component {
                 </div>
                 <div className='meaningsLinkP'>
                 <Link to='/view/meanings' className='meaningsLink'>Meanings</Link>
+                </div>
+                <div className='dreamsLinkP'>
+                <Link to='/dreams/view/all' className='dreamsLink'>Dreams</Link>
                 </div> 
             </div>
          );

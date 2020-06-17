@@ -27,7 +27,7 @@ class ViewAllMeanings extends Component {
             meanings : json
         })
         //sanity
-        console.log(`Admin : Meanings ${JSON.stringify(json)}`)
+        console.table(`Admin : Meanings ${JSON.stringify(json)}`)
     }
 
     render() { 
@@ -42,8 +42,10 @@ class ViewAllMeanings extends Component {
                     this.state.meanings.map((meaning) => {
                         return(
                             <div key={meaning._id} className='dreamersDisplay'>
+                                <Link to={`/meanings/view/one/${meaning._id}`} className='linkLink'>
                                 <p className='listedData'>{meaning.word}</p>
                                 <p className='listedData'>{meaning.meaning}</p>
+                                </Link>
                             </div>
                         )
                     })

@@ -17,6 +17,7 @@ import DreamersDreams from './Admin/Dreams/DreamersDreams';
 //Meanings
 import ViewAllMeanings from './Admin/Meanings/ViewAllMeanings';
 import CreateMeaning from './Admin/Meanings/CreateMeaning';
+import ViewOneMeaning from './Admin/Meanings/ViewOneMeaning';
 ////////// Customer imports /////////
 //Home
 import CustomerHome from './Customer/Home/CustomerHome';
@@ -25,6 +26,7 @@ import ViewOneDreamer from './Admin/Users/Dreamers/ViewOneDreamer';
 //Dreams
 import MyDreams from './Customer/Dreams/MyDreams';
 import ViewOneDream from './Customer/Dreams/ViewOneDream';
+import EditMeaning from './Admin/Meanings/EditMeaning';
 
 class AppContainer extends Component {
   constructor(props) {
@@ -172,6 +174,8 @@ class AppContainer extends Component {
                   { /* Admin */ }
                   <Route path='/view/meanings' exact component={() => <ViewAllMeanings/>}/>
                   <Route path='/create/meaning' exact component={() => <CreateMeaning/> }/>
+                  <Route path='/meanings/view/one/:id' exact component={(props) => <ViewOneMeaning {...props} /> }/>
+                  <Route path='/meanings/edit/:id' exact component={(props) => <EditMeaning {...props}/> }/>
              
                 </Router>
             </div>

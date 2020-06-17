@@ -29,6 +29,7 @@ import MyDreams from './Customer/Dreams/MyDreams';
 import ViewOneDream from './Customer/Dreams/ViewOneDream';
 import EditMeaning from './Admin/Meanings/EditMeaning';
 import Dreams from './Admin/Dreams/Dreams';
+import SpotlightedDreams from './Admin/Users/Admin/SpotLight/SpotlightedDreams';
 
 class AppContainer extends Component {
   constructor(props) {
@@ -180,6 +181,10 @@ class AppContainer extends Component {
                   <Route path='/create/meaning' exact component={() => <CreateMeaning/> }/>
                   <Route path='/meanings/view/one/:id' exact component={(props) => <ViewOneMeaning {...props} /> }/>
                   <Route path='/meanings/edit/:id' exact component={(props) => <EditMeaning {...props}/> }/>
+
+                  {/*//////// Spotlight ////////*/}
+                  {/* Admin */}
+                  <Route path='/dreams/spotlighted' exact component={() => <SpotlightedDreams/> } />
              
                 </Router>
             </div>

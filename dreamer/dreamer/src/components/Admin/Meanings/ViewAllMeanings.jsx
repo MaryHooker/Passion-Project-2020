@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+import {Link} from 'react-router-dom';
 
 class ViewAllMeanings extends Component {
     constructor(props) {
@@ -32,7 +33,9 @@ class ViewAllMeanings extends Component {
     render() { 
         return ( 
             <div>
-                <h3 className='dreamersPageTitle'>View All Meanings</h3>
+                <h3 className='dreamersPageTitle'>All Meanings</h3>
+                <Link to='/create/meaning' className='linkLink'><button>Add Meaning</button></Link>
+                <br/>
                 <br/>
                 <div className='dreamersContainer'>
                 {

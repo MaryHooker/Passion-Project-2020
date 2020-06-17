@@ -144,7 +144,7 @@ hr{
 }
 
 .noLineHome:hover{
-  color: rgb(74, 74, 136);
+  color: rgb(12, 128, 101);
 }
 
 /* //////////////////////// */
@@ -179,40 +179,40 @@ hr{
 
 .dreamersLink{
   text-decoration: none;
-  color: rgb(234, 19, 241);
+  color: rgb(45, 11, 182);
   font-size: 16px;
   font-weight: bold;
 }
 
 .dreamersLink:hover{
   text-decoration: none;
-  color: rgb(74, 74, 136);
+  color: rgb(11, 104, 7);
   font-weight: bold;
 }
 
 .adminLink{
   text-decoration: none;
-  color: rgb(234, 19, 241);
+  color: rgb(45, 11, 182);
   font-size: 16px;
   font-weight: bold;
 }
 
 .adminLink:hover{
   text-decoration: none;
-  color: rgb(74, 74, 136);
+  color: rgb(11, 104, 7);
   font-weight: bold;
 }
 
 .meaningsLink{
   text-decoration: none;
-  color: rgb(234, 19, 241);
+  color: rgb(45, 11, 182);
   font-size: 16px;
   font-weight: bold;
 }
 
 .meaningsLink:hover{
   text-decoration: none;
-  color: rgb(74, 74, 136);
+  color:rgb(11, 104, 7);
   font-weight: bold;
 }
 
@@ -226,9 +226,9 @@ hr{
 }
 
 .dreamersDisplay{
-  background-color: rgb(74, 74, 136);
+  background-color: rgb(45, 11, 182);
   color: rgb(233, 179, 233);
-  border: 5px solid rgb(74, 74, 136);
+  border: 5px solid rgb(45, 11, 182);
   border-radius: 5%;
   margin-left: 10%;
   margin-bottom: 10%;
@@ -251,7 +251,7 @@ hr{
 
 .dreamersPageTitle{
   font-size: 20px;
-  color: rgb(74, 74, 136);
+  color: rgb(45, 11, 182);
 }
 
 .listedData{
@@ -267,9 +267,9 @@ hr{
 /* //////////////////////// */
 
 .dreamerDisplay{
-  background-color: rgb(74, 74, 136);
+  background-color: rgb(45, 11, 182);
   color: rgb(233, 179, 233);
-  border: 5px solid rgb(74, 74, 136);
+  border: 5px solid rgb(45, 11, 182);
   border-radius: 5%;
   margin-left: 42%;
   /* margin-right:15%; */
@@ -282,9 +282,9 @@ hr{
 /* ///////////////////////////// */
 
 .dreamDisplay{
-  background-color: rgb(74, 74, 136);
+  background-color: rgb(45, 11, 182);
   color: rgb(233, 179, 233);
-  border: 5px solid rgb(74, 74, 136);
+  border: 5px solid rgb(45, 11, 182);
   border-radius: 5%;
   margin-left: 10%;
   margin-right:15%;

@@ -16,6 +16,7 @@ import EditDreamer from './Admin/Users/Dreamers/EditDreamer';
 import DreamersDreams from './Admin/Dreams/DreamersDreams';
 //Meanings
 import ViewAllMeanings from './Admin/Meanings/ViewAllMeanings';
+import CreateMeaning from './Admin/Meanings/CreateMeaning';
 ////////// Customer imports /////////
 //Home
 import CustomerHome from './Customer/Home/CustomerHome';
@@ -101,7 +102,7 @@ class AppContainer extends Component {
       } else if (this.state.tokenUser.role === "Customer") {
         homePage = "/customerHome";
       }
-      //Else if the user is not logged in, render the register, login components and hide the logout
+    //Else if the user is not logged in, render the register, login components and hide the logout
     } else {
       register = <Link to='/register' className='noLine' >Register</Link>
       login = <Link to='/login' className='noLine' >Login</Link>
@@ -147,7 +148,7 @@ class AppContainer extends Component {
                 { /* Customer */ }
                 <Route path='/customerHome' exact component={() => <CustomerHome tokenUser={this.state.tokenUser}/> }/>
 
-                {/* ///////// Admin /////////*/}
+                { /* ///////// Admin /////////*/ }
                 <Route path='/admin/view/all' exact component={() => <ViewAllAdmin/> }/>
                 <Route path='/admin/view/one/:email' exact component={(props) => <ViewOneAdmin {...props} /> }/>
 
@@ -167,9 +168,10 @@ class AppContainer extends Component {
                    <Route path='/myDreams' exact component={() => <MyDreams tokenUser={this.state.tokenUser}/> }/>
                    <Route path='/dreamers/dreams/view/one/:id' exact component={() => <ViewOneDream/>}/>
 
-                  {/*//////// Meanings ////////*/}
-                  {/* Admin */}
+                  { /*//////// Meanings ////////*/ }
+                  { /* Admin */ }
                   <Route path='/view/meanings' exact component={() => <ViewAllMeanings/>}/>
+                  <Route path='/create/meaning' exact component={() => <CreateMeaning/> }/>
              
                 </Router>
             </div>

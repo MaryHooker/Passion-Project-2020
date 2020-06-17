@@ -17,6 +17,9 @@ class AdminHome extends Component {
                 </div>
                 <div className='dreamersLinkP'>
                 <Link to='/view/dreamers' className='dreamersLink'>Dreamers</Link>
+                </div>
+                <div className='meaningsLinkP'>
+                <Link to='/view/meanings' className='meaningsLink'>Meanings</Link>
                 </div> 
             </div>
          );

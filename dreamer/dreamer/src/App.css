@@ -167,6 +167,16 @@ hr{
   grid-row: 2;
 }
 
+.adminLinkP{
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.meaningsLinkP{
+  grid-column: 3;
+  grid-row: 2;
+}
+
 .dreamersLink{
   text-decoration: none;
   color: rgb(234, 19, 241);
@@ -178,11 +188,6 @@ hr{
   text-decoration: none;
   color: rgb(74, 74, 136);
   font-weight: bold;
-}
-
-.adminLinkP{
-  grid-column: 1;
-  grid-row: 2;
 }
 
 .adminLink{
@@ -198,6 +203,18 @@ hr{
   font-weight: bold;
 }
 
+.meaningsLink{
+  text-decoration: none;
+  color: rgb(234, 19, 241);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.meaningsLink:hover{
+  text-decoration: none;
+  color: rgb(74, 74, 136);
+  font-weight: bold;
+}
 
 /* //////////////////////// */
 /* Admin View All Dreamers  */
@@ -214,6 +231,7 @@ hr{
   border: 5px solid rgb(74, 74, 136);
   border-radius: 5%;
   margin-left: 10%;
+  margin-bottom: 10%;
   margin-right:15%;
   width: 75%;
   box-shadow: 5px 10px 8px #8a6292;
@@ -225,6 +243,7 @@ hr{
   border: 5px solid rgb(128, 43, 123);
   border-radius: 5%;
   margin-left: 10%;
+  margin-bottom: 10%;
   margin-right:15%;
   width: 75%;
   box-shadow: 5px 10px 8px #8a6292;

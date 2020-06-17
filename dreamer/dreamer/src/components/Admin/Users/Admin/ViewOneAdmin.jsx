@@ -32,9 +32,14 @@ class ViewOneAdmin extends Component {
         console.log(`Admin : View one ${JSON.stringify(json)}`)
     }
 
-    // deleteAdmin = () => {
-
-    // }
+    deleteAdmin = async() => {
+        let response = await fetch(`/dreamers/admin/${this.state.admin.email}`,{
+            method:"DELETE",
+        })
+        let json = await response.json();
+        //sanity
+        console.log(`Deleting Admin ${JSON.stringify(json)}`);
+    }
 
     render() { 
         return ( 
@@ -47,7 +52,7 @@ class ViewOneAdmin extends Component {
                 <p className='listedData'>{this.state.admin.name}</p>
                 <p className='listedData'>{this.state.admin.email}</p>
                 </div>
-                <Link to={`/admin/edit/${this.state.admin.email}`}><button>Edit</button></Link>
+                {/* <Link to={`/admin/edit/${this.state.admin.email}`}><button>Edit</button></Link> */}
                 <button onClick={this.deleteAdmin}>Delete</button>
             </div>
          );

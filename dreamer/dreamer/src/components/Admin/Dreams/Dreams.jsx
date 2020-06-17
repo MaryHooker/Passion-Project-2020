@@ -20,14 +20,14 @@ class Dreams extends Component {
             method:"GET"
         })
         let json = await response.json();
-        //sanity
-        console.table(json)
+      
         //place data in state
         this.setState({
             dreams : json
         })
         //sanity
         console.table(`Admin : Dreams ${JSON.stringify(json)}`)
+
     }
 
     render() { 
@@ -38,11 +38,11 @@ class Dreams extends Component {
                 {
                     this.state.dreams.map((dream) => {
                         return(
-                            <div key={dream._id} className='dreamersDisplay'>
-                            {/* <Link to={`/dreams/view/one/${dream._id}`} className='linkLink'> */}
+                            <div className='dreamersDisplay'>
+                            <Link to={`/dreams/view/one/${dream._id}`} className='linkLink'>
                             <p className='listedData'>{dream.type}</p>
                             <p className='listedData'>{dream.dreamDescription}</p>
-                            {/* </Link> */}
+                            </Link>
                         </div>
                         )
                     })

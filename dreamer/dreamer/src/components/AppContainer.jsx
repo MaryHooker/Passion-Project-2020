@@ -14,6 +14,7 @@ import ViewOneAdmin from './Admin/Users/Admin/ViewOneAdmin';
 import Dreamers from './Admin/Users/Dreamers/Dreamers';
 import EditDreamer from './Admin/Users/Dreamers/EditDreamer';
 import DreamersDreams from './Admin/Dreams/DreamersDreams';
+import AdminViewOneDream from './Admin/Dreams/AdminViewOneDream';
 //Meanings
 import ViewAllMeanings from './Admin/Meanings/ViewAllMeanings';
 import CreateMeaning from './Admin/Meanings/CreateMeaning';
@@ -167,6 +168,7 @@ class AppContainer extends Component {
                    { /* Admin */ }
                    <Route path='/dreamers/dreams/view/:id' exact component={(props) => <DreamersDreams {...props}/>}/>
                   <Route path='/dreams/view/all' exact component={() => <Dreams/>} />
+                  <Route path='/dreams/view/one/:id' exact component={(props) => <AdminViewOneDream {...props} /> } />
                    
                    { /* Customer */ }
                    <Route path='/myDreams' exact component={() => <MyDreams tokenUser={this.state.tokenUser}/> }/>

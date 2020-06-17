@@ -17,17 +17,20 @@ button{
   border: 3px solid rgb(128, 43, 123);
   border-radius: 3%;
   margin-top: 3%;
+  margin: 2%;
   font-family: serif;
   font-weight: bold;
   height: 30px;
 }
 
 button:hover{
-  background-color:rgb(92, 27, 87);
+  background-color:rgb(24, 61, 51);
   color: rgb(209, 162, 209);
-  border: 3px solid rgb(92, 27, 87);
+  border: 3px solid rgb(24, 61, 51);
   border-radius: 3%;
   margin-top: 3%;
+  margin: 2%;
+
   font-family: serif;
   font-weight: bold;
   height: 30px;

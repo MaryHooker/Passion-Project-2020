@@ -74,6 +74,19 @@ router.put('/dream/:id', (req, res) => {
   })
 })
 
+// //Find dream dream by id
+// router.put('/dream/update/:id', (req, res) => {
+//   console.log(`Editing Dream`);
+//   // res.send(`Editing Dream`);
+//   DreamCollection.findOneAndUpdate({
+//     _id: req.params.id
+//   }, {spotlight:"true"}, {
+//     new: true
+//   }, (errors, results) => {
+//     errors ? res.send(errors) : res.send(results);
+//   })
+//})
+
 //Delete dream by id from dream collection & then find the dream inside of the dreamers collection and delete it from their dream array
 router.delete('/dream/:id', async(req, res) => {
   console.log(`Deleting Dream`);

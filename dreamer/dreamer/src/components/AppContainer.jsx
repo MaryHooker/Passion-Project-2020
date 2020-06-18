@@ -25,6 +25,7 @@ import ViewOneMeaning from './Admin/Meanings/ViewOneMeaning';
 import EditMeaning from './Admin/Meanings/EditMeaning';
 //Posted
 import PostedDreams from './Admin/Posted/PostedDreams';
+import ViewOnePostedDream from './Admin/Posted/ViewOnePostedDream';
 //Spotlight
 import SpotlightedDreams from './Admin/SpotLight/SpotlightedDreams';
 import ViewOneSpotlightedDream from './Admin/SpotLight/ViewOneSpotlightedDream';
@@ -191,6 +192,7 @@ class AppContainer extends Component {
                   {/*////////// Posted /////////*/}
                   {/* Admin */}
                   <Route path='/dreams/posted' exact component={() => <PostedDreams/>}/>
+                  <Route path='/dreams/posted/view/one/:id' exact component={(props) => <ViewOnePostedDream {...props}/> } />
 
                   {/*//////// Spotlight ////////*/}
                   {/* Admin */}

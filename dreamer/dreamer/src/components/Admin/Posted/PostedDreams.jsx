@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
-import {Link} from 'react-router-dom';
+// import {Link} from 'react-router-dom';
 
-class Dreams extends Component {
+class PostedDreams extends Component {
     constructor(props) {
         super(props);
         this.state = { 
@@ -14,9 +14,9 @@ class Dreams extends Component {
         this.allDreams();
     }
 
-     //Function to fetch all dreamers/users from database
+     //Function to fetch all posted dreams from database
      allDreams = async() => {
-        let response = await fetch('/api/dreams',{
+        let response = await fetch('/api/dreams/all/posted/true',{
             method:"GET"
         })
         let json = await response.json();
@@ -26,26 +26,24 @@ class Dreams extends Component {
             dreams : json
         })
         //sanity
-        console.log(`Admin : Dreams ${JSON.stringify(json)}`)
+        console.log(`Admin : Posted Dreams ${JSON.stringify(json)}`)
 
     }
 
     render() { 
         return ( 
             <div>
-                <h3>Dreams</h3>
-                <Link to='/dreams/posted' className='linkLink'><button>Posted</button></Link>
-                <Link to='/dreams/spotlighted' className='linkLink'><button>Spotlighted</button></Link>
+                <h3>Posted Dreams</h3>
                 <div className='dreamersContainer'>
                 {
                     this.state.dreams.map((dream) => {
                         return(
                             <div key={dream._id} className='dreamersDisplay'>
-                            <Link to={`/dreams/view/one/${dream._id}`} className='linkLink'>
+                            {/* <Link to={`/dreams/view/one/${dream._id}`} className='linkLink'> */}
                             <p className='listedData'>{dream.type}</p>
                             <p className='listedData'>{dream.dreamDescription}</p>
                             {/* <p className='listedData'>{dream.dreamer.name}</p> */}
-                            </Link>
+                            {/* </Link> */}
                         </div>
                         )
                     })
@@ -56,4 +54,4 @@ class Dreams extends Component {
     }
 }
  
-export default Dreams;
+export default PostedDreams;

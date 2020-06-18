@@ -23,6 +23,8 @@ import ViewAllMeanings from './Admin/Meanings/ViewAllMeanings';
 import CreateMeaning from './Admin/Meanings/CreateMeaning';
 import ViewOneMeaning from './Admin/Meanings/ViewOneMeaning';
 import EditMeaning from './Admin/Meanings/EditMeaning';
+//Posted
+import PostedDreams from './Admin/Posted/PostedDreams';
 //Spotlight
 import SpotlightedDreams from './Admin/SpotLight/SpotlightedDreams';
 import ViewOneSpotlightedDream from './Admin/SpotLight/ViewOneSpotlightedDream';
@@ -172,8 +174,8 @@ class AppContainer extends Component {
                 { /*/////// Dreams ///////*/ }
                    { /* Admin */ }
                    <Route path='/dreamers/dreams/view/:id' exact component={(props) => <DreamersDreams {...props}/>}/>
-                  <Route path='/dreams/view/all' exact component={() => <Dreams/>} />
-                  <Route path='/dreams/view/one/:id' exact component={(props) => <AdminViewOneDream {...props} /> } />
+                   <Route path='/dreams/view/all' exact component={() => <Dreams/>} />
+                   <Route path='/dreams/view/one/:id' exact component={(props) => <AdminViewOneDream {...props} /> } />
                    
                    { /* Customer */ }
                    <Route path='/myDreams' exact component={() => <MyDreams tokenUser={this.state.tokenUser}/> }/>
@@ -185,6 +187,10 @@ class AppContainer extends Component {
                   <Route path='/create/meaning' exact component={() => <CreateMeaning/> }/>
                   <Route path='/meanings/view/one/:id' exact component={(props) => <ViewOneMeaning {...props} /> }/>
                   <Route path='/meanings/edit/:id' exact component={(props) => <EditMeaning {...props}/> }/>
+
+                  {/*////////// Posted /////////*/}
+                  {/* Admin */}
+                  <Route path='/dreams/posted' exact component={() => <PostedDreams/>}/>
 
                   {/*//////// Spotlight ////////*/}
                   {/* Admin */}

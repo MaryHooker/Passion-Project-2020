@@ -55,7 +55,7 @@ class AdminViewOneDream extends Component {
 
     //Function to delete a dream from the database
     deleteDream = async() => {
-        let response = await fetch(`/api/dream/${this.state.dream.id}`,{
+        let response = await fetch(`/api/dream/${this.state.dream._id}`,{
             method:"DELETE",
         })
         let json = await response.json();

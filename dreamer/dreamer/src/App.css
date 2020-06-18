@@ -1,6 +1,6 @@
 body{
   background-color: rgb(233, 179, 233);
-  color: rgb(128, 43, 123);
+  color: rgb(83, 28, 81);
   font-family: serif;
   text-align: center;
 }
@@ -11,10 +11,15 @@ span{
   font-weight: bold;
 }
 
+.userName{
+  font-size: 18px;
+  color: rgb(182, 3, 137);
+}
+
 button{
-  background-color: rgb(128, 43, 123);
+  background-color: rgb(83, 28, 81);
   color: rgb(209, 162, 209);
-  border: 3px solid rgb(128, 43, 123);
+  border: 3px solid rgb(83, 28, 81);
   border-radius: 3%;
   margin-top: 3%;
   margin: 2%;
@@ -24,9 +29,9 @@ button{
 }
 
 button:hover{
-  background-color:rgb(24, 61, 51);
+  background-color:rgb(182, 3, 137);
   color: rgb(209, 162, 209);
-  border: 3px solid rgb(24, 61, 51);
+  border: 3px solid rgb(182, 3, 137);
   border-radius: 3%;
   margin-top: 3%;
   margin: 2%;
@@ -78,16 +83,19 @@ hr{
 }
 
 .homeTitle{
+  margin-top: 10%;
   grid-column: 6/8;
   grid-row: 1;
 }
 
 .registerLink{
+  margin-top: 2%;
   grid-column: 10;
   grid-row: 1;
 }
 
 .loginLink{
+  margin-top: 2%;
   grid-column: 11;
   grid-row: 1;
 }
@@ -100,14 +108,14 @@ hr{
 .logoutStyle{
   border: 0px;
   background-color: rgb(233, 179, 233);
-  color: rgb(128, 43, 123);
+  color: rgb(83, 28, 81);
   font-size: 18px;
 }
 
 .logoutStyle:hover{
   border: 0px;
   background-color: rgb(233, 179, 233);
-  color: rgb(128, 43, 123);
+  color: rgb(83, 28, 81);
   font-size: 20px;
 }
 
@@ -127,7 +135,7 @@ hr{
 
 .noLine{
   text-decoration: none;
-  color: rgb(128, 43, 123);
+  color: rgb(83, 28, 81);
   font-weight: bold;
   font-size: 18px;
 }
@@ -139,7 +147,7 @@ hr{
 }
 
 .noLineHome{
- color: rgb(128, 43, 123);
+ color: rgb(83, 28, 81);
  text-decoration: none;
  font-size: 34px;
  font-weight: bold;
@@ -147,7 +155,7 @@ hr{
 }
 
 .noLineHome:hover{
-  color: rgb(12, 128, 101);
+  color: rgb(182, 3, 137);
 }
 
 /* //////////////////////// */
@@ -190,53 +198,53 @@ hr{
 }
 .dreamersLink{
   text-decoration: none;
-  color: rgb(45, 11, 182);
+  color: rgb(182, 3, 137);
   font-size: 16px;
   font-weight: bold;
 }
 
 .dreamersLink:hover{
   text-decoration: none;
-  color: rgb(11, 104, 7);
+  color: rgb(83, 28, 81);
   font-weight: bold;
 }
 
 .adminLink{
   text-decoration: none;
-  color: rgb(45, 11, 182);
+  color: rgb(182, 3, 137);
   font-size: 16px;
   font-weight: bold;
 }
 
 .adminLink:hover{
   text-decoration: none;
-  color: rgb(11, 104, 7);
+  color: rgb(83, 28, 81);
   font-weight: bold;
 }
 
 .meaningsLink{
   text-decoration: none;
-  color: rgb(45, 11, 182);
+  color: rgb(182, 3, 137);
   font-size: 16px;
   font-weight: bold;
 }
 
 .meaningsLink:hover{
   text-decoration: none;
-  color:rgb(11, 104, 7);
+  color:rgb(83, 28, 81);
   font-weight: bold;
 }
 
 .dreamsLink{
   text-decoration: none;
-  color: rgb(45, 11, 182);
+  color: rgb(182, 3, 137);
   font-size: 16px;
   font-weight: bold;
 }
 
 .dreamsLink:hover{
   text-decoration: none;
-  color:rgb(11, 104, 7);
+  color:rgb(83, 28, 81);
   font-weight: bold;
 }
 
@@ -250,21 +258,21 @@ hr{
 }
 
 .dreamersDisplay{
-  background-color: rgb(45, 11, 182);
+  background-color: rgb(182, 3, 137);
   color: rgb(233, 179, 233);
-  border: 5px solid rgb(45, 11, 182);
+  border: 5px solid rgb(182, 3, 137);
   border-radius: 5%;
   margin-left: 10%;
   margin-bottom: 10%;
   margin-right:15%;
   width: 75%;
-  box-shadow: 5px 10px 8px #8a6292;
+  box-shadow: 5px 10px 8px #cd79db;
 }
 
 .dreamersDisplay:hover{
-  background-color: rgb(128, 43, 123);
+  background-color: rgb(83, 28, 81);
   color: rgb(233, 179, 233);
-  border: 5px solid rgb(128, 43, 123);
+  border: 5px solid rgb(83, 28, 81);
   border-radius: 5%;
   margin-left: 10%;
   margin-bottom: 10%;
@@ -275,7 +283,7 @@ hr{
 
 .dreamersPageTitle{
   font-size: 20px;
-  color: rgb(45, 11, 182);
+  color:rgb(182, 3, 137);
 }
 
 .listedData{
@@ -291,14 +299,14 @@ hr{
 /* //////////////////////// */
 
 .dreamerDisplay{
-  background-color: rgb(45, 11, 182);
+  background-color: rgb(182, 3, 137);
   color: rgb(233, 179, 233);
-  border: 5px solid rgb(45, 11, 182);
+  border: 5px solid rgb(182, 3, 137);
   border-radius: 5%;
   margin-left: 42%;
   /* margin-right:15%; */
   width: 15%;
-  box-shadow: 5px 10px 8px #8a6292;
+  box-shadow: 5px 10px 8px #cd79db;
 }
 
 /* ///////////////////////////// */
@@ -306,12 +314,12 @@ hr{
 /* ///////////////////////////// */
 
 .dreamDisplay{
-  background-color: rgb(45, 11, 182);
+  background-color: rgb(182, 3, 137);
   color: rgb(233, 179, 233);
-  border: 5px solid rgb(45, 11, 182);
+  border: 5px solid rgb(182, 3, 137);
   border-radius: 5%;
   margin-left: 10%;
   margin-right:15%;
   width: 75%;
-  box-shadow: 5px 10px 8px #8a6292;
+  box-shadow: 5px 10px 8px #cd79db;
 }

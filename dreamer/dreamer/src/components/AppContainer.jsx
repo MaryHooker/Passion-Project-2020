@@ -14,22 +14,23 @@ import ViewOneAdmin from './Admin/Users/Admin/ViewOneAdmin';
 import Dreamers from './Admin/Users/Dreamers/Dreamers';
 import EditDreamer from './Admin/Users/Dreamers/EditDreamer';
 import DreamersDreams from './Admin/Dreams/DreamersDreams';
+import ViewOneDreamer from './Admin/Users/Dreamers/ViewOneDreamer';
+//Dreams
 import AdminViewOneDream from './Admin/Dreams/AdminViewOneDream';
+import Dreams from './Admin/Dreams/Dreams';
 //Meanings
 import ViewAllMeanings from './Admin/Meanings/ViewAllMeanings';
 import CreateMeaning from './Admin/Meanings/CreateMeaning';
 import ViewOneMeaning from './Admin/Meanings/ViewOneMeaning';
+import EditMeaning from './Admin/Meanings/EditMeaning';
+//Spotlight
+import SpotlightedDreams from './Admin/SpotLight/SpotlightedDreams';
 ////////// Customer imports /////////
 //Home
 import CustomerHome from './Customer/Home/CustomerHome';
-//Dreamer
-import ViewOneDreamer from './Admin/Users/Dreamers/ViewOneDreamer';
 //Dreams
 import MyDreams from './Customer/Dreams/MyDreams';
 import ViewOneDream from './Customer/Dreams/ViewOneDream';
-import EditMeaning from './Admin/Meanings/EditMeaning';
-import Dreams from './Admin/Dreams/Dreams';
-import SpotlightedDreams from './Admin/Users/Admin/SpotLight/SpotlightedDreams';
 
 class AppContainer extends Component {
   constructor(props) {

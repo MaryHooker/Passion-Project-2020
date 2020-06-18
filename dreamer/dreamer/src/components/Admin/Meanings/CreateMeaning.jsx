@@ -50,7 +50,7 @@ class CreateMeaning extends Component {
         
         return (
             <div>
-                <h3>Meaning Form</h3>
+                <h2>Meaning Form</h2>
 
                 <form action="">
                     <div className="form-group">

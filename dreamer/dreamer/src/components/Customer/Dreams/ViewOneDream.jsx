@@ -8,7 +8,7 @@ class ViewOneDream extends Component {
     render() { 
         return ( 
             <div>
-                <h3>ViewOneDream</h3>
+                <h2>ViewOneDream</h2>
             </div>
          );
     }

@@ -58,7 +58,7 @@ class AdminViewOneDream extends Component {
     render() { 
         return ( 
             <div>
-                <h4>Spotlighted Dream</h4>
+                <h2>Spotlighted Dream</h2>
                 <br/>
                 <br/>
                 <br/>

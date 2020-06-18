@@ -32,7 +32,7 @@ class MyDreams extends Component {
     render() { 
         return ( 
             <div>
-                <h3 className='dreamersPageTitle'>My Dreams</h3>
+                <h2 className='dreamersPageTitle'>My Dreams</h2>
                 <br/>
                 <div className='dreamersContainer'>
                 {

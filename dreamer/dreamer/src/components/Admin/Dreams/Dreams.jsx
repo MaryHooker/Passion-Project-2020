@@ -33,7 +33,7 @@ class Dreams extends Component {
     render() { 
         return ( 
             <div>
-                <h3>Dreams</h3>
+                <h2>Dreams</h2>
                 <Link to='/dreams/posted' className='linkLink'><button>Posted</button></Link>
                 <Link to='/dreams/spotlighted' className='linkLink'><button>Spotlighted</button></Link>
                 <div className='dreamersContainer'>

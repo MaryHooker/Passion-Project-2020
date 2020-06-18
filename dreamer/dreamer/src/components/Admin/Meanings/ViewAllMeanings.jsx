@@ -33,7 +33,7 @@ class ViewAllMeanings extends Component {
     render() { 
         return ( 
             <div>
-                <h3 className='dreamersPageTitle'>All Meanings</h3>
+                <h2 className='dreamersPageTitle'>All Meanings</h2>
                 <Link to='/create/meaning' className='linkLink'><button>Add Meaning</button></Link>
                 <br/>
                 <br/>

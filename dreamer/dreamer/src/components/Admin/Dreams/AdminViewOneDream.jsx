@@ -31,28 +31,6 @@ class AdminViewOneDream extends Component {
         console.log(this.state.dream.dreamer[0].name)
     }
 
-    //Function to Spotlight a dream
-    spotlightDream = async() => {
-        //updated dream
-        let newDream = {
-            type:this.state.type,
-            dreamDescription:this.state.dreamDescription,
-            spotlight: "true"
-        }
-        //fetch method to to update the dream and set the spotlight property to true
-        let response = await fetch(`/api/dream/${this.state.dream._id}`,{
-            method:"PUT",
-            headers:{
-                "Accept":"application/json",
-                "Content-Type":"application/json",
-            },
-            body:JSON.stringify(newDream)
-        })
-        let json = await response.json();
-        //sanity
-        console.log(`Spotlighted Dream ${JSON.stringify(json)}`);
-    }
-
     //Function to delete a dream from the database
     deleteDream = async() => {
         let response = await fetch(`/api/dream/${this.state.dream._id}`,{
@@ -66,7 +44,7 @@ class AdminViewOneDream extends Component {
     render() { 
         return ( 
             <div>
-                <h4>Dream</h4>
+                <h2>Dream</h2>
                 <br/>
                 <br/>
                 <br/>
@@ -75,7 +53,7 @@ class AdminViewOneDream extends Component {
                 <p className='listedData'>{this.state.dream.dreamDescription}</p>
                 {/* <p className='listedData'>{this.state.dream.dreamer[0].name}</p> */}
                 </div>
-                <button onClick={this.spotlightDream}>Spotlight</button>
+                
                 <button onClick={this.deleteDream}>Delete</button>
             </div>
          );

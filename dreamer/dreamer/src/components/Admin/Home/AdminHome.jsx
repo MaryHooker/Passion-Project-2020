@@ -10,19 +10,19 @@ class AdminHome extends Component {
         return ( 
             <div className='adminHomeContainer'>
                 <div className='adminTitle'>
-                <h3>Welcome back <span className='userName'>{this.props.tokenUser.name}</span>!</h3>
+                <h2>Welcome back <span className='userName'>{this.props.tokenUser.name}</span>!</h2>
                 </div>
                 <div className='adminLinkP'>
-                <Link to='/admin/view/all' className='adminLink'>Admin</Link>
+                <Link to='/admin/view/all' className='adminLink'><button className='adminHomeButton'>Admin</button></Link>
                 </div>
                 <div className='dreamersLinkP'>
-                <Link to='/view/dreamers' className='dreamersLink'>Dreamers</Link>
+                <Link to='/view/dreamers' className='dreamersLink'><button className='adminHomeButton'>Dreamers</button></Link>
                 </div>
                 <div className='meaningsLinkP'>
-                <Link to='/view/meanings' className='meaningsLink'>Meanings</Link>
+                <Link to='/view/meanings' className='meaningsLink'><button className='adminHomeButton'>Meanings</button></Link>
                 </div>
                 <div className='dreamsLinkP'>
-                <Link to='/dreams/view/all' className='dreamsLink'>Dreams</Link>
+                <Link to='/dreams/view/all' className='dreamsLink'><button className='adminHomeButton'>Dreams</button></Link>
                 </div> 
 
             </div>

@@ -33,7 +33,7 @@ class PostedDreams extends Component {
     render() { 
         return ( 
             <div>
-                <h3>Posted Dreams</h3>
+                <h2>Posted Dreams</h2>
                 <div className='dreamersContainer'>
                 {
                     this.state.dreams.map((dream) => {

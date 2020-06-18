@@ -34,7 +34,7 @@ class SpotlightedDreams extends Component {
     render() { 
         return ( 
             <div>
-                <h3>Spotlighted Dreams</h3>
+                <h2>Spotlighted Dreams</h2>
                 <div className='dreamersContainer'>
                 {
                     this.state.spotlighted.map((dream) => {

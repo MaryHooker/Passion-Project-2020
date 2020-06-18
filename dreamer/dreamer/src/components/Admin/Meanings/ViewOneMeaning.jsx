@@ -45,7 +45,7 @@ class ViewOneMeaning extends Component {
     render() { 
         return ( 
             <div>
-                <h4>Meaning</h4>
+                <h2>Meaning</h2>
                 <br/>
                 <br/>
                 <div className='dreamerDisplay'>

@@ -1,7 +1,7 @@
 body{
   /* background-image: url('/pinkSky1.png'); */
-  background-color: rgb(233, 179, 233);
-  color: rgb(83, 28, 81);
+  background-color: rgb(85, 4, 85);
+  color: rgb(209, 162, 209);
   font-family: serif;
   text-align: center;
   height: 80vh;
@@ -15,14 +15,14 @@ span{
 }
 
 .userName{
-  font-size: 18px;
+  font-size: 22px;
   color: rgb(182, 3, 137);
 }
 
 button{
-  background-color: rgb(83, 28, 81);
+  background-color: rgb(87, 20, 131);
   color: rgb(209, 162, 209);
-  border: 3px solid rgb(83, 28, 81);
+  border: 3px solid rgb(87, 20, 131);
   border-radius: 3%;
   margin-top: 3%;
   margin: 2%;
@@ -45,8 +45,8 @@ button:hover{
 
 input{
   background-color: rgb(233, 179, 233);
-  color: rgb(94, 26, 94);
-  border: 1px solid rgb(94, 26, 94);
+  color: rgb(87, 20, 131);
+  border: 1px solid rgb(87, 20, 131);
   border-radius: 4%;
   height: 20px;
   margin: 6px;
@@ -58,8 +58,8 @@ input{
 
 input:hover{
   background-color: rgb(231, 169, 231);
-  color: rgb(94, 26, 94);
-  border: 1px solid rgb(94, 26, 94);
+  color: rgb(87, 20, 131);
+  border: 1px solid rgb(87, 20, 131);
   border-radius: 4%;
   height: 20px;
   margin: 6px;
@@ -137,7 +137,7 @@ hr{
 
 .noLine{
   text-decoration: none;
-  color: rgb(83, 28, 81);
+  color: rgb(182, 3, 137);
   font-weight: bold;
   font-size: 18px;
 }
@@ -149,7 +149,7 @@ hr{
 }
 
 .noLineHome{
- color: rgb(83, 28, 81);
+ color: rgb(182, 3, 137);
  text-decoration: none;
  font-size: 34px;
  font-weight: bold;
@@ -157,7 +157,7 @@ hr{
 }
 
 .noLineHome:hover{
-  color: rgb(182, 3, 137);
+  color: rgb(190, 157, 9);
 }
 
 /* //////////////////////// */
@@ -168,6 +168,12 @@ hr{
  display: grid;
  grid-template-columns: auto auto auto;
  grid-template-rows: auto auto auto auto;
+}
+
+.adminHomeButton{
+  /* height: 75%;
+  width: 35%; */
+  font-size: 15px;
 }
 
 .adminTitle{
@@ -273,25 +279,26 @@ hr{
 }
 
 .dreamersDisplay:hover{
-  background-color: rgb(83, 28, 81);
-  color: rgb(233, 179, 233);
-  border: 5px solid rgb(83, 28, 81);
+  background-color: rgb(105, 23, 211);
+  color: rgb(182, 3, 137);
+  border: 5px solid rgb(105, 23, 211);
   border-radius: 5%;
   margin-left: 10%;
   margin-bottom: 10%;
   margin-right:15%;
   width: 75%;
-  box-shadow: 5px 10px 8px #8a6292;
+  box-shadow: 5px 10px 8px #9168ce;
 }
 
 .dreamersPageTitle{
   font-size: 20px;
-  color:rgb(182, 3, 137);
+  color:rgb(105, 23, 211);
 }
 
 .listedData{
   color: rgb(233, 179, 233);
 }
+
 
 .linkLink{
   text-decoration: none;

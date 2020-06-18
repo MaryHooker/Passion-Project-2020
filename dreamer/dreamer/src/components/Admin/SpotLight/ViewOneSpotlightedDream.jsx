@@ -5,7 +5,7 @@ class AdminViewOneDream extends Component {
     constructor(props) {
         super(props);
         this.state = { 
-            dream:{
+            spotlight:{
 
             },
          }
@@ -13,11 +13,11 @@ class AdminViewOneDream extends Component {
 
     //When component mounts, run inner function
     componentDidMount(){
-        this.dreamData();
+        this.spotlightData();
     }
 
     //Function to run fetch method in order to view specific dream to update or delete
-    dreamData = async() => {
+    spotlightData = async() => {
         let response = await fetch(`/api/dream/view/${this.props.match.params.id}`,{
             method:"GET"
         })
@@ -25,22 +25,24 @@ class AdminViewOneDream extends Component {
         //place specific dream in state
         this.setState(
             {
-                dream:json
+                spotlight:json
             }
         )
-        console.log(this.state.dream.dreamer[0].name)
+        //sanity
+        console.log(json)
+        // console.log(this.state.dream.dreamer[0].name)
     }
 
-    //Function to Spotlight a dream
-    spotlightDream = async() => {
+    //Function to remove a Spotlight dream
+    removeDream = async() => {
         //updated dream
         let newDream = {
-            type:this.state.type,
-            dreamDescription:this.state.dreamDescription,
-            spotlight: "true"
+            type:this.state.spotlight.type,
+            dreamDescription:this.state.spotlight.dreamDescription,
+            spotlight: "false"
         }
         //fetch method to to update the dream and set the spotlight property to true
-        let response = await fetch(`/api/dream/${this.state.dream._id}`,{
+        let response = await fetch(`/api/dream/${this.state.spotlight._id}`,{
             method:"PUT",
             headers:{
                 "Accept":"application/json",
@@ -53,30 +55,19 @@ class AdminViewOneDream extends Component {
         console.log(`Spotlighted Dream ${JSON.stringify(json)}`);
     }
 
-    //Function to delete a dream from the database
-    deleteDream = async() => {
-        let response = await fetch(`/api/dream/${this.state.dream.id}`,{
-            method:"DELETE",
-        })
-        let json = await response.json();
-        //sanity
-        console.log(`Deleting Dream ${JSON.stringify(json)}`);
-    }
-
     render() { 
         return ( 
             <div>
-                <h4>Dream</h4>
+                <h4>Spotlighted Dream</h4>
                 <br/>
                 <br/>
                 <br/>
                 <div className='dreamerDisplay'>
-                <p className='listedData'>{this.state.dream.type}</p>
-                <p className='listedData'>{this.state.dream.dreamDescription}</p>
+                <p className='listedData'>{this.state.spotlight.type}</p>
+                <p className='listedData'>{this.state.spotlight.dreamDescription}</p>
                 {/* <p className='listedData'>{this.state.dream.dreamer[0].name}</p> */}
                 </div>
-                <button onClick={this.spotlightDream}>Spotlight</button>
-                <button onClick={this.deleteDream}>Delete</button>
+                <button onClick={this.removeDream}>Remove</button>
             </div>
          );
     }

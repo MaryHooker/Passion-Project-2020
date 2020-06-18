@@ -26,7 +26,7 @@ class Dreams extends Component {
             dreams : json
         })
         //sanity
-        console.table(`Admin : Dreams ${JSON.stringify(json)}`)
+        console.log(`Admin : Dreams ${JSON.stringify(json)}`)
 
     }
 
@@ -43,6 +43,7 @@ class Dreams extends Component {
                             <Link to={`/dreams/view/one/${dream._id}`} className='linkLink'>
                             <p className='listedData'>{dream.type}</p>
                             <p className='listedData'>{dream.dreamDescription}</p>
+                            {/* <p className='listedData'>{dream.dreamer.name}</p> */}
                             </Link>
                         </div>
                         )

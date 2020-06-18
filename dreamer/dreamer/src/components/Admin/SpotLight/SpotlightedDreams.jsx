@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+import {Link} from 'react-router-dom';
 
 class SpotlightedDreams extends Component {
     constructor(props) {
@@ -39,10 +40,10 @@ class SpotlightedDreams extends Component {
                     this.state.spotlighted.map((dream) => {
                         return(
                             <div key={dream._id} className='dreamersDisplay'>
-                            {/* <Link to={`/dreams/view/one/${dream._id}`} className='linkLink'> */}
+                            <Link to={`/dreams/spotlight/view/one/${dream._id}`} className='linkLink'>
                             <p className='listedData'>{dream.type}</p>
                             <p className='listedData'>{dream.dreamDescription}</p>
-                            {/* </Link> */}
+                            </Link>
                         </div>
                         )
                     })

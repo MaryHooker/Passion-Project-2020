@@ -25,6 +25,7 @@ import ViewOneMeaning from './Admin/Meanings/ViewOneMeaning';
 import EditMeaning from './Admin/Meanings/EditMeaning';
 //Spotlight
 import SpotlightedDreams from './Admin/SpotLight/SpotlightedDreams';
+import ViewOneSpotlightedDream from './Admin/SpotLight/ViewOneSpotlightedDream';
 ////////// Customer imports /////////
 //Home
 import CustomerHome from './Customer/Home/CustomerHome';
@@ -118,6 +119,8 @@ class AppContainer extends Component {
       <div>
         <Router>
           <div className='homeContainer'>
+            {/* ToDo: credit artist */}
+          {/* <a href="https://pngtree.com/free-backgrounds">free background photos from pngtree.com</a> */}
                 <div className='homeTitle'>
                  <Link to={homePage} className='noLineHome'>Dreamer</Link>
                 </div>
@@ -186,7 +189,8 @@ class AppContainer extends Component {
                   {/*//////// Spotlight ////////*/}
                   {/* Admin */}
                   <Route path='/dreams/spotlighted' exact component={() => <SpotlightedDreams/> } />
-             
+                  <Route path='/dreams/spotlight/view/one/:id' exact component={(props) => <ViewOneSpotlightedDream {...props} /> } />
+
                 </Router>
             </div>
       );

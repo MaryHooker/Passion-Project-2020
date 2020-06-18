@@ -1,8 +1,11 @@
 body{
+  /* background-image: url('/pinkSky1.png'); */
   background-color: rgb(233, 179, 233);
   color: rgb(83, 28, 81);
   font-family: serif;
   text-align: center;
+  height: 80vh;
+  /* width:238vh; */
 }
 
 span{
@@ -35,7 +38,6 @@ button:hover{
   border-radius: 3%;
   margin-top: 3%;
   margin: 2%;
-
   font-family: serif;
   font-weight: bold;
   height: 30px;
@@ -232,6 +234,7 @@ hr{
 .meaningsLink:hover{
   text-decoration: none;
   color:rgb(83, 28, 81);
+  font-size: 16px;
   font-weight: bold;
 }
 
@@ -303,8 +306,8 @@ hr{
   color: rgb(233, 179, 233);
   border: 5px solid rgb(182, 3, 137);
   border-radius: 5%;
-  margin-left: 42%;
-  /* margin-right:15%; */
+  margin-left: 42%; 
+  margin-right:15%;
   width: 15%;
   box-shadow: 5px 10px 8px #cd79db;
 }

@@ -28,7 +28,12 @@ class AdminViewOneDream extends Component {
                 dream:json
             }
         )
-        console.log(this.state.dream.dreamer[0].name)
+        // console.log(this.state.dream.dreamer.name)
+    }
+
+      // go back one page
+      goBack = () => {
+        window.history.back();
     }
 
     //Function to delete a dream from the database
@@ -39,6 +44,8 @@ class AdminViewOneDream extends Component {
         let json = await response.json();
         //sanity
         console.log(`Deleting Dream ${JSON.stringify(json)}`);
+
+        this.goBack();
     }
 
     render() { 

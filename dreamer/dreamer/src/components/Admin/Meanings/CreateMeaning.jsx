@@ -10,10 +10,9 @@ class CreateMeaning extends Component {
         }
     }
 
-    // goBack = () => {
-    //     window.history.back();
-    //     window.history.back();
-    // }
+    goBack = () => {
+        window.history.back();
+    }
 
     // handle changes to fields
     handleChanges = (event) => {
@@ -43,7 +42,7 @@ class CreateMeaning extends Component {
         //sanity
         console.log(json);
 
-        // this.goBack();
+        this.goBack();
     }
 
     render() {

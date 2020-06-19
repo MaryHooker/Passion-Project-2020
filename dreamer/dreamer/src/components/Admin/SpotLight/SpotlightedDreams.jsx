@@ -43,6 +43,15 @@ class SpotlightedDreams extends Component {
                             <Link to={`/dreams/spotlight/view/one/${dream._id}`} className='linkLink'>
                             <p className='listedData'>{dream.type}</p>
                             <p className='listedData'>{dream.dreamDescription}</p>
+                            {
+                                dream.dreamer.map((dreamer) => {
+                                    return(
+                                        <div key={dreamer._id}>
+                                            <p className='listedData'>{dreamer.name}</p>
+                                        </div>
+                                    )
+                                })
+                            }
                             </Link>
                         </div>
                         )

@@ -32,6 +32,11 @@ class ViewOneMeaning extends Component {
         console.log(this.state.meaning._id)
     }
 
+         // go back one page
+         goBack = () => {
+            window.history.back();
+        }
+
     //Function to delete a dreamer from the database
     deleteMeaning = async() => {
         let response = await fetch(`/api/meanings/${this.state.meaning.id}`,{
@@ -40,6 +45,8 @@ class ViewOneMeaning extends Component {
         let json = await response.json();
         //sanity
         console.log(`Deleting Meaning ${JSON.stringify(json)}`);
+
+        this.goBack();
     }
 
     render() { 

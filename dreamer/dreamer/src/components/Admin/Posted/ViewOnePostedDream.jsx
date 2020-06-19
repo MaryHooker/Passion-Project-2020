@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-// import {Link} from 'react-router-dom';
+import {Redirect} from 'react-router-dom';
 
 class ViewOnePostedDream extends Component {
     constructor(props) {
@@ -8,6 +8,7 @@ class ViewOnePostedDream extends Component {
             posted:{
 
             },
+            redirect:false,
          }
     }
 
@@ -81,10 +82,16 @@ class ViewOnePostedDream extends Component {
         //sanity
         console.log(`Posted Dream ${JSON.stringify(json)}`);
 
+        this.setState({
+            redirect:true
+        })
         // this.goBack();
     }
 
     render() { 
+        if(this.state.redirect){
+            return <Redirect to='/dreams/spotlighted'/>
+        }
         return ( 
             <div>
                 <h2>Posted Dream</h2>
@@ -94,7 +101,6 @@ class ViewOnePostedDream extends Component {
                 <div className='dreamerDisplay'>
                 <p className='listedData'>{this.state.posted.type}</p>
                 <p className='listedData'>{this.state.posted.dreamDescription}</p>
-                {/* <p className='listedData'>{this.state.dream.dreamer[0].name}</p> */}
                 </div>
                 <button onClick={this.spotlightDream}>Spotlight</button>
                 <button onClick={this.removeDream}>Remove</button>

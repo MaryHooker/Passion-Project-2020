@@ -26,7 +26,7 @@ class PostedDreams extends Component {
             dreams : json
         })
         //sanity
-        console.log(`Admin : Posted Dreams ${JSON.stringify(json)}`)
+        console.log(json)
 
     }
 
@@ -42,11 +42,21 @@ class PostedDreams extends Component {
                             <Link to={`/dreams/posted/view/one/${dream._id}`} className='linkLink'>
                             <p className='listedData'>{dream.type}</p>
                             <p className='listedData'>{dream.dreamDescription}</p>
-                            <p className='listedData'>{dream.dreamer.name}</p>
+                            {
+                                dream.dreamer.map((dreamer) => {
+                                    return(
+                                        <div key={dreamer._id}>
+                                            <p className='listedData'>{dreamer.name}</p>
+                                        </div>
+                                    )
+                                })
+                            }
+                          
                             </Link> 
                         </div>
                         )
                     })
+
                 }
                 </div>
             </div>

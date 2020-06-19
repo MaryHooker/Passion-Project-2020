@@ -42,6 +42,12 @@ class EditDreamer extends Component {
         console.log(`Editing Dreamer ${JSON.stringify(this.state)}`)
     }
 
+     // go back two pages
+     goBackTwo = () => {
+        window.history.back();
+        window.history.back();
+    }
+
     handleSubmission = async(event) => {
         event.preventDefault();
             //define data to be passed through the body
@@ -63,6 +69,8 @@ class EditDreamer extends Component {
     
             //sanity
             console.log(` Edit Dreamer ${JSON.stringify(json)}`)
+
+            this.goBackTwo();
     }
 
     render() { 

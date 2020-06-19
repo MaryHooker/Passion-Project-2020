@@ -33,6 +33,11 @@ class AdminViewOneDream extends Component {
         // console.log(this.state.dream.dreamer[0].name)
     }
 
+     // go back one page
+     goBack = () => {
+        window.history.back();
+    }
+
     //Function to remove a Spotlight dream
     removeDream = async() => {
         //updated dream
@@ -53,6 +58,8 @@ class AdminViewOneDream extends Component {
         let json = await response.json();
         //sanity
         console.log(`Spotlighted Dream ${JSON.stringify(json)}`);
+
+        this.goBack();
     }
 
     render() { 

@@ -40,6 +40,12 @@ class EditMeaning extends Component {
         console.log(`Viewing Meaning ${JSON.stringify(this.state)}`)
     }
 
+     // go back two pages
+     goBackTwo = () => {
+        window.history.back();
+        window.history.back();
+    }
+
     handleSubmission = async(event) => {
         event.preventDefault();
             //define data to be passed through the body
@@ -62,6 +68,8 @@ class EditMeaning extends Component {
     
             //sanity
             console.log(` Edit Meaning ${JSON.stringify(json)}`)
+
+            this.goBackTwo();
     }
 
     render() { 

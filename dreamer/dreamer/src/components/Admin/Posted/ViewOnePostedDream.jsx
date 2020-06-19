@@ -42,7 +42,7 @@ class ViewOnePostedDream extends Component {
             spotlight: "true"
         }
         //fetch method to to update the dream and set the spotlight property to true
-        let response = await fetch(`/api/dream/${this.state.dream._id}`,{
+        let response = await fetch(`/api/dream/${this.state.posted._id}`,{
             method:"PUT",
             headers:{
                 "Accept":"application/json",
@@ -54,6 +54,11 @@ class ViewOnePostedDream extends Component {
         //sanity
         console.log(`Spotlighted Dream ${JSON.stringify(json)}`);
     }
+
+    //  // go back one page
+    //  goBack = () => {
+    //     window.history.back();
+    // }
 
     //Function to remove a Posted dream
     removeDream = async() => {
@@ -75,6 +80,8 @@ class ViewOnePostedDream extends Component {
         let json = await response.json();
         //sanity
         console.log(`Posted Dream ${JSON.stringify(json)}`);
+
+        // this.goBack();
     }
 
     render() { 

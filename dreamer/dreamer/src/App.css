@@ -111,14 +111,13 @@ hr{
   border: 0px;
   background-color: rgb(233, 179, 233);
   color: rgb(83, 28, 81);
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .logoutStyle:hover{
   border: 0px;
-  background-color: rgb(233, 179, 233);
+  background-color: rgb(8, 101, 104);
   color: rgb(83, 28, 81);
-  font-size: 20px;
 }
 
 .registerComponent{
@@ -413,4 +412,40 @@ hr{
   margin-right:15%;
   width: 75%;
   box-shadow: 5px 10px 8px #cd79db;
+}
+
+.postLink{
+  font-size: 15px;
+  background-color: rgb(26, 81, 82);
+  border: 1px solid rgb(26, 81, 82);
+  border-radius: 25%;
+  height: 65px;
+  width: 75px;
+}
+
+.postLink:hover{
+  font-size: 15px;
+  background-color: rgb(105, 23, 211);
+  border: 1px solid rgb(105, 23, 211);
+  border-radius: 25%;
+  height: 65px;
+  width: 75px;
+}
+
+.spotLink{
+  font-size: 15px;
+  background-color: rgb(26, 81, 82);
+  border: 1px solid rgb(26, 81, 82);
+  border-radius: 25%;
+  height: 65px;
+  width: 90px;
+}
+
+.spotLink:hover{
+  font-size: 15px;
+  background-color: rgb(105, 23, 211);
+  border: 1px solid rgb(105, 23, 211);
+  border-radius: 25%;
+  height: 65px;
+  width: 90px;
 }

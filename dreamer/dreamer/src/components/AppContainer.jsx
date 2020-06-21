@@ -182,7 +182,7 @@ class AppContainer extends Component {
                    { /* Customer */ }
                    <Route path='/myDreams' exact component={() => <MyDreams tokenUser={this.state.tokenUser}/> }/>
                    <Route path='/dreamers/dreams/view/one/:id' exact component={(props) => <ViewOneDream {...props} />}/>
-                   <Route path='/dreamer/dream/edit/:id' exact component={() => <EditOwnDream/>}/>
+                   <Route path='/dreamer/dream/edit/:id' exact component={(props) => <EditOwnDream {...props} />}/>
 
                   { /*//////// Meanings ////////*/ }
                   { /* Admin */ }

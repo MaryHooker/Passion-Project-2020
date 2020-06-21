@@ -27,7 +27,7 @@ class MyDreams extends Component {
             dreams:json
         })
         //sanity
-        console.log(`My Dreams state ${JSON.stringify(json)}`)
+        // console.log(`My Dreams state ${JSON.stringify(json)}`)
     }
 
     render() { 

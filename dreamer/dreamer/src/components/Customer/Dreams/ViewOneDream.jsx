@@ -59,7 +59,7 @@ class ViewOneDream extends Component {
                 <p className='listedData'>{this.state.dream.type}</p>
                 <p className='listedData'>{this.state.dream.dreamDescription}</p>
                 </div>
-                <Link to={`/dreamer/dream/edit/${this.state.dream.id}`}><button>Edit</button></Link>
+                <Link to={`/dreamer/dream/edit/${this.state.dream._id}`}><button>Edit</button></Link>
                 <button onClick={this.deleteDream}>Delete</button>
             </div>
          );

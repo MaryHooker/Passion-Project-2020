@@ -11,12 +11,11 @@ class CustomerHome extends Component {
     render() { 
         return ( 
             <div>
-                <h2>Welcome back {this.props.tokenUser.name}!</h2>
+                <h2>Welcome back <span className='userName'>{this.props.tokenUser.name}</span>!</h2>
                 <br/>
                 <div className='dreamersLink'>
-                <Link to='/myDreams' className='dreamersLink'>My Dreams</Link>
+                <Link to='/myDreams' className='dreamersLink'><button className='adminHomeButton4'>My Dreams</button></Link>
                 </div>
-               
             </div>
          );
     }

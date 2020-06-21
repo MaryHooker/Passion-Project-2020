@@ -69,6 +69,16 @@ input:hover{
   font-size: 15px;
 }
 
+textarea{
+  background-color: rgb(233, 179, 233);
+  color: rgb(87, 20, 131);
+  border: 1px solid rgb(87, 20, 131);
+  border-radius: 4%;
+  margin-bottom: 5px;
+  font-family: serif;
+  font-size: 15px;
+}
+
 hr{
   border: 1px solid rgb(94, 26, 94);
   width: 90px;

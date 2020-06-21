@@ -3,7 +3,11 @@ import React,{Component} from 'react';
 class EditOwnDream extends Component {
     constructor(props) {
         super(props);
-        this.state = {  }
+        this.state = { 
+
+            type:"",
+            dreamDescription:"",
+         }
     }
 
     //when component mounts, run the inner function
@@ -20,7 +24,20 @@ class EditOwnDream extends Component {
         //place specific dream in state
         this.setState(
             {
-                dream:json
+                type:json.type,
+                dreamDescription:json.dreamDescription,
+            }
+        )
+
+        //sanity
+        console.log(json)
+    }
+
+    //handle changes of input fields
+    handleChanges = (event) => {
+        this.setState(
+            {
+                [event.target.id]: event.target.value
             }
         )
     }
@@ -48,7 +65,25 @@ class EditOwnDream extends Component {
     render() { 
         return ( 
             <div>
-                <h2>Edit Own Dream</h2>
+                <h2>Edit</h2>
+                <form action="">
+                    <div className="form-group">
+                        <label htmlFor="type"><span>Type:</span></label>
+                        <br/>
+                        <input type="text" name='type' id='type' onChange={this.handleChanges} value={this.state.type} />
+                    </div>
+
+                    <div className="form-group">
+                        <br/>
+                        <label htmlFor="dreamDescription"><span>Dream Description:</span></label>
+                        <br/>
+                        <textarea name='dreamDescription' id='dreamDescription' onChange={this.handleChanges} value={this.state.dreamDescription}  cols="30" rows="10"></textarea>
+                    </div>
+
+                    <div className="form-group">
+                        <button type='submit' onClick={this.handleSubmission}>Submit</button>
+                    </div>
+                </form>
             </div>
          );
     }

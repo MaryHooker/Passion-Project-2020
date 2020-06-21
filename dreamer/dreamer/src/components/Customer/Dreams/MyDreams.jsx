@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+import {Link} from 'react-router-dom';
 
 class MyDreams extends Component {
     constructor(props) {
@@ -39,10 +40,10 @@ class MyDreams extends Component {
                     this.state.dreams.map((dream) => {
                         return(
                             <div key={dream._id} className='dreamersDisplay'>
-                               
+                               <Link to={`dreamers/dreams/view/one/${dream._id}`}>
                                 <p className='listedData'>{dream.type}</p>
                                 <p className='listedData'>{dream.dreamDescription}</p>
-                                
+                                </Link>
                             </div>
                         )
                     })

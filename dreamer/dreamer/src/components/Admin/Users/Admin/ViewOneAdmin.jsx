@@ -31,6 +31,11 @@ class ViewOneAdmin extends Component {
         console.log(`Admin : View one ${JSON.stringify(json)}`)
     }
 
+    //On deletion/ go back to page to view all admin again in order to see that the admin was deleted
+    goBack = () => {
+        window.history.back();
+    }
+
     deleteAdmin = async() => {
         let response = await fetch(`/dreamers/admin/${this.state.admin.email}`,{
             method:"DELETE",
@@ -38,12 +43,14 @@ class ViewOneAdmin extends Component {
         let json = await response.json();
         //sanity
         console.log(`Deleting Admin ${JSON.stringify(json)}`);
+
+        this.goBack();
     }
 
     render() { 
         return ( 
             <div>
-                <h3 className='dreamersPageTitle'>View All Admin</h3>
+                {/* <h3 className='dreamersPageTitle'></h3> */}
                 <br/>
                 <br/>
                 <br/>

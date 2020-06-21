@@ -41,7 +41,6 @@ class DreamersDreams extends Component {
                             <div className='dreamDisplay'>
                                 <p className='listedData'>{dream.type}</p>
                                 <p className='listedData'>{dream.dreamDescription}</p>
-                                <p className='listedData'>{dream.dreamer}</p>
                             </div>
                         )
                     })

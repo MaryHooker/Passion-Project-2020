@@ -92,32 +92,33 @@ hr{
 
 .registerLink{
   margin-top: 2%;
-  grid-column: 10;
+  grid-column: 11;
   grid-row: 1;
 }
 
 .loginLink{
   margin-top: 2%;
-  grid-column: 11;
+  grid-column: 12;
   grid-row: 1;
 }
 
 .logoutButton{
-  grid-column: 11;
+  grid-column: 12;
   grid-row: 1;
 }
 
 .logoutStyle{
   border: 0px;
-  background-color: rgb(233, 179, 233);
-  color: rgb(83, 28, 81);
-  font-size: 16px;
+  color: rgb(182, 3, 137);
+  background-color: rgb(63, 3, 63);
+  font-size: 18px;
 }
 
 .logoutStyle:hover{
   border: 0px;
-  background-color: rgb(8, 101, 104);
-  color: rgb(83, 28, 81);
+font-size: 20px;
+color: rgb(182, 3, 137);
+background-color: rgb(63, 3, 63);
 }
 
 .registerComponent{
@@ -156,7 +157,7 @@ hr{
 }
 
 .noLineHome:hover{
-  color: rgb(190, 157, 9);
+  color: rgb(165, 79, 190);
 }
 
 /* //////////////////////// */
@@ -173,8 +174,8 @@ hr{
   /* height: 75%;
   width: 35%; */
   font-size: 15px;
-  background-color: rgb(122, 24, 24);
-  border: 1px solid rgb(117, 9, 9);
+  background-color: rgb(94, 6, 153);
+  border: 1px solid rgb(94, 6, 153);
   border-radius: 25%;
   height: 65px;
   width: 75px;
@@ -195,8 +196,8 @@ hr{
   /* height: 75%;
   width: 35%; */
   font-size: 15px;
-  background-color: rgb(19, 80, 16);
-  border: 1px solid rgb(19, 80, 16);
+  background-color: rgb(71, 9, 112);
+  border: 1px solid rgb(71, 9, 112);
   border-radius: 25%;
   height: 65px;
   width: 75px;
@@ -216,8 +217,8 @@ hr{
   /* height: 75%;
   width: 35%; */
   font-size: 15px;
-  background-color: rgb(170, 80, 6);
-  border: 1px solid rgb(170, 80, 6);
+  background-color: rgb(126, 6, 170);
+  border: 1px solid rgb(126, 6, 170);
   border-radius: 25%;
   height: 65px;
   width: 75px;
@@ -238,8 +239,8 @@ hr{
   /* height: 75%;
   width: 35%; */
   font-size: 15px;
-  background-color: rgb(17, 38, 112);
-  border: 1px solid rgb(17, 38, 112);
+  background-color: rgb(175, 60, 190);
+  border: 1px solid rgb(175, 60, 190);
   border-radius: 25%;
   height: 65px;
   width: 75px;

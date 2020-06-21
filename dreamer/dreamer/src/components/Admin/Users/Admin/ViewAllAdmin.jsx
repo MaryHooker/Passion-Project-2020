@@ -33,7 +33,7 @@ class ViewAllAdmin extends Component {
     render() { 
         return ( 
             <div>
-                <h3 className='dreamersPageTitle'>View All Admin</h3>
+                <h3 className='dreamersPageTitle'>Admin</h3>
                 <br/>
                 <div className='dreamersContainer'>
                 {

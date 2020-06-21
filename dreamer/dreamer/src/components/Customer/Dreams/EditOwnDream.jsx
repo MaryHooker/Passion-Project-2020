@@ -42,6 +42,12 @@ class EditOwnDream extends Component {
         )
     }
 
+    //function to go back to view all dreams once updated
+    goBack = () =>{
+        window.history.back();
+        window.history.back();
+    }
+
     //handle the submission button by fetching the method to update the dream
     handleSubmission = async(event) => {
         event.preventDefault();
@@ -53,13 +59,15 @@ class EditOwnDream extends Component {
             method:"PUT",
             headers:{
                 "Accept":"application/json",
-                "Content-type":"application'json"
+                "Content-type":"application/json"
             },
-            body: JSON.stringify(updatedDream)
+            body:JSON.stringify(updatedDream)
         })
         let json = await response.json();
         //sanity
         console.log(json)
+
+        this.goBack();
     }
 
     render() { 

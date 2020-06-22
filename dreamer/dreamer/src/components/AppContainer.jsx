@@ -29,6 +29,8 @@ import ViewOnePostedDream from './Admin/Posted/ViewOnePostedDream';
 //Spotlight
 import SpotlightedDreams from './Admin/SpotLight/SpotlightedDreams';
 import ViewOneSpotlightedDream from './Admin/SpotLight/ViewOneSpotlightedDream';
+//Links
+import ViewAllLinks from './Admin/Knowledge/ViewAllLinks';
 ////////// Customer imports /////////
 //Home
 import CustomerHome from './Customer/Home/CustomerHome';
@@ -200,6 +202,9 @@ class AppContainer extends Component {
                   {/* Admin */}
                   <Route path='/dreams/spotlighted' exact component={() => <SpotlightedDreams/> } />
                   <Route path='/dreams/spotlight/view/one/:id' exact component={(props) => <ViewOneSpotlightedDream {...props} /> } />
+
+                  {/*////////// Knowledge/Links //////////*/}
+                  <Route path='/knowledge/links' exact component={() => <ViewAllLinks/> }/>
 
                 </Router>
             </div>

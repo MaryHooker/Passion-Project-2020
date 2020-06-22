@@ -1,14 +1,14 @@
-import React,{Component} from 'react';
-import {Link} from 'react-router-dom'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 
 class AdminHome extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {  }
-    }
-    render() { 
-        return ( 
-            <div className='adminHomeContainer'>
+  constructor(props) {
+    super(props);
+    this.state = {  }
+  }
+  render() {
+    return (
+      <div className='adminHomeContainer'>
                 <div className='adminTitle'>
                 <h2>Welcome <span className='userName'>{this.props.tokenUser.name}</span>!</h2>
                 <br/>
@@ -25,10 +25,12 @@ class AdminHome extends Component {
                 <div className='dreamsLinkP'>
                 <Link to='/dreams/view/all' className='dreamsLink'><button className='adminHomeButton4'>Dreams</button></Link>
                 </div> 
-
+                <div className='knowledgeLinkP'>                
+                <Link to='/knowledge/links' className='dreamsLink'><button className='adminHomeButton5'>Knowledge</button></Link>  
+                </div>
             </div>
-         );
-    }
+      );
+  }
 }
- 
+
 export default AdminHome;

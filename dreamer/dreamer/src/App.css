@@ -1,7 +1,7 @@
 body{
   /* background-image: url('/pinkSky1.png'); */
-  background-color: rgb(63, 3, 63);
-  color: rgb(209, 162, 209);
+  background-color: rgb(41, 39, 41);
+  color: rgb(209, 152, 209);
   font-family: serif;
   text-align: center;
   height: 80vh;
@@ -267,6 +267,28 @@ background-color: rgb(63, 3, 63);
   width: 75px;
 }
 
+.adminHomeButton5{
+  /* height: 75%;
+  width: 35%; */
+  font-size: 15px;
+  background-color: rgb(171, 59, 223);
+  border: 1px solid rgb(175, 60, 190);
+  border-radius: 25%;
+  height: 65px;
+  width: 84px;
+}
+
+.adminHomeButton5:hover{
+  /* height: 75%;
+  width: 35%; */
+  font-size: 15px;
+  background-color: rgb(175, 60, 190);
+  border: 1px solid rgb(175, 60, 190);
+  border-radius: 25%;
+  height: 65px;
+  width: 84px;
+}
+
 .adminTitle{
   grid-column: 4;
   grid-row: 1;
@@ -274,7 +296,7 @@ background-color: rgb(63, 3, 63);
 
 .dreamersLinkP{
   margin-top: 5%;
-  grid-column: 4;
+  grid-column: 5;
   grid-row: 2;
 }
 
@@ -285,16 +307,23 @@ background-color: rgb(63, 3, 63);
 }
 
 .meaningsLinkP{
-  margin-top: 5%;
-  grid-column: 5;
-  grid-row: 2;
-}
-
-.dreamsLinkP{
   margin-top: 15%;
   grid-column: 4;
   grid-row: 3;
 }
+
+.dreamsLinkP{
+  margin-top: 5%;
+  grid-column: 4;
+  grid-row: 2;
+}
+
+.knowledgeLinkP{
+  margin-top: 15%;
+  grid-column: 4;
+  grid-row: 4;
+}
+
 .dreamersLink{
   text-decoration: none;
   color: rgb(182, 3, 137);

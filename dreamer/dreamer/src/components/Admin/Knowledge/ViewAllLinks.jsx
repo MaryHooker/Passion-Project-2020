@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-// import {Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 class ViewAllLinks extends Component {
     constructor(props) {
@@ -34,7 +34,7 @@ class ViewAllLinks extends Component {
         return ( 
             <div>
                 <h2 className='dreamersPageTitle'>Knowledge</h2>
-                {/* <Link to='/create/link' className='linkLink'><button>Add</button></Link> */}
+                <Link to='/knowledge/links/create' className='linkLink'><button>Add</button></Link>
                 <br/>
                 <br/>
                 <div className='dreamersContainer'>
@@ -42,7 +42,7 @@ class ViewAllLinks extends Component {
                     this.state.knowledge.map((link) => {
                         return(
                             <div key={link._id} className='dreamersDisplay'>
-                                <a href={link.link}>
+                                <a href={link.link} className='noLineLinks'>
                                 <p className='listedData'>{link.title}</p>
                                 <p className='listedData'>{link.link}</p>
                                 <p className='listedData'>{link.author}</p>

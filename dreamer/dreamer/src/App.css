@@ -489,3 +489,11 @@ background-color: rgb(63, 3, 63);
   height: 65px;
   width: 90px;
 }
+
+/* //////////////////////// */
+/* Admin Knowledge/Links  */
+/* //////////////////////// */
+
+.noLineLinks{
+  text-decoration: none;
+}

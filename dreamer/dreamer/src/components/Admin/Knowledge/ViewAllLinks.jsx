@@ -42,9 +42,11 @@ class ViewAllLinks extends Component {
                     this.state.knowledge.map((link) => {
                         return(
                             <div key={link._id} className='dreamersDisplay'>
+                                <a href={link.link}>
                                 <p className='listedData'>{link.title}</p>
                                 <p className='listedData'>{link.link}</p>
                                 <p className='listedData'>{link.author}</p>
+                                </a>
                             </div>
                         )
                     })

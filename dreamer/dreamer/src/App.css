@@ -497,3 +497,18 @@ background-color: rgb(63, 3, 63);
 .noLineLinks{
   text-decoration: none;
 }
+
+.linksContainer{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+}
+
+.linkDisplay{
+  background-color: rgb(182, 3, 137);
+  color: rgb(233, 179, 233);
+  border: 5px solid rgb(182, 3, 137);
+  border-radius: 5%;
+  margin-left: 37%; 
+  width: 25%;
+  box-shadow: 5px 10px 8px #cd79db;
+}

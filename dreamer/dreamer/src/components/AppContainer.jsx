@@ -32,6 +32,7 @@ import ViewOneSpotlightedDream from './Admin/SpotLight/ViewOneSpotlightedDream';
 //Links
 import ViewAllLinks from './Admin/Knowledge/ViewAllLinks';
 import CreateLink from './Admin/Knowledge/CreateLink';
+import LinkDetails from './Admin/Knowledge/LinkDetails';
 ////////// Customer imports /////////
 //Home
 import CustomerHome from './Customer/Home/CustomerHome';
@@ -208,6 +209,8 @@ class AppContainer extends Component {
                   {/* Admin */}
                   <Route path='/knowledge/links' exact component={() => <ViewAllLinks/> }/>
                   <Route path='/knowledge/links/create' exact component={() => <CreateLink/> }/>
+                  <Route path='/knowledge/links/details/:id' exact component={(props) => <LinkDetails {...props} /> }/>
+
 
                 </Router>
             </div>

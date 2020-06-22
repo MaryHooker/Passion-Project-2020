@@ -30,6 +30,23 @@ class ViewAllLinks extends Component {
         console.table(`Admin : Knowledge Links ${JSON.stringify(json)}`)
     }
 
+    //    // go back one page
+    //    goBack = () => {
+    //     window.history.back();
+    // }
+
+       //Function to delete a link from the database
+       deleteLink = async() => {
+        let response = await fetch(`/api/links/${this.state.knowledge.id}`,{
+            method:"DELETE",
+        })
+        let json = await response.json();
+        //sanity
+        console.log(`Deleting Link ${JSON.stringify(json)}`);
+
+        // this.goBack();
+    }
+
     render() { 
         return ( 
             <div>
@@ -37,7 +54,7 @@ class ViewAllLinks extends Component {
                 <Link to='/knowledge/links/create' className='linkLink'><button>Add</button></Link>
                 <br/>
                 <br/>
-                <div className='dreamersContainer'>
+                <div className='linksContainer'>
                 {
                     this.state.knowledge.map((link) => {
                         return(
@@ -47,11 +64,12 @@ class ViewAllLinks extends Component {
                                 <p className='listedData'>{link.link}</p>
                                 <p className='listedData'>{link.author}</p>
                                 </a>
+                                <Link to={`/knowledge/links/details/${link._id}`} className='linkLink'><button>Details</button></Link>            
                             </div>
                         )
                     })
                 }
-                </div>
+                </div>    
             </div>
          );
     }

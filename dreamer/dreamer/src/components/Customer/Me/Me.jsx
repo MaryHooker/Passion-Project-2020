@@ -30,6 +30,16 @@ class Me extends Component {
         })
     }
 
+    //On Delete
+    deleteMe = async() => {
+        let response = await fetch(`/dreamers/customer/${this.state.dreamer.email}`,{
+            method:"DELETE"
+        })
+        let json = await response.json();
+        //sanity
+        console.log(json)
+    }
+
     render() { 
         return ( 
             <div>
@@ -42,7 +52,7 @@ class Me extends Component {
                 <p className='listedData'>{this.state.dreamer.email}</p>
                 </div>
                 <Link to={`/me/edit/${this.state.dreamer.email}`}><button>Edit</button></Link>
-                {/* <button onClick={this.deleteMe}>Delete</button> */}
+                <button onClick={this.deleteMe}>Delete</button>
             </div>
          );
     }

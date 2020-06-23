@@ -43,6 +43,7 @@ import MyDreams from './Customer/Dreams/MyDreams';
 import ViewOneDream from './Customer/Dreams/ViewOneDream';
 import EditOwnDream from './Customer/Dreams/EditOwnDream';
 import CreateDream from './Customer/Dreams/CreateDream';
+import EditMe from './Customer/Me/EditMe';
 
 class AppContainer extends Component {
   constructor(props) {
@@ -180,6 +181,7 @@ class AppContainer extends Component {
                   <Route path='/dreamers/edit/:email' exact component={(props) => <EditDreamer {...props}/>}/>
                   { /* Customer */ }
                   <Route path='/me' exact component={() => <Me tokenUser={this.state.tokenUser} /> }/>
+                  <Route path='/me/edit/:email' exact component={(props) => <EditMe {...props} /> }/>
                 
                 { /*/////// Dreams ///////*/ }
                    { /* Admin */ }

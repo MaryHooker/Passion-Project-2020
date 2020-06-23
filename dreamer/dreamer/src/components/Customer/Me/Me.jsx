@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+import {Link} from 'react-router-dom';
 
 class Me extends Component {
     constructor(props) {
@@ -40,8 +41,8 @@ class Me extends Component {
                 <p className='listedData'>{this.state.dreamer.name}</p>
                 <p className='listedData'>{this.state.dreamer.email}</p>
                 </div>
-                {/* <Link to={`/dreamer/dream/edit/${this.state.dream._id}`}><button>Edit</button></Link>
-                <button onClick={this.deleteDream}>Delete</button> */}
+                <Link to={`/me/edit/${this.state.dreamer.email}`}><button>Edit</button></Link>
+                {/* <button onClick={this.deleteMe}>Delete</button> */}
             </div>
          );
     }

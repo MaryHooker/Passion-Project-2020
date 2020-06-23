@@ -14,9 +14,9 @@ class CreateDream extends Component {
         console.log(`Dream Creator ${JSON.stringify(this.state.dreamer)}`)
     }
 
-    // goBack = () => {
-    //     window.history.back();
-    // }
+    goBack = () => {
+        window.history.back();
+    }
 
     // handle changes to fields
     handleChanges = (event) => {
@@ -47,7 +47,7 @@ class CreateDream extends Component {
         //sanity
         console.log(json)
 
-        // this.goBack();
+        this.goBack();
     }
 
     render() {

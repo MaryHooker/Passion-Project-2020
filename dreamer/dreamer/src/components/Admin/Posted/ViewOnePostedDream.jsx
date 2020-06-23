@@ -90,7 +90,7 @@ class ViewOnePostedDream extends Component {
 
     render() { 
         if(this.state.redirect){
-            return <Redirect to='/dreams/spotlighted'/>
+            return <Redirect to='/dreams/posted'/>
         }
         return ( 
             <div>

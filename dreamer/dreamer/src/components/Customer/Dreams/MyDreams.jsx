@@ -42,7 +42,7 @@ class MyDreams extends Component {
                     this.state.dreams.map((dream) => {
                         return(
                             <div key={dream._id} className='dreamersDisplay'>
-                               <Link to={`dreamers/dreams/view/one/${dream._id}`}>
+                               <Link to={`dreamers/dreams/view/one/${dream._id}`} className='noLineLinks'>
                                 <p className='listedData'>{dream.type}</p>
                                 <p className='listedData'>{dream.dreamDescription}</p>
                                 </Link>

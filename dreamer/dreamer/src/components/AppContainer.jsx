@@ -190,10 +190,10 @@ class AppContainer extends Component {
                    <Route path='/dreams/view/one/:id' exact component={(props) => <AdminViewOneDream {...props} /> } />
                    
                    { /* Customer */ }
-                   <Route path='/myDreams' exact component={() => <MyDreams tokenUser={this.state.tokenUser}/> }/>
+                   <Route path='/myDreams' exact component={(props) => <MyDreams tokenUser={this.state.tokenUser} {...props} /> }/>
                    <Route path='/dreamers/dreams/view/one/:id' exact component={(props) => <ViewOneDream {...props} />}/>
                    <Route path='/dreamer/dream/edit/:id' exact component={(props) => <EditOwnDream {...props} />}/>
-                   <Route path='/create/dream/:email' exact component={() => <CreateDream tokenUser={this.state.tokenUser}/>}/>
+                   <Route path='/create/dream/:email' exact component={(props) => <CreateDream tokenUser={this.state.tokenUser} {...props} />}/>
 
                   { /*//////// Meanings ////////*/ }
                   { /* Admin */ }

@@ -182,13 +182,36 @@ router.delete('/admin/:email', (req, res) => {
 router.put('/customer/:email', (req, res) => {
   console.log('Deleting customer');
   // res.send(`Deleting customer`);
+  if(!req.body.password){
   DreamerCollection.findOneAndUpdate({
     email: req.params.email
   }, req.body, {
     new: true
   }, (errors, results) => {
     errors ? res.send(errors) : res.send(results);
-  })
+    })} else{
+      let password = req.body.password;
+       //encrypt New Users password
+       bcrypt.genSalt(10, (error, salt) => {
+        bcrypt.hash(password, salt, (error, hash) => {
+          //if hash has errors then send the error message
+          if (error) {
+            console.log(`Password has not been hashed`);
+            res.status(500).json({
+              error: error
+            });
+          } // else if hash does not contain any errors
+          else {
+            //set password of new user to hash password
+            req.body.password = hash
+            //save the new user
+            newUser.save()
+              //send New User to database
+              .then(user => res.json(user));
+          }
+        })
+      })
+    }
 })
 
 /////////////////////////////////////////////////////////////////////

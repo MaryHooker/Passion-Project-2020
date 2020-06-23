@@ -28,6 +28,7 @@ router.put('/dream/relate/:email', async (req, res) => {
 
   await DreamCollection.create(req.body, (errors, results1) => {
     errors ? res.json(errors) : dream = results1;
+    console.log(dream);
 
     DreamerCollection.findOne({
       email: req.params.email

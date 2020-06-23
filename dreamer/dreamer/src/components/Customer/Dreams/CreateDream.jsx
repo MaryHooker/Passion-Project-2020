@@ -9,24 +9,29 @@ class CreateDream extends Component {
             dreamer: this.props.tokenUser.email,  
         }
     }
-
-    goBack = () => {
-        window.history.back();
+    //sanity
+    componentDidMount(){
+        console.log(`Dream Creator ${JSON.stringify(this.state.dreamer)}`)
     }
+
+    // goBack = () => {
+    //     window.history.back();
+    // }
 
     // handle changes to fields
     handleChanges = (event) => {
         this.setState({ [event.target.id]: event.target.value });
+        
     }
    
-    // handle submission/ fetch method to add a new meaning to the database
+    // handle submission/ fetch method to add a new dream to the database
     handleSubmission = async (event) => {
         event.preventDefault();
-        //new meaning to be submitted
+        //new dream to be submitted
         const newDream = {
             type: this.state.type,
             dreamDescription: this.state.dreamDescription,
-            dreamer: this.state.dreamer,
+            // dreamer: this.state.dreamer,
         };
         const response = await fetch(`/api/dream/relate/${this.state.dreamer}`, {
             method: "PUT",
@@ -42,7 +47,7 @@ class CreateDream extends Component {
         //sanity
         console.log(json)
 
-        this.goBack();
+        // this.goBack();
     }
 
     render() {

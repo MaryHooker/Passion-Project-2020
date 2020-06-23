@@ -12,8 +12,8 @@ class Me extends Component {
     //when component mounts, run inner function
     componentDidMount(){
         this.loadData();
-        //sanity
-        console.log(this.props.tokenUser.email)
+        // //sanity
+        // console.log(this.props.tokenUser.email)
     }
 
     //function to fetch method to view logged in dreamers information

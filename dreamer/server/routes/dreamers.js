@@ -204,10 +204,13 @@ router.put('/customer/:email', (req, res) => {
           else {
             //set password of new user to hash password
             req.body.password = hash
-            //save the new user
-            newUser.save()
-              //send New User to database
-              .then(user => res.json(user));
+            DreamerCollection.findOneAndUpdate({
+              email: req.params.email
+            }, req.body, {
+              new: true
+            },(errors,results) => {
+              errors ? res.send(errors): res.send(results);
+            })
           }
         })
       })

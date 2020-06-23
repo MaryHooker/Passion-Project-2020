@@ -39,27 +39,34 @@ class EditMe extends Component {
             {
                name: json.name,
                email:json.email,
-               password:json.password
             }
         )
         //sanity
         console.log(`Editing Me ${JSON.stringify(this.state)}`)
     }
 
-     // go back two pages
-     goBackTwo = () => {
-        window.history.back();
-        window.history.back();
-    }
+    //  // go back two pages
+    //  goBackTwo = () => {
+    //     window.history.back();
+    //     window.history.back();
+    // }
 
     handleSubmission = async(event) => {
         event.preventDefault();
+        let updatedDreamer;
+        //conditional to update password if new in entered
+        if(!this.state.password){
+            updatedDreamer = {
+                name:this.state.name,
+                email:this.state.email
+            }
+        } else{
             //define data to be passed through the body
-            let updatedDreamer = {
+            updatedDreamer = {
                 name:this.state.name,
                 email:this.state.email,
                 password:this.state.password
-            }
+            }}
             //use fetch to import update method from server
             let response = await fetch(`/dreamers/customer/${this.props.match.params.email}`,{
                 method:'PUT',
@@ -75,7 +82,7 @@ class EditMe extends Component {
             //sanity
             console.log(` Edit Me ${JSON.stringify(json)}`)
 
-            this.goBackTwo();
+            // this.goBackTwo();
     }
 
     render() { 

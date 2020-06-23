@@ -10,10 +10,15 @@ class CustomerHome extends Component {
     }
     render() { 
         return ( 
-            <div>
+            <div className='adminHomeContainer'>
+                <div className='adminTitle'>
                 <h2>Welcome back <span className='userName'>{this.props.tokenUser.name}</span>!</h2>
+                </div>
                 <br/>
-                <div className='dreamersLink'>
+                <div className='adminLinkP'>
+                <Link to='/me' className='dreamersLink'><button className='adminHomeButton1'>Me</button></Link>
+                </div>
+                <div className='dreamsLinkP'>
                 <Link to='/myDreams' className='dreamersLink'><button className='adminHomeButton4'>My Dreams</button></Link>
                 </div>
             </div>

@@ -36,10 +36,13 @@ import LinkDetails from './Admin/Knowledge/LinkDetails';
 ////////// Customer imports /////////
 //Home
 import CustomerHome from './Customer/Home/CustomerHome';
+//Me
+import Me from './Customer/Me/Me';
 //Dreams
 import MyDreams from './Customer/Dreams/MyDreams';
 import ViewOneDream from './Customer/Dreams/ViewOneDream';
 import EditOwnDream from './Customer/Dreams/EditOwnDream';
+import CreateDream from './Customer/Dreams/CreateDream';
 
 class AppContainer extends Component {
   constructor(props) {
@@ -168,7 +171,7 @@ class AppContainer extends Component {
                 { /* ///////// Admin /////////*/ }
                 <Route path='/admin/view/all' exact component={() => <ViewAllAdmin/> }/>
                 <Route path='/admin/view/one/:email' exact component={(props) => <ViewOneAdmin {...props} /> }/>
-
+                
 
                 { /*/////// Dreamers ///////*/ }
                   { /* Admin */ }
@@ -176,6 +179,7 @@ class AppContainer extends Component {
                   <Route path='/dreamers/view/one/:email' exact component={(props) => <ViewOneDreamer {...props} /> }/>
                   <Route path='/dreamers/edit/:email' exact component={(props) => <EditDreamer {...props}/>}/>
                   { /* Customer */ }
+                  <Route path='/me' exact component={() => <Me tokenUser={this.state.tokenUser} /> }/>
                 
                 { /*/////// Dreams ///////*/ }
                    { /* Admin */ }
@@ -187,6 +191,7 @@ class AppContainer extends Component {
                    <Route path='/myDreams' exact component={() => <MyDreams tokenUser={this.state.tokenUser}/> }/>
                    <Route path='/dreamers/dreams/view/one/:id' exact component={(props) => <ViewOneDream {...props} />}/>
                    <Route path='/dreamer/dream/edit/:id' exact component={(props) => <EditOwnDream {...props} />}/>
+                   <Route path='/create/dream/:email' exact component={() => <CreateDream tokenUser={this.state.tokenUser}/>}/>
 
                   { /*//////// Meanings ////////*/ }
                   { /* Admin */ }
@@ -210,8 +215,6 @@ class AppContainer extends Component {
                   <Route path='/knowledge/links' exact component={() => <ViewAllLinks/> }/>
                   <Route path='/knowledge/links/create' exact component={() => <CreateLink/> }/>
                   <Route path='/knowledge/links/details/:id' exact component={(props) => <LinkDetails {...props} /> }/>
-
-
                 </Router>
             </div>
       );

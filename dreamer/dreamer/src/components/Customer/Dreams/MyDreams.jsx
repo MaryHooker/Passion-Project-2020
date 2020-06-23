@@ -35,6 +35,8 @@ class MyDreams extends Component {
             <div>
                 <h2 className='dreamersPageTitle'>My Dreams</h2>
                 <br/>
+                                <Link to={`/create/dream/${this.props.tokenUser.email}`} className='linkLink'><button>Add</button></Link>
+
                 <div className='dreamersContainer'>
                 {
                     this.state.dreams.map((dream) => {

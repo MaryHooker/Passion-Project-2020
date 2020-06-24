@@ -13,6 +13,7 @@ class MyPosted extends Component {
         this.loadPosted();
     }
 
+    //Fetch method to view a specific dreamer & pull out all of their dreams to be saved in state
     loadPosted = async() => {
         let response = await fetch(`/dreamers/customer/view/${this.props.tokenUser.email}`,{
             method:"GET",
@@ -31,9 +32,17 @@ class MyPosted extends Component {
 
     }
     render() { 
+        if(!this.state.dreams){
+            return(
+                <div>
+                    <h5>You have no posted dreams</h5>
+                </div>
+            )
+        } else{
         return ( 
             <div>
                 <h3>My posted dreams</h3>
+                {/* map function to drill */}
                 <div className='dreamersContainer'>
                 {
                     this.state.dreams.map((dream) => {
@@ -47,13 +56,12 @@ class MyPosted extends Component {
                                 </div>
                             )
                         }
-                       
                     })
                 }
                 </div>
             </div>
          );
-    }
+    }}
 }
  
 export default MyPosted;

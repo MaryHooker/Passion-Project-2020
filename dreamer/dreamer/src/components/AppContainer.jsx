@@ -47,6 +47,7 @@ import EditMe from './Customer/Me/EditMe';
 //Posted
 import MyPosted from './Customer/Posted/MyPosted';
 import DreamerOnePosted from './Customer/Posted/DreamerOnePosted';
+import DreamerViewAllPostedDreams from './Customer/Posted/DreamerViewAllPostedDreams';
 
 class AppContainer extends Component {
   constructor(props) {
@@ -212,6 +213,7 @@ class AppContainer extends Component {
                   {/* Customer */}
                   <Route path='/dreams/posted/mine' exact component={(props) => <MyPosted {...props} tokenUser={this.state.tokenUser} /> }/>
                   <Route path='/dreamer/posted/view/one/:id' exact component={(props) => <DreamerOnePosted {...props} /> } />
+                  <Route path='/dreamer/dreams/posted' exact component={() => <DreamerViewAllPostedDreams/> }/>
 
                   {/*//////// Spotlight ////////*/}
                   {/* Admin */}

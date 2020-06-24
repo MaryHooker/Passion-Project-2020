@@ -51,6 +51,7 @@ import DreamerViewAllPostedDreams from './Customer/Posted/DreamerViewAllPostedDr
 //Knowledge
 import DreamerKnowledge from './Customer/Knowledge/DreamerKnowledge';
 import DreamerViewAllSpotlightedDreams from './Customer/Spotlight/DreamerViewAllSpotlightedDreams';
+import DreamerViewAllMeanings from './Customer/Meanings/DreamerViewAllMeanings';
 class AppContainer extends Component {
   constructor(props) {
     super(props);
@@ -207,6 +208,8 @@ class AppContainer extends Component {
                   <Route path='/create/meaning' exact component={() => <CreateMeaning/> }/>
                   <Route path='/meanings/view/one/:id' exact component={(props) => <ViewOneMeaning {...props} /> }/>
                   <Route path='/meanings/edit/:id' exact component={(props) => <EditMeaning {...props}/> }/>
+                  {/* Dreamer */}
+                  <Route path='/dreamer/meanings' exact component={() => <DreamerViewAllMeanings/> }/>
 
                   {/*////////// Posted /////////*/}
                   {/* Admin */}

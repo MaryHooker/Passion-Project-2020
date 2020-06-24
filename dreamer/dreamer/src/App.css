@@ -311,6 +311,28 @@ background-color: rgb(29, 1, 29);
   width: 84px;
 }
 
+.adminHomeButton7{
+  /* height: 75%;
+  width: 35%; */
+  font-size: 15px;
+  background-color: rgb(110, 15, 148);
+  border: 1px solid rgb(110, 15, 148);
+  border-radius: 25%;
+  height: 65px;
+  width: 84px;
+}
+
+.adminHomeButton7:hover{
+  /* height: 75%;
+  width: 35%; */
+  font-size: 15px;
+  background-color: rgb(182, 3, 137);
+  border: 1px solid rgb(182, 3, 137);
+  border-radius: 25%;
+  height: 65px;
+  width: 84px;
+}
+
 .adminTitle{
   grid-column: 4;
   grid-row: 1;
@@ -343,6 +365,12 @@ background-color: rgb(29, 1, 29);
 .knowledgeLinkP{
   margin-top: 15%;
   grid-column: 4;
+  grid-row: 4;
+}
+
+.dreamerMeaningsLinkP{
+  margin-top: 15%;
+  grid-column: 3;
   grid-row: 4;
 }
 

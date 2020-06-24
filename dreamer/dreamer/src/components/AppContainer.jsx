@@ -50,6 +50,7 @@ import DreamerOnePosted from './Customer/Posted/DreamerOnePosted';
 import DreamerViewAllPostedDreams from './Customer/Posted/DreamerViewAllPostedDreams';
 //Knowledge
 import DreamerKnowledge from './Customer/Knowledge/DreamerKnowledge';
+import DreamerViewAllSpotlightedDreams from './Customer/Spotlight/DreamerViewAllSpotlightedDreams';
 class AppContainer extends Component {
   constructor(props) {
     super(props);
@@ -220,6 +221,8 @@ class AppContainer extends Component {
                   {/* Admin */}
                   <Route path='/dreams/spotlighted' exact component={() => <SpotlightedDreams/> } />
                   <Route path='/dreams/spotlight/view/one/:id' exact component={(props) => <ViewOneSpotlightedDream {...props} /> } />
+                  {/* Dreamer */}
+                  <Route path='/dreamer/spotlighted' exact component={() => <DreamerViewAllSpotlightedDreams/> }/>
 
                   {/*////////// Knowledge/Links //////////*/}
                   {/* Admin */}

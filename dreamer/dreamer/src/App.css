@@ -289,6 +289,28 @@ background-color: rgb(29, 1, 29);
   width: 84px;
 }
 
+.adminHomeButton56{
+  /* height: 75%;
+  width: 35%; */
+  font-size: 15px;
+  background-color: rgb(131, 20, 235);
+  border: 1px solid rgb(131, 20, 235);
+  border-radius: 25%;
+  height: 65px;
+  width: 84px;
+}
+
+.adminHomeButton56:hover{
+  /* height: 75%;
+  width: 35%; */
+  font-size: 15px;
+  background-color: rgb(182, 3, 137);
+  border: 1px solid rgb(182, 3, 137);
+  border-radius: 25%;
+  height: 65px;
+  width: 84px;
+}
+
 .adminTitle{
   grid-column: 4;
   grid-row: 1;

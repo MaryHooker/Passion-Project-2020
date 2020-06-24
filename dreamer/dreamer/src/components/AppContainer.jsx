@@ -48,7 +48,8 @@ import EditMe from './Customer/Me/EditMe';
 import MyPosted from './Customer/Posted/MyPosted';
 import DreamerOnePosted from './Customer/Posted/DreamerOnePosted';
 import DreamerViewAllPostedDreams from './Customer/Posted/DreamerViewAllPostedDreams';
-
+//Knowledge
+import DreamerKnowledge from './Customer/Knowledge/DreamerKnowledge';
 class AppContainer extends Component {
   constructor(props) {
     super(props);
@@ -225,6 +226,8 @@ class AppContainer extends Component {
                   <Route path='/knowledge/links' exact component={() => <ViewAllLinks/> }/>
                   <Route path='/knowledge/links/create' exact component={() => <CreateLink/> }/>
                   <Route path='/knowledge/links/details/:id' exact component={(props) => <LinkDetails {...props} /> }/>
+                  {/* Customer */}
+                  <Route path='/dreamer/knowledge' exact component={() => <DreamerKnowledge/> }/>
                 </Router>
             </div>
       );

@@ -24,6 +24,9 @@ class CustomerHome extends Component {
                 <div className='dreamersLinkP'>
                 <Link to='/dreamer/dreams/posted' className='dreamersLink'><button className='adminHomeButton3'>Posted Dreams</button></Link>
                 </div>
+                <div className='knowledgeLinkP'>
+                <Link to='/dreamer/knowledge' className='dreamersLink'><button className='adminHomeButton5'>Knowledge</button></Link>
+                </div>
             </div>
          );
     }

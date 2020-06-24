@@ -271,8 +271,8 @@ background-color: rgb(29, 1, 29);
   /* height: 75%;
   width: 35%; */
   font-size: 15px;
-  background-color: rgb(171, 59, 223);
-  border: 1px solid rgb(175, 60, 190);
+  background-color: rgb(183, 21, 204);
+  border: 1px solid rgb(183, 21, 204);
   border-radius: 25%;
   height: 65px;
   width: 84px;
@@ -282,8 +282,8 @@ background-color: rgb(29, 1, 29);
   /* height: 75%;
   width: 35%; */
   font-size: 15px;
-  background-color: rgb(175, 60, 190);
-  border: 1px solid rgb(175, 60, 190);
+  background-color: rgb(182, 3, 137);
+  border: 1px solid rgb(182, 3, 137);
   border-radius: 25%;
   height: 65px;
   width: 84px;
@@ -400,7 +400,7 @@ background-color: rgb(29, 1, 29);
 
 .dreamersDisplay:hover{
   background-color: rgb(105, 23, 211);
-  color: rgb(182, 3, 137);
+  color: rgb(236, 161, 218);
   border: 5px solid rgb(105, 23, 211);
   border-radius: 5%;
   margin-left: 10%;

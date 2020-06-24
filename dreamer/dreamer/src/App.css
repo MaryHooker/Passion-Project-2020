@@ -120,7 +120,7 @@ hr{
 .logoutStyle{
   border: 0px;
   color: rgb(182, 3, 137);
-  background-color: rgb(63, 3, 63);
+  background-color: rgb(29, 1, 29);
   font-size: 18px;
 }
 
@@ -128,7 +128,7 @@ hr{
   border: 0px;
 font-size: 20px;
 color: rgb(182, 3, 137);
-background-color: rgb(63, 3, 63);
+background-color: rgb(29, 1, 29);
 }
 
 .registerComponent{

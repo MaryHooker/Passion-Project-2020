@@ -35,7 +35,9 @@ class MyDreams extends Component {
             <div>
                 <h2 className='dreamersPageTitle'>My Dreams</h2>
                 <br/>
-                <Link to={`/create/dream/${this.props.tokenUser.email}`} className='linkLink'><button>Add</button></Link>
+                <Link to='/dreams/posted/mine' className='linkLink'><button className='postLink'>Posted</button></Link>
+                <br/>
+                <Link to={`/create/dream/${this.props.tokenUser.email}`} className='linkLink' ><button>Add</button></Link>
 
                 <div className='dreamersContainer'>
                 {

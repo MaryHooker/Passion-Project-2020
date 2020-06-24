@@ -112,7 +112,7 @@ router.get('/dreams', (req, res) => {
   // res.send(`Viewing all Dreams`);
   DreamCollection.find({}, (errors, results) => {
     errors ? res.send(errors) : res.send(results);
-  }).populate('dreamer')
+  }).populate('dreamer');
 })
 
 //View all dreams by dreamers id
@@ -260,6 +260,25 @@ router.get('/dreams/all/posted/true', (req, res) => {
     .populate('dreamer')
 })
 
+// //View all posted dreams of a specific user/dreamer
+// router.get('/dreams/posted/mine/:id', (req, res) => {
+//   console.log(`Viewing all posted Dreams`);
+//   let dreamer;
+//   let dreamArray=[];
+//   // res.send(`Viewing all posted Dreams`);
+//   DreamerCollection.findOne({
+//     _id: req.params.id
+//   }, (errors, results1) => {
+//     errors ? res.send(errors) : dreamer=results1;
+//     dreamer.dreams.map((dream) =>{
+//       if(dream.posted){
+//         dreamArray.push(dream);
+//       }
+//       console.log(dream);
+//     });
+//     res.send(dreamArray)
+//   });
+// })
 
 /////////////////////////////////////////////////////////////////////
 //      Spotlight

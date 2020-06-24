@@ -127,7 +127,7 @@ router.get('/customer/view/:email', (req, res) => {
     email: req.params.email
   }, (errors, results) => {
     errors ? res.send(errors) : res.send(results);
-  })
+  }).populate('dreams');
 })
 
 // Delete dreamer by email

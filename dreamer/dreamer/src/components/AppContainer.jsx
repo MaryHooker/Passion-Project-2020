@@ -44,6 +44,9 @@ import ViewOneDream from './Customer/Dreams/ViewOneDream';
 import EditOwnDream from './Customer/Dreams/EditOwnDream';
 import CreateDream from './Customer/Dreams/CreateDream';
 import EditMe from './Customer/Me/EditMe';
+//Posted
+import MyPosted from './Customer/Posted/MyPosted';
+import DreamerOnePosted from './Customer/Posted/DreamerOnePosted';
 
 class AppContainer extends Component {
   constructor(props) {
@@ -206,6 +209,9 @@ class AppContainer extends Component {
                   {/* Admin */}
                   <Route path='/dreams/posted' exact component={() => <PostedDreams/>}/>
                   <Route path='/dreams/posted/view/one/:id' exact component={(props) => <ViewOnePostedDream {...props}/> } />
+                  {/* Customer */}
+                  <Route path='/dreams/posted/mine' exact component={(props) => <MyPosted {...props} tokenUser={this.state.tokenUser} /> }/>
+                  <Route path='/dreamer/posted/view/one/:id' exact component={(props) => <DreamerOnePosted {...props} /> } />
 
                   {/*//////// Spotlight ////////*/}
                   {/* Admin */}

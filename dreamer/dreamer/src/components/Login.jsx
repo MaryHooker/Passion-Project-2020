@@ -10,6 +10,8 @@ export default class Login extends Component {
       password: "",
       token: "",
       redirect: false,
+      emailError:"",
+      passwordError:""
     };
   }
   //handle changes in the input fields
@@ -17,9 +19,46 @@ export default class Login extends Component {
     this.setState({ [event.target.name]: event.target.value });
   };
 
+  //function to validate input fields
+  validate = () => {
+   let emailError = "";
+   let passwordError = "";
+//if email does not incluse @, set value to invalid email
+   if(!this.state.email.includes('@')){
+     emailError = 'invalid email'
+   }
+
+   //if email is empty
+   if(!this.state.email){
+     emailError = 'email cannot be blank'
+   }
+
+   //if password is empty
+   if(!this.state.password){
+     passwordError = 'password cannot be blank'
+   }
+
+   //if there is an email or password error, set state to our message and return false
+   if(passwordError || emailError){
+     //could be emailError:emailError but if the 
+    this.setState({emailError, passwordError});
+    return false;
+  }
+
+
+
+   //if you dont hit any errors in validate, return true
+   return true;
+  }
+
   //Sends user input to server which should return a token
   handleSubmission = async (event) => {
-    event.preventDefault();
+    // event.preventDefault();
+    //calling function to validate
+    const isValid = this.validate();
+    if(isValid){
+      console.log(this.state)
+    }
     let user = { email: this.state.email, password: this.state.password };
     let response = await fetch("/dreamers/login", {
       method: "post",
@@ -30,12 +69,13 @@ export default class Login extends Component {
     });
     let json = await response.json();
     console.log(json);
-    if (json.error) {
-      window.alert(json.error);
-    }
+    // if (json.error) {
+    //   window.alert(json.error);
+    // }
     this.setState({ token: json.token });
     console.log(this.state.token);
     this.props.getToken(json.token);
+
   };
 
   render() {
@@ -55,10 +95,12 @@ export default class Login extends Component {
                 type="email"
                 name="email"
                 id="email"
+                placeholder="email"
                 value={this.state.email}
                 className="form-control"
                 onChange={this.handleChange}
               />
+              <div style={{ fontSize: 13, color:"red"}}>{this.state.emailError}</div>
             </div>
             <div className='labelPositions'>
               <label htmlFor="password" className='loginPage'><span>Password</span> </label>
@@ -66,10 +108,12 @@ export default class Login extends Component {
                 type="password"
                 name="password"
                 id="password"
+                placeholder="password"
                 value={this.state.password}
                 className="form-control"
                 onChange={this.handleChange}
               />
+              <div style={{ fontSize: 13, color:"red"}}>{this.state.passwordError}</div>
             </div>
             <div>
               <button onClick={this.handleSubmission}>Submit</button>

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {Redirect} from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 
 
 class CustomerRegister extends Component {
@@ -10,7 +10,10 @@ class CustomerRegister extends Component {
       email: "",
       password: "",
       role: "Customer",
-      redirect:false
+      redirect: false,
+      nameError: "",
+      emailError: "",
+      passwordError: "",
     };
   }
 
@@ -20,12 +23,59 @@ class CustomerRegister extends Component {
       [event.target.name]: event.target.value
     })
   }
+  //function to validate input fields
+  validate = () => {
+    let nameError = "";
+    let emailError = "";
+    let passwordError = "";
+
+    //If name is empty
+    if (!this.state.name) {
+      nameError = "name cannot be blank"
+    }
+
+    //if email does not incluse @, set value to invalid email
+    if (!this.state.email.includes('@')) {
+      emailError = 'invalid email'
+    }
+
+    //if email is empty
+    if (!this.state.email) {
+      emailError = 'email cannot be blank'
+    }
+
+    //if password is empty
+    if (!this.state.password) {
+      passwordError = 'password cannot be blank'
+    }
+
+    //if there is an email or password error, set state to our message and return false
+    if (passwordError || emailError || nameError) {
+      //could be emailError:emailError but if the 
+      this.setState({
+        nameError,
+        emailError,
+        passwordError
+      });
+      return false;
+
+    }
+    //if error, do not redirect
+    this.setState({
+      redirect: false
+    })
+  }
 
   //handle submit button
   handleSubmission = async(event) => {
     event.preventDefault();
+    //calling function to validate
+    const isValid = this.validate();
+    if (isValid) {
+      console.log(this.state)
+    }
     //define data to be passed through the body
-    let newAdmin = {
+    let newUser = {
       name: this.state.name,
       email: this.state.email,
       password: this.state.password,
@@ -39,7 +89,7 @@ class CustomerRegister extends Component {
         "Content-type": "application/json",
       // "Authorization": this.props.token
       },
-      body: JSON.stringify(newAdmin)
+      body: JSON.stringify(newUser)
     })
     let json = await response.json();
 
@@ -47,13 +97,13 @@ class CustomerRegister extends Component {
     console.log(`Registration Form ${JSON.stringify(json)}`)
     //Setting redirect to true 
     this.setState({
-      redirect:true
+      redirect: true
     })
 
   }
 
   render() {
-    if(this.state.redirect){
+    if (this.state.redirect) {
       return <Redirect to='/login'/>
     }
     return (
@@ -69,9 +119,15 @@ class CustomerRegister extends Component {
       type="text"
       name="name"
       id="name"
+      placeholder='name'
       value={this.state.name}
       onChange={this.handleInputs}
       />
+                    <div style={{
+        fontSize: 13,
+        color: "red"
+      }}>{this.state.nameError}</div>
+
           </div>
           <div className='labelPositions'>
             <label htmlFor="email">
@@ -81,9 +137,15 @@ class CustomerRegister extends Component {
       type="email"
       name="email"
       id="email"
+      placeholder="email"
       value={this.state.email}
       onChange={this.handleInputs}
       />
+                    <div style={{
+        fontSize: 13,
+        color: "red"
+      }}>{this.state.emailError}</div>
+
           </div>
           <div className='labelPositions'>
             <label htmlFor="password">
@@ -93,9 +155,15 @@ class CustomerRegister extends Component {
       type="password"
       name="password"
       id="password"
+      placeholder='password'
       value={this.state.password}
       onChange={this.handleInputs}
       />
+                    <div style={{
+        fontSize: 13,
+        color: "red"
+      }}>{this.state.passwordError}</div>
+
           </div>
           <button onClick={this.handleSubmission}>Submit</button>
         </form>

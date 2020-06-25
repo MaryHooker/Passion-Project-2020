@@ -72,7 +72,7 @@ router.post("/login", (req, res) => {
   }).then((user) => {
     if (!user) {
       res.status(404).json({
-        error: "Email/Password is incorrect"
+        error: 'Email is invalid'
       });
     } else {
       bcrypt.compare(req.body.password, user.password).then((isMatched) => {
@@ -96,7 +96,7 @@ router.post("/login", (req, res) => {
           });
         } else {
           res.status(500).json({
-            error: "Email/Password is incorrect"
+            error: "Password is invalid"
           });
         }
       });

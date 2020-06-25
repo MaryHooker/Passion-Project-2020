@@ -318,14 +318,10 @@ background-color: rgb(29, 1, 29);
   grid-column: 1/3;
   grid-row: 4/7;
   font-size: 15px;
-  background-color: rgb(110, 15, 148);
+  background-color: rgb(143, 57, 177);
   border: 1px solid rgb(110, 15, 148);
   border-radius: 25%;
-  /* height: 85px;
-  width: 84px; */
 }
-
-
 
 .meaningsAll{
   color: rgb(231, 181, 238);
@@ -333,6 +329,15 @@ background-color: rgb(29, 1, 29);
 
 .meaningsAll:hover{
   color: rgb(6, 8, 138);
+}
+
+.meaningLetters{
+  color: yellow;
+  font-size: 16px;
+}
+
+.meaningLetters:hover{
+  color: rgb(33, 202, 188);
 }
 
 /* ///////////////////////// */

@@ -177,7 +177,7 @@ background-color: rgb(29, 1, 29);
 .adminHomeContainer{
  display: grid;
  grid-template-columns: repeat(7,1fr);
- grid-template-rows: auto auto auto auto;
+ grid-template-rows: repeat(7,1fr);
 }
 
 .adminHomeButton1{
@@ -311,27 +311,31 @@ background-color: rgb(29, 1, 29);
   width: 84px;
 }
 
-.adminHomeButton7{
-  /* height: 75%;
-  width: 35%; */
+/*////////Meanings////////*/
+
+.dreamerMeaningsLinkP{
+  /* margin-top: 15%; */
+  grid-column: 1/3;
+  grid-row: 4/7;
   font-size: 15px;
   background-color: rgb(110, 15, 148);
   border: 1px solid rgb(110, 15, 148);
   border-radius: 25%;
-  height: 65px;
-  width: 84px;
+  /* height: 85px;
+  width: 84px; */
 }
 
-.adminHomeButton7:hover{
-  /* height: 75%;
-  width: 35%; */
-  font-size: 15px;
-  background-color: rgb(182, 3, 137);
-  border: 1px solid rgb(182, 3, 137);
-  border-radius: 25%;
-  height: 65px;
-  width: 84px;
+
+
+.meaningsAll{
+  color: rgb(231, 181, 238);
 }
+
+.meaningsAll:hover{
+  color: rgb(6, 8, 138);
+}
+
+/* ///////////////////////// */
 
 .adminTitle{
   grid-column: 4;
@@ -368,11 +372,6 @@ background-color: rgb(29, 1, 29);
   grid-row: 4;
 }
 
-.dreamerMeaningsLinkP{
-  margin-top: 15%;
-  grid-column: 3;
-  grid-row: 4;
-}
 
 .dreamersLink{
   text-decoration: none;

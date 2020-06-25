@@ -52,6 +52,7 @@ import DreamerViewAllPostedDreams from './Customer/Posted/DreamerViewAllPostedDr
 import DreamerKnowledge from './Customer/Knowledge/DreamerKnowledge';
 import DreamerViewAllSpotlightedDreams from './Customer/Spotlight/DreamerViewAllSpotlightedDreams';
 import DreamerViewAllMeanings from './Customer/Meanings/DreamerViewAllMeanings';
+import MeaningsByLetter from './Customer/Meanings/MeaningsByLetter';
 class AppContainer extends Component {
   constructor(props) {
     super(props);
@@ -210,6 +211,7 @@ class AppContainer extends Component {
                   <Route path='/meanings/edit/:id' exact component={(props) => <EditMeaning {...props}/> }/>
                   {/* Dreamer */}
                   <Route path='/dreamer/meanings' exact component={() => <DreamerViewAllMeanings/> }/>
+                  <Route path='/meanings/letter/:letter' exact component={(props) => <MeaningsByLetter {...props}/> }/>
 
                   {/*////////// Posted /////////*/}
                   {/* Admin */}

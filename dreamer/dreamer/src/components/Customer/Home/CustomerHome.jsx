@@ -11,6 +11,27 @@ class CustomerHome extends Component {
     }
   }
 
+        //when component mounts, runner inner function
+        componentDidMount(){
+            this.allDreams();
+        }
+    
+         //Function to fetch all posted dreams from database
+         allDreams = async() => {
+            let response = await fetch('/api/dreams/all/posted/true',{
+                method:"GET"
+            })
+            let json = await response.json();
+          
+            //place data in state
+            this.setState({
+                dreams : json
+            })
+            //sanity
+            console.log(json)
+    
+        }
+
   // handle changes to fields
   handleChange = (event) => {
     this.setState({
@@ -20,24 +41,48 @@ class CustomerHome extends Component {
 
   render() {
     return (
-      <div className='adminHomeContainer'>
-                <div className='adminTitle'>
+      <div className='dreamerHomeContainer'>
+                {/* <div className='adminTitle'>
                 <h2>Welcome back <span className='userName'>{this.props.tokenUser.name}</span>!</h2>
-                </div>
+                </div> */}
                 <br/>
-                <div className='adminLinkP'>
-                <Link to='/me' className='dreamersLink'><button className='adminHomeButton1'>Me</button></Link>
+                <div className='meLinkP'>
+                <Link to='/me' className='dreamersLink'><button className='dreamerHomeButton1'>Me</button></Link>
                 </div>
-                <div className='dreamsLinkP'>
-                <Link to='/myDreams' className='dreamersLink'><button className='adminHomeButton4'>My Dreams</button></Link>
+                <div className='myDreamsLinkP'>
+                <Link to='/myDreams' className='dreamersLink'><button className='dreamerHomeButton4'>My Dreams</button></Link>
                 </div>
-                <div className='dreamersLinkP'>
-                <Link to='/dreamer/dreams/posted' className='dreamersLink'><button className='adminHomeButton3'>Posted Dreams</button></Link>
+                <div className='dreamerForum'>
+                    <h4>Dreamer's Dreams</h4>
+                    <div className='dreamPostDisplay'>
+                {
+                    this.state.dreams.map((dream) => {
+                        return(
+                            <div key={dream._id} className='eachPost'>
+                            {/* <Link to={`/dreams/posted/view/one/${dream._id}`} className='linkLink'> */}
+                            <p className='listedDataPost'>{dream.type}</p>
+                            <p className='listedDataPost'>{dream.dreamDescription}</p>
+                            {
+                                dream.dreamer.map((dreamer) => {
+                                    return(
+                                        <div key={dreamer._id}>
+                                            <p className='listedDataDreamer'>{dreamer.name}</p>
+                                        </div>
+                                    )
+                                })
+                            }
+                          
+                        </div>
+                        )
+                    })
+
+                }
                 </div>
-                <div className='meaningsLinkP'>
-                <Link to='/dreamer/knowledge' className='dreamersLink'><button className='adminHomeButton5'>Knowledge</button></Link>
                 </div>
-                <div className='knowledgeLinkP'>
+                <div className='dreamerKnowledgeLinkP'>
+                <Link to='/dreamer/knowledge' className='dreamersLink'><button className='dreamerHomeButton5'>Knowledge</button></Link>
+                </div>
+                <div className='spotlightLinkP'>
                 <Link to='/dreamer/spotlighted' className='dreamersLink'><button className='adminHomeButton56'>Spotlighted</button></Link>
                 </div>
                 <div className='dreamerMeaningsLinkP'>

@@ -36,7 +36,8 @@ class CustomerRegister extends Component {
 
     //if email does not incluse @, set value to invalid email
     if (!this.state.email.includes('@')) {
-      emailError = 'invalid email'
+      emailError = 'invalid email';
+      this.setState({email:""}); 
     }
 
     //if email is empty
@@ -140,6 +141,7 @@ class CustomerRegister extends Component {
       placeholder="email"
       value={this.state.email}
       onChange={this.handleInputs}
+      required={true}
       />
                     <div style={{
         fontSize: 13,

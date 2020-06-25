@@ -53,7 +53,7 @@ export default class Login extends Component {
 
   //Sends user input to server which should return a token
   handleSubmission = async (event) => {
-    // event.preventDefault();
+    event.preventDefault();
     //calling function to validate
     const isValid = this.validate();
     if(isValid){

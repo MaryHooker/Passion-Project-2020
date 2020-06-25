@@ -39,7 +39,7 @@ class ViewOneMeaning extends Component {
 
     //Function to delete a dreamer from the database
     deleteMeaning = async() => {
-        let response = await fetch(`/api/meanings/${this.state.meaning.id}`,{
+        let response = await fetch(`/api/meanings/${this.state.meaning._id}`,{
             method:"DELETE",
         })
         let json = await response.json();

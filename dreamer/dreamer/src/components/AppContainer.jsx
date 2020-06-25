@@ -51,8 +51,10 @@ import DreamerViewAllPostedDreams from './Customer/Posted/DreamerViewAllPostedDr
 //Knowledge
 import DreamerKnowledge from './Customer/Knowledge/DreamerKnowledge';
 import DreamerViewAllSpotlightedDreams from './Customer/Spotlight/DreamerViewAllSpotlightedDreams';
+//Meanings
 import DreamerViewAllMeanings from './Customer/Meanings/DreamerViewAllMeanings';
 import MeaningsByLetter from './Customer/Meanings/MeaningsByLetter';
+import FindingWordMeaning from './Customer/Meanings/FindingWordMeaning';
 class AppContainer extends Component {
   constructor(props) {
     super(props);
@@ -212,6 +214,7 @@ class AppContainer extends Component {
                   {/* Dreamer */}
                   <Route path='/dreamer/meanings' exact component={() => <DreamerViewAllMeanings/> }/>
                   <Route path='/meanings/letter/:letter' exact component={(props) => <MeaningsByLetter {...props}/> }/>
+                  <Route path='/meanings/word/:word' exact component={(props) => <FindingWordMeaning {...props} /> }/>
 
                   {/*////////// Posted /////////*/}
                   {/* Admin */}

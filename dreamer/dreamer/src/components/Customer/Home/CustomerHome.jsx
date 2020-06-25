@@ -1,16 +1,26 @@
-import React,{Component} from 'react';
-import {Link} from 'react-router-dom';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class CustomerHome extends Component {
-    constructor(props) {
-        super(props);
-        this.state = { 
-            dreams:[],
-         }
+  constructor(props) {
+    super(props);
+    this.state = {
+      dreams: [],
+      //word entered in search bar when looking up a meaning
+      word: "",
     }
-    render() { 
-        return ( 
-            <div className='adminHomeContainer'>
+  }
+
+  // handle changes to fields
+  handleChange = (event) => {
+    this.setState({
+      [event.target.id]: event.target.value
+    });
+  }
+
+  render() {
+    return (
+      <div className='adminHomeContainer'>
                 <div className='adminTitle'>
                 <h2>Welcome back <span className='userName'>{this.props.tokenUser.name}</span>!</h2>
                 </div>
@@ -61,10 +71,16 @@ class CustomerHome extends Component {
                 <Link to={`/meanings/letter/${'X'}`} className='noLineLinks'><span className='meaningLetters'>X</span></Link>
                 <Link to={`/meanings/letter/${'Y'}`} className='noLineLinks'><span className='meaningLetters'>Y</span></Link>
                 <Link to={`/meanings/letter/${'Z'}`} className='noLineLinks'><span className='meaningLetters'>Z</span></Link>
+                <br/>
+                        <form>
+                            <label htmlFor="word"><span>Word </span></label>
+                            <input type="text" name="word" id="word" onChange={this.handleChange} />
+                            <Link to={`/meanings/word/${this.state.word}`}><button>Search</button></Link>
+                        </form>
                 </div>
             </div>
-         );
-    }
+      );
+  }
 }
- 
+
 export default CustomerHome;

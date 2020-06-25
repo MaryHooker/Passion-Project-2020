@@ -340,6 +340,19 @@ background-color: rgb(29, 1, 29);
   color: rgb(33, 202, 188);
 }
 
+.oneMeaningDisplay{
+  background-color: rgb(182, 3, 137);
+  color: rgb(233, 179, 233);
+  border: 5px solid rgb(182, 3, 137);
+  border-radius: 5%;
+  width: 35%;
+  margin-left: 30%;
+  padding: 2%;
+  text-align: center;
+  box-shadow: 5px 10px 8px #cd79db;
+}
+
+
 /* ///////////////////////// */
 
 .adminTitle{

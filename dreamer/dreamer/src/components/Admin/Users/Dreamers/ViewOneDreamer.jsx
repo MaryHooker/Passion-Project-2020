@@ -32,6 +32,10 @@ class ViewOneDreamer extends Component {
         console.log(this.state.dreamer._id)
     }
 
+    goBack = () => {
+        window.history.back();
+      }
+
     //Function to delete a dreamer from the database
     deleteDreamer = async() => {
         let response = await fetch(`/dreamers/customer/${this.state.dreamer.email}`,{
@@ -40,6 +44,9 @@ class ViewOneDreamer extends Component {
         let json = await response.json();
         //sanity
         console.log(`Deleting Dreamer ${JSON.stringify(json)}`);
+
+        //after deletion go back to previous page to confirm
+        this.goBack();
     }
 
     render() { 

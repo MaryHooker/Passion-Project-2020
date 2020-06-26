@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import DreamerViewAllPostedDreams from '../Posted/DreamerViewAllPostedDreams';
 
 class CustomerHome extends Component {
   constructor(props) {
@@ -47,14 +48,16 @@ class CustomerHome extends Component {
                 </div> */}
                 <br/>
                 <div className='meLinkP'>
-                <Link to='/me' className='dreamersLink'><button className='dreamerHomeButton1'>Me</button></Link>
+                <Link to='/me' className='dreamersLink'><span className='dreamerHomeButton1'>Me</span></Link>
                 </div>
                 <div className='myDreamsLinkP'>
-                <Link to='/myDreams' className='dreamersLink'><button className='dreamerHomeButton4'>My Dreams</button></Link>
+                <Link to='/myDreams' className='dreamersLink'><span className='dreamerHomeButton4'>My Dreams</span></Link>
                 </div>
                 <div className='dreamerForum'>
                     <h2>Dreamer's Dreams</h2>
-                    <div className='dreamPostDisplay'>
+                   
+                        {/* <iframe src={<DreamerViewAllPostedDreams/>} frameborder="0"> */}
+                        <div className='dreamPostDisplay'>
                 {
                     this.state.dreams.map((dream) => {
                         return(
@@ -75,22 +78,23 @@ class CustomerHome extends Component {
                         </div>
                         )
                     })
-
                 }
-                </div>
+                 </div>
+                {/* </iframe> */}
+               
                 </div>
                 <div className='dreamerKnowledgeLinkP'>
-                <Link to='/dreamer/knowledge' className='dreamersLink'><button className='dreamerHomeButton5'>Knowledge</button></Link>
+                <Link to='/dreamer/knowledge' className='dreamersLink'><span className='dreamerHomeButton5'>Knowledge</span></Link>
                 </div>
                 <div className='spotlightLinkP'>
-                <Link to='/dreamer/spotlighted' className='dreamersLink'><button className='spotlightHomeButton56'>Spotlighted</button></Link>
+                <Link to='/dreamer/spotlighted' className='dreamersLink'><span className='spotlightHomeButton56'>Spotlighted</span></Link>
                 </div>
                 <div className='dreamerMeaningsLinkP'>
                 <Link to='/dreamer/meanings' className='dreamersLink'><span className='meaningsAll'>Meanings</span></Link>
                 <br/>
                 <br/>
                 <form>
-                            <label htmlFor="word"><span>Word </span></label>
+                            <label htmlFor="word"><span> </span></label>
                             <input type="text" name="word" id="word" onChange={this.handleChange} />
                             <Link to={`/meanings/word/${this.state.word}`}><button>Search</button></Link>
                         </form>

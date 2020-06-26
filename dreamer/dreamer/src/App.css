@@ -380,8 +380,8 @@ background-color: rgb(29, 1, 29);
 .dreamerHomeContainer{
   display: grid;
   grid-template-columns: repeat(12,1fr);
-  grid-template-rows: repeat(7,1fr);
-  height: 85vh;
+  grid-template-rows: repeat(6,1fr);
+  height: 80vh;
 }
 
 /* //////// My Dreams ///////// */
@@ -392,7 +392,7 @@ background-color: rgb(29, 1, 29);
 }
 
 .dreamerHomeButton4{
-  font-size: 15px;
+  font-size: 24px;
   background-color: rgb(175, 60, 190);
   border: 1px solid rgb(175, 60, 190);
   /* border-radius: 25%; */
@@ -401,7 +401,7 @@ background-color: rgb(29, 1, 29);
 }
 
 .dreamerHomeButton4:hover{
-  font-size: 15px;
+  font-size: 24px;
   background-color: rgb(180, 34, 136);
   border: 1px solid rgb(180, 34, 136);
   /* border-radius: 25%; */
@@ -417,7 +417,7 @@ background-color: rgb(29, 1, 29);
 }
 
 .dreamerHomeButton1{
-  font-size: 26px;
+  font-size: 24px;
   background-color: rgb(94, 6, 153);
   border: 1px solid rgb(94, 6, 153);
   /* border-radius: 25%; */
@@ -426,7 +426,7 @@ background-color: rgb(29, 1, 29);
 }
 
 .dreamerHomeButton1:hover{
-  font-size: 26px;
+  font-size: 24px;
   background-color: rgb(153, 6, 153);
   border: 1px solid rgb(153, 6, 153);
   /* border-radius: 25%; */
@@ -474,23 +474,30 @@ background-color: rgb(29, 1, 29);
   /* margin-top: 15%; */
   grid-column: 1/4;
   grid-row: 3/8;
-  font-size: 15px;
+  font-size: 24px;
   background-color: rgb(143, 57, 177);
   border: 1px solid rgb(110, 15, 148);
   /* border-radius: 25%; */
+  padding: 1%;
 }
 
 .meaningsAll{
   color: rgb(231, 181, 238);
+  font-size: 24px;
 }
 
 .meaningsAll:hover{
-  color: rgb(6, 8, 138);
+  color: rgb(16, 142, 192);
+}
+
+.lettersContainer{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
 }
 
 .meaningLetters{
   color: yellow;
-  font-size: 16px;
+  font-size: 22px;
 }
 
 .meaningLetters:hover{
@@ -517,7 +524,7 @@ background-color: rgb(29, 1, 29);
 }
 
 .dreamerHomeButton5{
-  font-size: 15px;
+  font-size: 24px;
   background-color: rgb(107, 18, 119);
   border: 1px solid rgb(107, 18, 119);
   /* border-radius: 25%; */
@@ -544,7 +551,7 @@ background-color: rgb(29, 1, 29);
 }
 
 .spotlightHomeButton56{
-  font-size: 15px;
+  font-size: 24px;
   background-color: rgb(131, 20, 235);
   border: 1px solid rgb(131, 20, 235);
   height: 175%;

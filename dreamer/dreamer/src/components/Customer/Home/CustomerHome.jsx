@@ -53,7 +53,7 @@ class CustomerHome extends Component {
                 <Link to='/myDreams' className='dreamersLink'><button className='dreamerHomeButton4'>My Dreams</button></Link>
                 </div>
                 <div className='dreamerForum'>
-                    <h4>Dreamer's Dreams</h4>
+                    <h2>Dreamer's Dreams</h2>
                     <div className='dreamPostDisplay'>
                 {
                     this.state.dreams.map((dream) => {
@@ -86,10 +86,16 @@ class CustomerHome extends Component {
                 <Link to='/dreamer/spotlighted' className='dreamersLink'><button className='spotlightHomeButton56'>Spotlighted</button></Link>
                 </div>
                 <div className='dreamerMeaningsLinkP'>
-                    <h4>Meanings</h4>
-                <Link to='/dreamer/meanings' className='dreamersLink'><span className='meaningsAll'>All</span></Link>
+                <Link to='/dreamer/meanings' className='dreamersLink'><span className='meaningsAll'>Meanings</span></Link>
                 <br/>
                 <br/>
+                <form>
+                            <label htmlFor="word"><span>Word </span></label>
+                            <input type="text" name="word" id="word" onChange={this.handleChange} />
+                            <Link to={`/meanings/word/${this.state.word}`}><button>Search</button></Link>
+                        </form>
+                        <br/>
+                        <div className='lettersContainer'>
                 <Link to={`/meanings/letter/${'A'}`} className='noLineLinks'><span className='meaningLetters'>A</span></Link>
                 <Link to={`/meanings/letter/${'B'}`} className='noLineLinks'><span className='meaningLetters'>B</span></Link>
                 <Link to={`/meanings/letter/${'C'}`} className='noLineLinks'><span className='meaningLetters'>C</span></Link>
@@ -116,12 +122,9 @@ class CustomerHome extends Component {
                 <Link to={`/meanings/letter/${'X'}`} className='noLineLinks'><span className='meaningLetters'>X</span></Link>
                 <Link to={`/meanings/letter/${'Y'}`} className='noLineLinks'><span className='meaningLetters'>Y</span></Link>
                 <Link to={`/meanings/letter/${'Z'}`} className='noLineLinks'><span className='meaningLetters'>Z</span></Link>
+                </div>
                 <br/>
-                        <form>
-                            <label htmlFor="word"><span>Word </span></label>
-                            <input type="text" name="word" id="word" onChange={this.handleChange} />
-                            <Link to={`/meanings/word/${this.state.word}`}><button>Search</button></Link>
-                        </form>
+                      
                 </div>
             </div>
       );

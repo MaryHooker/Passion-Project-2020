@@ -180,6 +180,65 @@ background-color: rgb(29, 1, 29);
  grid-template-rows: repeat(6,1fr);
 }
 
+
+.adminTitle{
+  grid-column: 4;
+  grid-row: 1;
+}
+
+.dreamersLink{
+  text-decoration: none;
+  color: rgb(182, 3, 137);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.dreamersLink:hover{
+  text-decoration: none;
+  color: rgb(83, 28, 81);
+  font-weight: bold;
+}
+
+.adminLink{
+  text-decoration: none;
+  color: rgb(182, 3, 137);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.adminLink:hover{
+  text-decoration: none;
+  color: rgb(83, 28, 81);
+  font-weight: bold;
+}
+
+.meaningsLink{
+  text-decoration: none;
+  color: rgb(182, 3, 137);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.meaningsLink:hover{
+  text-decoration: none;
+  color:rgb(83, 28, 81);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.dreamsLink{
+  text-decoration: none;
+  color: rgb(182, 3, 137);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.dreamsLink:hover{
+  text-decoration: none;
+  color:rgb(83, 28, 81);
+  font-weight: bold;
+}
+
 .adminHomeButton1{
   font-size: 15px;
   background-color: rgb(94, 6, 153);
@@ -292,7 +351,6 @@ background-color: rgb(29, 1, 29);
   grid-row: 2;
 }
 
-
 .dreamersLinkP{
   margin-top: 5%;
   grid-column: 5;
@@ -315,7 +373,9 @@ background-color: rgb(29, 1, 29);
   grid-row: 4;
 }
 
-/*////////////////////////////////////////////////////////////////*/
+/* ////////////////////////////////////////////////////////////////////////// */
+/*                              Dreamer Home Page */
+/* //////////////////////////////////////////////////////////////////////////// */
 
 .dreamerHomeContainer{
   display: grid;
@@ -499,72 +559,34 @@ background-color: rgb(29, 1, 29);
   width: 150%;
 }
 
-/* /////////////////////////////////////////////////////////////////////// */
 
-/* ////////////////////////////////// */
-/* .adminTitle{
-  grid-column: 4;
-  grid-row: 1;
-} */
+/* ///////////////////////////////////////////////////////////////////////// */
+/*                            Components                                     */
+/* ///////////////////////////////////////////////////////////////////////// */
 
 
+/*////////////////////////////   Admin    ////////////////////////////////// */
 
-.dreamersLink{
-  text-decoration: none;
-  color: rgb(182, 3, 137);
-  font-size: 16px;
-  font-weight: bold;
+/* //////////////// */
+/*  Dreamers */
+/* //////////////// */
+
+/*/// Admin View One Dreamer  ///*/
+
+.dreamerDisplay{
+  background-color: rgb(182, 3, 137);
+  color: rgb(233, 179, 233);
+  border: 5px solid rgb(182, 3, 137);
+  border-radius: 5%;
+  margin-left: 42%; 
+  margin-right:15%;
+  width: 15%;
+  box-shadow: 5px 10px 8px #cd79db;
 }
 
-.dreamersLink:hover{
-  text-decoration: none;
-  color: rgb(83, 28, 81);
-  font-weight: bold;
-}
 
-.adminLink{
-  text-decoration: none;
-  color: rgb(182, 3, 137);
-  font-size: 16px;
-  font-weight: bold;
-}
+/*/// Admin View All Dreamers  ///*/
 
-.adminLink:hover{
-  text-decoration: none;
-  color: rgb(83, 28, 81);
-  font-weight: bold;
-}
-
-.meaningsLink{
-  text-decoration: none;
-  color: rgb(182, 3, 137);
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.meaningsLink:hover{
-  text-decoration: none;
-  color:rgb(83, 28, 81);
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.dreamsLink{
-  text-decoration: none;
-  color: rgb(182, 3, 137);
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.dreamsLink:hover{
-  text-decoration: none;
-  color:rgb(83, 28, 81);
-  font-weight: bold;
-}
-
-/* //////////////////////// */
-/* Admin View All Dreamers  */
-/* //////////////////////// */
 
 .dreamersContainer{
   display: grid;
@@ -610,32 +632,6 @@ background-color: rgb(29, 1, 29);
   text-decoration: none;
 }
 
-
-
-
-/* ///////////////////////////////////////////////////////////////////////// */
-/*                            Components                                     */
-/* ///////////////////////////////////////////////////////////////////////// */
-
-
-/*////////////////////////////   Admin    ////////////////////////////////// */
-
-/* //////////////// */
-/*  Dreamers */
-/* //////////////// */
-
-/*/// Admin View One Dreamer  ///*/
-
-.dreamerDisplay{
-  background-color: rgb(182, 3, 137);
-  color: rgb(233, 179, 233);
-  border: 5px solid rgb(182, 3, 137);
-  border-radius: 5%;
-  margin-left: 42%; 
-  margin-right:15%;
-  width: 15%;
-  box-shadow: 5px 10px 8px #cd79db;
-}
 
 /* //////////////// */
 /*  Dreams */

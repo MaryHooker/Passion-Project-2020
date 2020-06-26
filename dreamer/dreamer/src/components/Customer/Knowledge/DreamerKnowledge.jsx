@@ -57,7 +57,7 @@ class DreamerKnowledge extends Component {
                 {
                     this.state.knowledge.map((link) => {
                         return(
-                            <div key={link._id} className='dreamersDisplay'>
+                            <div key={link._id} className='knowledgeDisplay'>
                                 <a href={link.link} className='noLineLinks'target="_blank">
                                 <p className='listedData'>{link.title}</p>
                                 <p className='listedData'>{link.link}</p>

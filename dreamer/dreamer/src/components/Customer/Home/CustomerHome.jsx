@@ -60,7 +60,7 @@ class CustomerHome extends Component {
                         return(
                             <div key={dream._id} className='eachPost'>
                             {/* <Link to={`/dreams/posted/view/one/${dream._id}`} className='linkLink'> */}
-                            <p className='listedDataPost'>{dream.type}</p>
+                            <p className='listedDataPostType'>{dream.type}</p>
                             <p className='listedDataPost'>{dream.dreamDescription}</p>
                             {
                                 dream.dreamer.map((dreamer) => {
@@ -83,7 +83,7 @@ class CustomerHome extends Component {
                 <Link to='/dreamer/knowledge' className='dreamersLink'><button className='dreamerHomeButton5'>Knowledge</button></Link>
                 </div>
                 <div className='spotlightLinkP'>
-                <Link to='/dreamer/spotlighted' className='dreamersLink'><button className='adminHomeButton56'>Spotlighted</button></Link>
+                <Link to='/dreamer/spotlighted' className='dreamersLink'><button className='spotlightHomeButton56'>Spotlighted</button></Link>
                 </div>
                 <div className='dreamerMeaningsLinkP'>
                     <h4>Meanings</h4>

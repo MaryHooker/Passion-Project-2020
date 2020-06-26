@@ -182,7 +182,6 @@ background-color: rgb(29, 1, 29);
  grid-template-rows: repeat(6,1fr);
 }
 
-
 .adminTitle{
   grid-column: 4;
   grid-row: 1;
@@ -465,7 +464,7 @@ background-color: rgb(29, 1, 29);
   grid-row: 3/8;
   font-size: 24px;
   /* background-color: rgb(138, 104, 151); */
-  border: 1px solid rgb(197, 135, 221);
+  border: 5px solid rgb(197, 135, 221);
   /* border-radius: 25%; */
   padding: 1%;
   margin: 1%;
@@ -487,7 +486,7 @@ background-color: rgb(29, 1, 29);
 
 .meaningLetters{
   color: rgb(234, 178, 241);
-  font-size: 36px;
+  font-size: 34px;
 }
 
 .meaningLetters:hover{

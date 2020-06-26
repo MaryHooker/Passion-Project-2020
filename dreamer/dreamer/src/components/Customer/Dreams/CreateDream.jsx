@@ -1,65 +1,78 @@
 import React, { Component } from 'react';
 
 class CreateDream extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            type: "",
-            dreamDescription: "",
-            dreamer: this.props.tokenUser.email,  
-        }
+  constructor(props) {
+    super(props);
+    this.state = {
+      type: "",
+      dreamDescription: "",
+      dreamer: this.props.tokenUser.email,
     }
+  }
+  //sanity
+  componentDidMount() {
+    console.log(`Dream Creator ${JSON.stringify(this.state.dreamer)}`)
+  }
+
+  goBack = () => {
+    window.history.back();
+  }
+
+  // handle changes to fields
+  handleChanges = (event) => {
+    this.setState({
+      [event.target.id]: event.target.value
+    });
+
+  }
+
+  // handle submission/ fetch method to add a new dream to the database
+  handleSubmission = async (event) => {
+    event.preventDefault();
+    //new dream to be submitted
+    const newDream = {
+      type: this.state.type,
+      dreamDescription: this.state.dreamDescription,
+    // dreamer: this.state.dreamer,
+    };
+    const response = await fetch(`/api/dream/relate/${this.state.dreamer}`, {
+      method: "PUT",
+      headers: {
+        // "Authorization": this.props.token,
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify(newDream)
+    });
+
+    const json = await response.json();
     //sanity
-    componentDidMount(){
-        console.log(`Dream Creator ${JSON.stringify(this.state.dreamer)}`)
-    }
+    console.log(json)
 
-    goBack = () => {
-        window.history.back();
-    }
+    this.goBack();
+  }
 
-    // handle changes to fields
-    handleChanges = (event) => {
-        this.setState({ [event.target.id]: event.target.value });
-        
-    }
-   
-    // handle submission/ fetch method to add a new dream to the database
-    handleSubmission = async (event) => {
-        event.preventDefault();
-        //new dream to be submitted
-        const newDream = {
-            type: this.state.type,
-            dreamDescription: this.state.dreamDescription,
-            // dreamer: this.state.dreamer,
-        };
-        const response = await fetch(`/api/dream/relate/${this.state.dreamer}`, {
-            method: "PUT",
-            headers: {
-                // "Authorization": this.props.token,
-                "Content-Type": "application/json",
-                "Accept": "application/json"
-            },
-            body: JSON.stringify(newDream)
-        });
+  render() {
 
-        const json = await response.json();
-        //sanity
-        console.log(json)
-
-        this.goBack();
-    }
-
-    render() {
-        
-        return (
-            <div>
+    return (
+      <div>
                 <h2>Dream Form</h2>
 
                 <form action="">
                     <div className="form-group">
-                        <label htmlFor="type"><span>Type:</span></label>
-                        <input type="text" name='type' id='type' onChange={this.handleChanges} value={this.state.type} />
+                    <label for="type">Dream Type</label>
+
+                        <select name="type" id="type" onChange={this.handleChanges} value={this.state.type}>
+                        <option value="Daydream">Daydream</option>
+                        <option value="Lucid">Lucid</option>
+                        <option value="Nightmare">Nightmare</option>
+                        <option value="Recurring">Recurring</option>
+                        <option value="Healing">Healing</option>
+                        <option value="Prophetic">Prophetic</option>
+                        <option value="Signal">Signal</option>
+                        <option value="Epic">Epic</option>
+                        </select>
+                    
                     </div>
 
                     <div className="form-group">
@@ -72,8 +85,8 @@ class CreateDream extends Component {
                     </div>
                 </form>
             </div>
-        );
-    }
+      );
+  }
 }
 
 export default CreateDream;

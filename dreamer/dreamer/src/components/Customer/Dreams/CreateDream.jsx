@@ -56,13 +56,14 @@ class CreateDream extends Component {
 
     return (
       <div>
-                <h2>Dream Form</h2>
+                {/* <h2>Dream Form</h2> */}
 
                 <form action="">
                     <div className="form-group">
-                    <label for="type">Dream Type</label>
+                    {/* <label for="type">Dream Type</label> */}
 
                         <select name="type" id="type" onChange={this.handleChanges} value={this.state.type}>
+                        <option >Dream Type</option>
                         <option value="Daydream">Daydream</option>
                         <option value="Lucid">Lucid</option>
                         <option value="Nightmare">Nightmare</option>
@@ -72,12 +73,16 @@ class CreateDream extends Component {
                         <option value="Signal">Signal</option>
                         <option value="Epic">Epic</option>
                         </select>
-                    
+                    <br/>
+                    <br/>
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="dreamDescription"><span>Description:</span></label>
-                        <input type="text" name='dreamDescription' id='dreamDescription' onChange={this.handleChanges} value={this.state.dreamDescription} />
+                        <label htmlFor="dreamDescription"><span className='whatHappened'>What happened?</span></label>
+                        <br/>
+                        <br/>
+                        <textarea name="dreamDescription" id="dreamDescription" cols="30" rows="10"  onChange={this.handleChanges} value={this.state.dreamDescription} ></textarea>
+                        {/* <input type="text" name='dreamDescription' id='dreamDescription' onChange={this.handleChanges} value={this.state.dreamDescription} /> */}
                     </div>
 
                     <div className="form-group">

@@ -33,12 +33,15 @@ class MyDreams extends Component {
     render() { 
         return ( 
             <div>
-                <h2 className='dreamersPageTitle'>My Dreams</h2>
+                {/* <h2 className='dreamersPageTitle'>My Dreams</h2> */}
+                {/* <br/> */}
+                <Link to='/dreams/posted/mine' className='linkLink'><span className='postLink'>Posted</span></Link>
                 <br/>
-                <Link to='/dreams/posted/mine' className='linkLink'><button className='postLink'>Posted</button></Link>
                 <br/>
-                <Link to={`/create/dream/${this.props.tokenUser.email}`} className='linkLink' ><button>Add</button></Link>
-
+                <br/>
+                <Link to={`/create/dream/${this.props.tokenUser.email}`} className='linkLink' ><img src="./addSymbol2.png" alt="addSymbol"/></Link>
+                <br/>
+                <br/>
                 <div className='dreamersContainer'>
                 {
                     this.state.dreams.map((dream) => {

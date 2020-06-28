@@ -20,15 +20,16 @@ span{
 }
 
 button{
-  background-color: rgb(23, 5, 36);
-  color: rgb(209, 162, 209);
-  border: 3px solid rgb(23, 5, 36);
+  background-color: rgb(204, 145, 19);
+  color: rgb(48, 1, 48);
+  border: 3px solid rgb(204, 145, 19);
   border-radius: 3%;
   margin-top: 3%;
   margin: 2%;
   font-family: serif;
   font-weight: bold;
   height: 30px;
+  font-size: 16px;
 }
 
 button:hover{
@@ -120,7 +121,7 @@ hr{
 .logoutStyle{
   border: 0px;
   color: rgb(204, 145, 19);
-  /* background-color: rgb(29, 1, 29); */
+  background-color: rgb(19, 2, 19);
   font-size: 18px;
 }
 
@@ -128,7 +129,7 @@ hr{
   border: 0px;
 font-size: 20px;
 color: rgb(204, 145, 19);
-background-color: rgb(29, 1, 29);
+background-color: rgb(19, 2, 19);
 }
 
 .registerComponent{
@@ -381,7 +382,7 @@ background-color: rgb(29, 1, 29);
 .dreamerHomeContainer{
   display: grid;
   grid-template-columns: repeat(12,1fr);
-  grid-template-rows: repeat(6,1fr);
+  grid-template-rows: repeat(7,1fr);
   height: 80vh;
 }
 
@@ -394,12 +395,12 @@ background-color: rgb(29, 1, 29);
 }
 
 .dreamerHomeButton4{
-  font-size: 38px;
+  font-size: 32px;
   color: rgb(226, 178, 238);
 }
 
 .dreamerHomeButton4:hover{
-  font-size: 38px;
+  font-size: 32px;
   color: rgb(217, 97, 241);
 }
 
@@ -412,12 +413,12 @@ background-color: rgb(29, 1, 29);
 }
 
 .dreamerHomeButton1{
-  font-size: 38px;
+  font-size: 32px;
   color: rgb(226, 178, 238);
 }
 
 .dreamerHomeButton1:hover{
-  font-size: 38px;
+  font-size: 32px;
   color: rgb(217, 97, 241);
 }
 
@@ -426,6 +427,11 @@ background-color: rgb(29, 1, 29);
 .dreamerForum{
   grid-column: 9/13;
   grid-row: 1/8;
+  overflow: scroll;
+}
+
+.dreamersDreamsTitle{
+  font-size: 32px;
 }
 
 .eachPost{
@@ -435,20 +441,20 @@ background-color: rgb(29, 1, 29);
 }
 
 .dreamPostDisplay{
-  background-color: rgb(23, 3, 26);
+  background-color: rgb(19, 2, 19);
   border: 5px solid rgb(211, 150, 223);
-  height: 80vh;
+  /* height: 80vh; */
   margin: 1%;
 }
 
 .listedDataPostType{
   color: rgb(148, 162, 241);
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .listedDataPost{
   color: rgb(224, 169, 224);
-  font-size: 11px;
+  font-size: 13px;
 }
 
 .listedDataDreamer{
@@ -472,7 +478,7 @@ background-color: rgb(29, 1, 29);
 
 .meaningsAll{
   color: rgb(231, 181, 238);
-  font-size: 36px;
+  font-size: 32px;
 }
 
 .meaningsAll:hover{
@@ -486,7 +492,7 @@ background-color: rgb(29, 1, 29);
 
 .meaningLetters{
   color: rgb(234, 178, 241);
-  font-size: 34px;
+  font-size: 24px;
 }
 
 .meaningLetters:hover{
@@ -508,18 +514,18 @@ background-color: rgb(29, 1, 29);
 /* /////// Knowledge /////// */
 
 .dreamerKnowledgeLinkP{
-  margin-top: 15%;
+  margin-top: 25%;
   grid-column: 6/8;
   grid-row: 3;
 }
 
 .dreamerHomeButton5{
-  font-size: 38px;
+  font-size: 32px;
   color: rgb(226, 178, 238);
 }
 
 .dreamerHomeButton5:hover{
-  font-size: 38px;
+  font-size: 32px;
   color: rgb(217, 97, 241);
 }
 
@@ -527,18 +533,18 @@ background-color: rgb(29, 1, 29);
 /* /////// Spotlight /////// */
 
 .spotlightLinkP{
-  margin-top: 15%;
+  margin-top: 25%;
   grid-column: 6/8;
   grid-row: 5;
 }
 
 .spotlightHomeButton56{
-  font-size: 38px;
+  font-size: 32px;
   color: rgb(226, 178, 238);
 }
 
 .spotlightHomeButton56:hover{
-  font-size: 38px;
+  font-size: 32px;
   color: rgb(217, 97, 241);
 }
 
@@ -557,14 +563,14 @@ background-color: rgb(29, 1, 29);
 /*/// Admin View One Dreamer  ///*/
 
 .dreamerDisplay{
-  background-color: rgb(182, 3, 137);
+  background-color: rgb(29, 2, 23);
   color: rgb(233, 179, 233);
   border: 5px solid rgb(182, 3, 137);
   border-radius: 5%;
   margin-left: 42%; 
   margin-right:15%;
   width: 15%;
-  box-shadow: 5px 10px 8px #cd79db;
+  box-shadow: 5px 10px 8px #cc8ad8;
 }
 
 
@@ -577,33 +583,34 @@ background-color: rgb(29, 1, 29);
 }
 
 .dreamersDisplay{
-  background-color: rgb(182, 3, 137);
+  background-color: rgb(22, 1, 18);
   color: rgb(233, 179, 233);
-  border: 5px solid rgb(182, 3, 137);
+  border: 1px solid rgb(204, 145, 19);
   border-radius: 5%;
   margin-left: 10%;
   margin-bottom: 10%;
   margin-right:15%;
+  /* padding: 1%; */
   width: 75%;
-  box-shadow: 5px 10px 8px #cd79db;
+  box-shadow: 5px 10px 8px #3b3b1f;
 }
 
 
 .dreamersDisplay:hover{
-  background-color: rgb(105, 23, 211);
+  background-color: rgb(66, 5, 55);
   color: rgb(236, 161, 218);
-  border: 5px solid rgb(105, 23, 211);
+  border: 1px solid rgb(204, 145, 19);
   border-radius: 5%;
   margin-left: 10%;
   margin-bottom: 10%;
   margin-right:15%;
   width: 75%;
-  box-shadow: 5px 10px 8px #9168ce;
+  box-shadow: 5px 10px 8px #3b3b1f;
 }
 
 .dreamersPageTitle{
   font-size: 20px;
-  color:rgb(155, 114, 209);
+  color:rgb(146, 148, 9);
 }
 
 .listedData{
@@ -635,9 +642,11 @@ background-color: rgb(29, 1, 29);
 
 .postLink{
   font-size: 15px;
-  background-color: rgb(26, 81, 82);
-  border: 1px solid rgb(26, 81, 82);
-  border-radius: 25%;
+  color: #cc8ad8;
+  /* background-color: rgb(26, 81, 82); */
+  /* border: 1px solid rgb(26, 81, 82); */
+  /* border-radius: 25%; */
+  font-size: 26px;
   height: 65px;
   width: 75px;
 }
@@ -696,6 +705,30 @@ background-color: rgb(29, 1, 29);
 
 
 /*////////////////////////////   Customer    ////////////////////////////////// */
+
+
+
+/* //////////////// */
+/*  Create Dream */
+/* //////////////// */
+
+select{
+  color: rgb(226, 181, 238);
+  background-color: rgb(15, 0, 15);
+  border: 1px solid rgb(236, 201, 236);
+  height: 15%;
+  padding: 1%;
+  font-family: serif;
+  font-size: 16px;
+  border-radius: 5%;
+}
+select:hover{
+  background-color: rgb(39, 4, 39);
+}
+
+.whatHappened{
+  font-size: 18px;
+}
 
 
 /* //////////////// */

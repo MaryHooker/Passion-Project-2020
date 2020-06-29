@@ -33,15 +33,15 @@ class ViewAllMeanings extends Component {
     render() { 
         return ( 
             <div>
-                <h2 className='dreamersPageTitle'>Meanings</h2>
-                <Link to='/create/meaning' className='linkLink'><button>Add</button></Link>
+                {/* <h2 className='dreamersPageTitle'>Meanings</h2> */}
+                <Link to='/create/meaning' className='linkLink'><img src="../addSymbol2.png" alt="addSymbol"/></Link>
                 <br/>
                 <br/>
-                <div className='dreamersContainer'>
+                <div className='dreamersContainerM'>
                 {
                     this.state.meanings.map((meaning) => {
                         return(
-                            <div key={meaning._id} className='dreamersDisplay'>
+                            <div key={meaning._id} className='dreamersDisplayM'>
                                 <Link to={`/meanings/view/one/${meaning._id}`} className='linkLink'>
                                 <p className='listedData'>{meaning.word}</p>
                                 <p className='listedData'>{meaning.meaning}</p>

@@ -60,7 +60,7 @@ class DreamerKnowledge extends Component {
                             <div key={link._id} className='knowledgeDisplay'>
                                 <a href={link.link} className='noLineLinks'target="_blank">
                                 <p className='listedData'>{link.title}</p>
-                                <p className='listedData'>{link.link}</p>
+                                {/* <p className='listedData'>{link.link}</p> */}
                                 <p className='listedData'>{link.author}</p>
                                 </a>
                             </div>

@@ -56,7 +56,7 @@ class LinkDetails extends Component {
     render() { 
         return ( 
             <div>
-                <h2>Dream Link</h2>
+                {/* <h2>Dream Link</h2> */}
                 <br/>
                 <br/>
                 <div className='linkDisplay'>

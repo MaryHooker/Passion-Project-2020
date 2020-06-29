@@ -53,18 +53,18 @@ class CreateMeaning extends Component {
 
                 <form action="">
                     <div className="form-group">
-                        <label htmlFor="letter"><span>Letter:</span></label>
-                        <input type="text" name='letter' id='letter' onChange={this.handleChanges} value={this.state.letter} />
+                        {/* <label htmlFor="letter"><span>Letter:</span></label> */}
+                        <input type="text" name='letter' id='letter' onChange={this.handleChanges} value={this.state.letter} placeholder='letter'/>
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="word"><span>Word:</span></label>
-                        <input type="text" name='word' id='word' onChange={this.handleChanges} value={this.state.word} />
+                        {/* <label htmlFor="word"><span>Word:</span></label> */}
+                        <input type="text" name='word' id='word' onChange={this.handleChanges} value={this.state.word} placeholder='word'/>
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="meaning"><span>Meaning:</span></label>
-                        <input type="text" name='meaning' id='meaning' onChange={this.handleChanges} value={this.state.meaning} />
+                        {/* <label htmlFor="meaning"><span>Meaning:</span></label> */}
+                        <input type="text" name='meaning' id='meaning' onChange={this.handleChanges} value={this.state.meaning} placeholder='meaning'/>
                     </div>
 
 

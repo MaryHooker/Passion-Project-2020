@@ -118,7 +118,8 @@ class AppContainer extends Component {
     let register,
       login,
       logout,
-      homePage;
+      homePage,
+      credit;
     //If the customer or admin have succesfully logged in and been assigned a token, hide the register, login components & show the the logout component
     if (this.state.token) {
       register = <Link to='/register' className='noLine' hidden>Register</Link>
@@ -131,11 +132,13 @@ class AppContainer extends Component {
       } else if (this.state.tokenUser.role === "Customer") {
         homePage = "/customerHome";
       }
-    //Else if the user is not logged in, render the register, login components and hide the logout
+    //Else if the user is not logged in, render the register, login components and hide the logout/ and credit artist of background picture
     } else {
       register = <Link to='/register' className='noLine' >Register</Link>
       login = <Link to='/login' className='noLine' >Login</Link>
       logout = <button hidden className='logoutStyle'>Logout</button>
+      credit = <span>Photo by <a href="https://unsplash.com/@bryangoffphoto?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Bryan Goff</a> on <a href="/s/photos/galaxy?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+
     }
     return (
       <div>
@@ -146,6 +149,9 @@ class AppContainer extends Component {
                 <div className='homeTitle'>
                  <Link to={homePage} className='noLineHome'>Dreamer</Link>
                 </div>
+                <div className='photo'>
+                    {credit}
+                  </div>
                   { /* Home Links */ }
                   <div className='registerLink'>
                   {register}
@@ -168,6 +174,7 @@ class AppContainer extends Component {
                   <div>
                   <Route path='/login' exact component={() => <Login getToken={this.getToken} tokenUser={this.state.tokenUser} token={this.state.token}/> }/>
                   </div>
+                  
                  
 
                 { /* Routes */ }

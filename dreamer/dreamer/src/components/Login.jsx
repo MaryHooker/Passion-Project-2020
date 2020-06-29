@@ -90,7 +90,7 @@ export default class Login extends Component {
           {/* <h5>Login</h5> */}
           <form >
             <div className='labelPositions'>
-              <label htmlFor="email" className='loginPage'><span>Email</span> </label>
+              {/* <label htmlFor="email" className='loginPage'><span>Email</span> </label> */}
               <input
                 type="email"
                 name="email"
@@ -103,7 +103,7 @@ export default class Login extends Component {
               <div style={{ fontSize: 13, color:"red"}}>{this.state.emailError}</div>
             </div>
             <div className='labelPositions'>
-              <label htmlFor="password" className='loginPage'><span>Password</span> </label>
+              {/* <label htmlFor="password" className='loginPage'><span>Password</span> </label> */}
               <input
                 type="password"
                 name="password"

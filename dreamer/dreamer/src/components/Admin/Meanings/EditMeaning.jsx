@@ -75,7 +75,7 @@ class EditMeaning extends Component {
     render() { 
         return ( 
             <div>
-                <h2>Edit Meaning</h2>
+                {/* <h2>Edit Meaning</h2> */}
                 <form>
                 <div className="form-group">
                         <label htmlFor="letter"><span>Letter:</span></label>

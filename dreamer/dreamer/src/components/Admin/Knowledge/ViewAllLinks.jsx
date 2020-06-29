@@ -50,8 +50,8 @@ class ViewAllLinks extends Component {
     render() { 
         return ( 
             <div>
-                <h2 className='dreamersPageTitle'>Knowledge</h2>
-                <Link to='/knowledge/links/create' className='linkLink'><button>Add</button></Link>
+                {/* <h2 className='dreamersPageTitle'>Knowledge</h2> */}
+                <Link to='/knowledge/links/create' className='linkLink'><img src="../addSymbol2.png" alt="addSymbol"/></Link>
                 <br/>
                 <br/>
                 <div className='linksContainer'>
@@ -61,7 +61,7 @@ class ViewAllLinks extends Component {
                             <div key={link._id} className='dreamersDisplay'>
                                 <a href={link.link} className='noLineLinks' target="_blank">
                                 <p className='listedData'>{link.title}</p>
-                                <p className='listedData'>{link.link}</p>
+                                {/* <p className='listedData'>{link.link}</p> */}
                                 <p className='listedData'>{link.author}</p>
                                 </a>
                                 <Link to={`/knowledge/links/details/${link._id}`} className='linkLink'><button>Details</button></Link>            

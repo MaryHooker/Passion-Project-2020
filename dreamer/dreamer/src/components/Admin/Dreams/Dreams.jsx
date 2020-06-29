@@ -33,9 +33,11 @@ class Dreams extends Component {
     render() { 
         return ( 
             <div>
-                <h2>Dreams</h2>
-                <Link to='/dreams/posted' className='linkLink'><button className='postLink'>Posted</button></Link>
-                <Link to='/dreams/spotlighted' className='linkLink'><button className='spotLink'>Spotlighted</button></Link>
+                {/* <h2>Dreams</h2> */}
+                <Link to='/dreams/posted' className='linkLink'><span className='postLink'>Posted</span></Link>
+                <Link to='/dreams/spotlighted' className='linkLink'><span className='postLink'>Spotlighted</span></Link>
+                <br/>
+                <br/>
                 <div className='dreamersContainer'>
                 {
                     this.state.dreams.map((dream) => {

@@ -41,7 +41,7 @@ class MyPosted extends Component {
         } else{
         return ( 
             <div>
-                <h3>My posted dreams</h3>
+                {/* <h3>My posted dreams</h3> */}
                 {/* map function to drill */}
                 <div className='dreamersContainer'>
                 {

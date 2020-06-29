@@ -33,7 +33,7 @@ class FindingWordMeaning extends Component {
   render() {
     return (
       <div>
-            <h4> {this.props.match.params.word}'s Symbolic Meaning</h4>
+            {/* <h4> {this.props.match.params.word}'s Symbolic Meaning</h4> */}
             <div className='oneMeaningDisplay'>
                 { /* <p className='listedData'>{this.state.meaning.word}</p> */ }
                 <p className='listedData'>{this.state.meaning.meaning}</p>

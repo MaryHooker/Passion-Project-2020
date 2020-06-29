@@ -1,7 +1,8 @@
 body{
   background-image: url('/darkNight2.jpeg');
   /* background-color: rgb(29, 1, 29); */
-  color: rgb(209, 152, 209);
+  color: rgb(201, 107, 201);
+  font-size: 18px;
   font-family: serif;
   text-align: center;
   height: 80vh;
@@ -20,54 +21,60 @@ span{
 }
 
 button{
-  background-color: rgb(204, 145, 19);
-  color: rgb(48, 1, 48);
-  border: 3px solid rgb(204, 145, 19);
-  border-radius: 3%;
+  background-color: rgb(22, 1, 18);
+  color: rgb(233, 179, 233);
+  border: 1px solid rgb(233, 179, 233);
+  border-radius: 5%;
   margin-top: 3%;
   margin: 2%;
   font-family: serif;
   font-weight: bold;
-  height: 30px;
+  height: 50px;
   font-size: 16px;
+  padding: 1%;
+  /* box-shadow: 5px 10px 8px #6c4374; */
 }
 
 button:hover{
-  background-color:rgb(209, 162, 209);
-  color: rgb(23, 5, 36);
-  border: 3px solid rgb(209, 162, 209);
-  border-radius: 3%;
+  background-color:rgb(66, 5, 55);
+  color: rgb(233, 179, 233);
+  border: 1px solid rgb(233, 179, 233);
+  border-radius: 5%;
   margin-top: 3%;
   margin: 2%;
   font-family: serif;
   font-weight: bold;
-  height: 30px;
+  height: 50px;
+  padding: 1%;
+  /* box-shadow: 5px 10px 8px #6c4374; */
 }
 
 input{
   background-color: rgb(233, 179, 233);
-  color: rgb(87, 20, 131);
+  color: rgb(21, 3, 34);
   border: 1px solid rgb(87, 20, 131);
   border-radius: 4%;
-  height: 20px;
+  height: 40px;
   margin: 6px;
   width: 205px;
+  padding: 1%;
   margin-bottom: 5px;
   font-family: serif;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 input:hover{
-  background-color: rgb(231, 169, 231);
-  color: rgb(87, 20, 131);
+  background-color: rgb(226, 153, 226);
+  color: rgb(21, 3, 34);
   border: 1px solid rgb(87, 20, 131);
   border-radius: 4%;
-  height: 20px;
+  padding: 1%;
+  height: 40px;
   margin: 6px;
   width: 205px;
   margin-bottom: 5px;
   font-family: serif;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 textarea{
@@ -242,110 +249,124 @@ background-color: rgb(19, 2, 19);
 }
 
 .adminHomeButton1{
-  font-size: 15px;
-  background-color: rgb(94, 6, 153);
-  border: 1px solid rgb(94, 6, 153);
+  font-size: 18px;
+  /* background-color: rgb(22, 1, 18);
+  border: 1px solid rgb(22, 1, 18); */
   border-radius: 25%;
   height: 65px;
   width: 75px;
+  padding: 1%;
 }
 
 .adminHomeButton1:hover{
-  font-size: 15px;
-  background-color: rgb(182, 3, 137);
-  border: 1px solid rgb(182, 3, 137);
+  font-size: 18px;
+  /* background-color: rgb(182, 3, 137);
+  border: 1px solid rgb(182, 3, 137); */
   border-radius: 25%;
   height: 65px;
   width: 75px;
+  padding: 1%;
 }
 
 .adminHomeButton2{
-  font-size: 15px;
-  background-color: rgb(71, 9, 112);
-  border: 1px solid rgb(71, 9, 112);
+  font-size: 18px;
+  /* background-color: rgb(71, 9, 112);
+  border: 1px solid rgb(71, 9, 112); */
   border-radius: 25%;
-  height: 65px;
-  width: 75px;
+  height: 75px;
+  width: 85px;
+  padding: 1%;
 }
 
 .adminHomeButton2:hover{
-  font-size: 15px;
-  background-color: rgb(182, 3, 137);
-  border: 1px solid rgb(182, 3, 137);
+  font-size: 18px;
+  /* background-color: rgb(182, 3, 137);
+  border: 1px solid rgb(182, 3, 137); */
   border-radius: 25%;
-  height: 65px;
-  width: 75px;
+  height: 75px;
+  width: 85px;
+  
+  padding: 1%;
 }
+
 .adminHomeButton3{
-  font-size: 15px;
-  background-color: rgb(126, 6, 170);
-  border: 1px solid rgb(126, 6, 170);
+  font-size: 18px;
+  /* background-color: rgb(126, 6, 170);
+  border: 1px solid rgb(126, 6, 170); */
   border-radius: 25%;
-  height: 65px;
-  width: 75px;
+  height: 75px;
+  width: 85px;
+  padding: 1%;
 }
 
 .adminHomeButton3:hover{
-  font-size: 15px;
-  background-color: rgb(182, 3, 137);
-  border: 1px solid rgb(182, 3, 137);
+  font-size: 18px;
+  /* background-color: rgb(182, 3, 137);
+  border: 1px solid rgb(182, 3, 137); */
   border-radius: 25%;
-  height: 65px;
-  width: 75px;
+  height: 75px;
+  width: 85px;
+  padding: 1%;
 }
 
 .adminHomeButton4{
-  font-size: 15px;
-  background-color: rgb(175, 60, 190);
-  border: 1px solid rgb(175, 60, 190);
+  font-size: 18px;
+  /* background-color: rgb(175, 60, 190);
+  border: 1px solid rgb(175, 60, 190); */
   border-radius: 25%;
-  height: 65px;
-  width: 75px;
+  height: 75px;
+  width: 85px;
+  padding: 1%;
 }
 
 .adminHomeButton4:hover{
-  font-size: 15px;
-  background-color: rgb(182, 3, 137);
-  border: 1px solid rgb(182, 3, 137);
+  font-size: 18px;
+  /* background-color: rgb(182, 3, 137);
+  border: 1px solid rgb(182, 3, 137); */
   border-radius: 25%;
-  height: 65px;
-  width: 75px;
+  height: 75px;
+  width: 85px;
+  padding: 1%;
 }
 
 .adminHomeButton5{
-  font-size: 15px;
-  background-color: rgb(183, 21, 204);
-  border: 1px solid rgb(183, 21, 204);
+  font-size: 18px;
+  /* background-color: rgb(183, 21, 204);
+  border: 1px solid rgb(183, 21, 204); */
   border-radius: 25%;
-  height: 65px;
-  width: 84px;
+  height: 75px;
+  width: 92px;
+  padding: 1%;
 }
 
 .adminHomeButton5:hover{
-  font-size: 15px;
-  background-color: rgb(182, 3, 137);
-  border: 1px solid rgb(182, 3, 137);
+  font-size: 18px;
+  /* background-color: rgb(182, 3, 137);
+  border: 1px solid rgb(182, 3, 137); */
   border-radius: 25%;
-  height: 65px;
-  width: 84px;
+  height: 75px;
+  width: 92px;
+  padding: 1%;
 }
 
 .adminHomeButton56{
-  font-size: 15px;
-  background-color: rgb(131, 20, 235);
-  border: 1px solid rgb(131, 20, 235);
+  font-size: 18px;
+  /* background-color: rgb(131, 20, 235);
+  border: 1px solid rgb(131, 20, 235); */
   border-radius: 25%;
   height: 65px;
   width: 84px;
+  padding: 1%;
 }
 
 .adminHomeButton56:hover{
-  font-size: 15px;
-  background-color: rgb(182, 3, 137);
-  border: 1px solid rgb(182, 3, 137);
+  font-size: 18px;
+  /* background-color: rgb(182, 3, 137);
+  border: 1px solid rgb(182, 3, 137); */
   border-radius: 25%;
   height: 65px;
   width: 84px;
+  padding: 1%;
 }
 
 .dreamsLinkP{
@@ -427,7 +448,7 @@ background-color: rgb(19, 2, 19);
 .dreamerForum{
   grid-column: 9/13;
   grid-row: 1/8;
-  overflow: scroll;
+  /* overflow: scroll; */
 }
 
 .dreamersDreamsTitle{
@@ -444,6 +465,10 @@ background-color: rgb(19, 2, 19);
   background-color: rgb(19, 2, 19);
   border: 5px solid rgb(211, 150, 223);
   /* height: 80vh; */
+  overflow: scroll;
+  grid-column: 9/13;
+  grid-row: 1/8;
+height: 70vh;
   margin: 1%;
 }
 
@@ -500,15 +525,35 @@ background-color: rgb(19, 2, 19);
 }
 
 .oneMeaningDisplay{
-  background-color: rgb(182, 3, 137);
+  background-color: rgb(22, 1, 18);
   color: rgb(233, 179, 233);
-  border: 5px solid rgb(182, 3, 137);
-  border-radius: 5%;
+  border: 1px solid rgb(204, 145, 19);
+  border-radius: 2%;
   width: 35%;
   margin-left: 30%;
   padding: 2%;
   text-align: center;
-  box-shadow: 5px 10px 8px #cd79db;
+  box-shadow: 5px 10px 8px #3b3b1f;
+}
+
+
+.dreamersDisplayM{
+  background-color: rgb(22, 1, 18);
+  color: rgb(233, 179, 233);
+  border: 1px solid rgb(204, 145, 19);
+  border-radius: 5%;
+  margin-left: 10%;
+  margin-bottom: 10%;
+  margin-right:15%;
+  /* padding: 1%; */
+  width: 75%;
+  box-shadow: 5px 10px 8px #3b3b1f;
+  padding: 2%;
+}
+
+.dreamersContainerM{
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
 }
 
 /* /////// Knowledge /////// */
@@ -563,14 +608,15 @@ background-color: rgb(19, 2, 19);
 /*/// Admin View One Dreamer  ///*/
 
 .dreamerDisplay{
-  background-color: rgb(29, 2, 23);
+  background-color: rgb(22, 1, 18);
   color: rgb(233, 179, 233);
-  border: 5px solid rgb(182, 3, 137);
+  border: 1px solid rgb(204, 145, 19);
   border-radius: 5%;
   margin-left: 42%; 
   margin-right:15%;
   width: 15%;
-  box-shadow: 5px 10px 8px #cc8ad8;
+  padding: 1%;
+  box-shadow: 5px 10px 8px #3b3b1f;
 }
 
 
@@ -578,6 +624,11 @@ background-color: rgb(19, 2, 19);
 
 
 .dreamersContainer{
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+}
+
+.dreamersContainerM{
   display: grid;
   grid-template-columns: repeat(6,1fr);
 }
@@ -643,21 +694,15 @@ background-color: rgb(19, 2, 19);
 .postLink{
   font-size: 15px;
   color: #cc8ad8;
-  /* background-color: rgb(26, 81, 82); */
-  /* border: 1px solid rgb(26, 81, 82); */
-  /* border-radius: 25%; */
   font-size: 26px;
   height: 65px;
   width: 75px;
 }
 
 .postLink:hover{
-  font-size: 15px;
-  background-color: rgb(105, 23, 211);
-  border: 1px solid rgb(105, 23, 211);
-  border-radius: 25%;
+  color: #746dcc;
   height: 65px;
-  width: 75px;
+  width: 75px;  
 }
 
 .spotLink{
@@ -690,7 +735,7 @@ background-color: rgb(19, 2, 19);
 
 .linksContainer{
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(3,1fr);
 }
 
 .linkDisplay{
@@ -701,6 +746,19 @@ background-color: rgb(19, 2, 19);
   margin-left: 37%; 
   width: 25%;
   box-shadow: 5px 10px 8px #cd79db;
+}
+
+.dreamersDisplayK{
+  background-color: rgb(22, 1, 18);
+  color: rgb(233, 179, 233);
+  border: 1px solid rgb(204, 145, 19);
+  border-radius: 5%;
+  margin-left: 10%;
+  margin-bottom: 10%;
+  margin-right:15%;
+  /* padding: 1%; */
+  width: 75%;
+  box-shadow: 5px 10px 8px #3b3b1f;
 }
 
 
@@ -737,12 +795,25 @@ select:hover{
 
 /* /// Dreamer Knowledge ///*/
 .knowledgeDisplay{
-  background-color: rgb(182, 3, 137);
-  color: rgb(233, 179, 233);
-  border: 5px solid rgb(182, 3, 137);
+  background-color: rgb(22, 1, 18);
+  color: rgb(236, 161, 218);
+  border: 1px solid rgb(204, 145, 19);
   border-radius: 5%;
+  margin-bottom: 10%;
   margin-left: 10%;
   margin-right:15%;
   width: 75%;
-  box-shadow: 5px 10px 8px #cd79db;
+  box-shadow: 5px 10px 8px #3b3b1f;
+}
+
+.knowledgeDisplay:hover{
+  background-color: rgb(66, 5, 55);
+  color: rgb(236, 161, 218);
+  border: 1px solid rgb(204, 145, 19);
+  border-radius: 5%;
+  margin-left: 10%;
+  margin-bottom: 10%;
+  margin-right:15%;
+  width: 75%;
+  box-shadow: 5px 10px 8px #3b3b1f;
 }

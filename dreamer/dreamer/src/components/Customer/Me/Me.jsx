@@ -43,7 +43,7 @@ class Me extends Component {
     render() { 
         return ( 
             <div>
-                <h3>Me</h3>
+                {/* <h3>Me</h3> */}
                 <br/>
                 <br/>
                 <br/>

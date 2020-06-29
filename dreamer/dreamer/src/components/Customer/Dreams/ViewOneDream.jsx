@@ -76,7 +76,7 @@ class ViewOneDream extends Component {
     render() { 
         return ( 
             <div>
-                <h2>Dream</h2>
+                {/* <h2>Dream</h2> */}
                 <br/>
                 <br/>
                 <br/>

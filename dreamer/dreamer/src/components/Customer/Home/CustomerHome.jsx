@@ -54,7 +54,7 @@ class CustomerHome extends Component {
                 <Link to='/myDreams' className='dreamersLink'><span className='dreamerHomeButton4'>My Dreams</span></Link>
                 </div>
                 <div className='dreamerForum'>
-                    <h2 className='dreamersDreamsTitle'>Dreamer's Dreams</h2>
+                    <h2>Dreamer's Dreams</h2>
                    
                         {/* <iframe src={<DreamerViewAllPostedDreams/>} frameborder="0"> */}
                         <div className='dreamPostDisplay'>

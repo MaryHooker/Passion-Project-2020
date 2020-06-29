@@ -50,7 +50,7 @@ class DreamerKnowledge extends Component {
     render() { 
         return ( 
             <div>
-                <h2 className='dreamersPageTitle'>Knowledge</h2>
+                {/* <h2 className='dreamersPageTitle'>Knowledge</h2> */}
                 <br/>
                 <br/>
                 <div className='linksContainer'>

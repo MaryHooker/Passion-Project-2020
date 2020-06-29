@@ -33,12 +33,12 @@ class DreamerViewAllSpotlightedDreams extends Component {
     render() { 
         return ( 
             <div>
-                <h3>Spotlighted Dreams</h3>
+                {/* <h3>Spotlighted Dreams</h3> */}
                 <div className='dreamersContainer'>
                 {
                     this.state.spotlighted.map((dream) => {
                         return(
-                            <div key={dream._id} className='dreamersDisplay'>
+                            <div key={dream._id} className='dreamersDisplayK'>
                             {/* <Link to={`/dreams/spotlight/view/one/${dream._id}`} className='linkLink'> */}
                             <p className='listedData'>{dream.type}</p>
                             <p className='listedData'>{dream.dreamDescription}</p>

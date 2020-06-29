@@ -475,22 +475,23 @@ background-color: rgba(0, 0, 0, 0);
   overflow: scroll;
   grid-column: 9/13;
   grid-row: 1/8;
-height: 70vh;
+  height: 70vh;
   margin: 1%;
 }
 
 .listedDataPostType{
-  color: rgb(148, 162, 241);
+  color: rgb(223, 140, 218);
   font-size: 12px;
 }
 
 .listedDataPost{
   color: rgb(224, 169, 224);
-  font-size: 13px;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 .listedDataDreamer{
-  color: rgb(223, 140, 218);
+  color: rgb(148, 162, 241);
   font-size: 12px;
 }
 
@@ -505,6 +506,7 @@ height: 70vh;
   border: 1px solid rgb(197, 135, 221);
   padding: 1%;
   margin: 1%;
+  height: 68vh;
 }
 
 .meaningsAll{
@@ -523,7 +525,9 @@ height: 70vh;
 
 .meaningLetters{
   color: rgb(234, 178, 241);
-  font-size: 28px;
+  margin: 1%;
+  font-size: 34px;
+  padding: 1%;
 }
 
 .meaningLetters:hover{
@@ -565,11 +569,36 @@ height: 70vh;
 /* /////// Knowledge /////// */
 
 .dreamerKnowledgeLinkP{
-  margin-top: 25%;
-  grid-column: 6/8;
+  /* margin-top: 25%; */
+  grid-column: 5/9;
   grid-row: 3;
+  /* width: 125%; */
+  /* height: 20%; */
 }
 
+.dreamKnowledgeDisplay{
+  background-color: rgba(0, 0, 0, 0.808);  
+  border: 1px solid rgb(211, 150, 223);
+  /* height: 80vh; */
+  overflow: scroll;
+  height: 27vh;
+  margin: 1%;
+}
+
+.eachLink{
+  border: 1px solid rgb(231, 169, 231);
+  margin: 1%;
+  padding: 1%;
+}
+
+.eachLink:hover{
+  background-color: rgba(255, 192, 203, 0.109);
+  border: 1px solid rgb(231, 169, 231);
+  margin: 1%;
+  padding: 1%;
+}
+
+/* 
 .dreamerHomeButton5{
   font-size: 32px;
   color: rgb(226, 178, 238);
@@ -578,15 +607,15 @@ height: 70vh;
 .dreamerHomeButton5:hover{
   font-size: 32px;
   color: rgb(217, 97, 241);
-}
+} */
 
 
 /* /////// Spotlight /////// */
 
 .spotlightLinkP{
-  margin-top: 25%;
-  grid-column: 6/8;
-  grid-row: 5;
+  /* margin-top: 25%; */
+  grid-column: 5/9;
+  grid-row: 4;
 }
 
 .spotlightHomeButton56{
@@ -597,6 +626,15 @@ height: 70vh;
 .spotlightHomeButton56:hover{
   font-size: 32px;
   color: rgb(217, 97, 241);
+}
+
+.dreamSpotlightDisplay{
+  background-color: rgba(0, 0, 0, 0.808);  
+  border: 1px solid rgb(211, 150, 223);
+  /* height: 80vh; */
+  overflow: scroll;
+  height: 24vh;
+  margin: 1%;
 }
 
 
@@ -707,7 +745,7 @@ height: 70vh;
 }
 
 .postLink:hover{
-  color: #746dcc;
+  color: rgb(219, 196, 141);
   height: 65px;
   width: 75px;  
 }

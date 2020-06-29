@@ -9,29 +9,68 @@ class CustomerHome extends Component {
       dreams: [],
       //word entered in search bar when looking up a meaning
       word: "",
+      knowledge: [],
+      spotlighted: [],
+
     }
   }
 
-        //when component mounts, runner inner function
-        componentDidMount(){
-            this.allDreams();
-        }
-    
-         //Function to fetch all posted dreams from database
-         allDreams = async() => {
-            let response = await fetch('/api/dreams/all/posted/true',{
-                method:"GET"
-            })
-            let json = await response.json();
-          
-            //place data in state
-            this.setState({
-                dreams : json
-            })
-            //sanity
-            console.log(json)
-    
-        }
+  //when component mounts, runner inner function
+  componentDidMount() {
+    this.allDreams();
+    this.loadKnowledge();
+    this.loadSpotlight();
+  }
+
+  //Function to fetch all posted dreams from database
+  allDreams = async() => {
+    let response = await fetch('/api/dreams/all/posted/true', {
+      method: "GET"
+    })
+    let json = await response.json();
+
+    //place data in state
+    this.setState({
+      dreams: json
+    })
+    //sanity
+    console.log(json)
+
+  }
+
+  //Function to fetch all dream links/knowledge to share from database
+  loadKnowledge = async() => {
+    let response = await fetch('/api/links', {
+      method: "GET"
+    })
+    let json = await response.json();
+    //sanity
+    console.table(json)
+    //place data in state
+    this.setState({
+      knowledge: json
+    })
+    //sanity
+    console.table(`Admin : Knowledge Links ${JSON.stringify(json)}`)
+  }
+
+
+  //function to fetch method to render all spotlighted dreams
+  loadSpotlight = async() => {
+    let response = await fetch(`/api/dreams/all/spotlight/true`, {
+      method: "GET",
+
+    })
+    let json = await response.json();
+    //sanity
+    console.log(`All Spotlighted Dreams ${JSON.stringify(json)}`)
+    //place in state
+    this.setState(
+      {
+        spotlighted: json
+      }
+    )
+  }
 
   // handle changes to fields
   handleChange = (event) => {
@@ -43,9 +82,9 @@ class CustomerHome extends Component {
   render() {
     return (
       <div className='dreamerHomeContainer'>
-                {/* <div className='adminTitle'>
+                { /* <div className='adminTitle'>
                 <h2>Welcome back <span className='userName'>{this.props.tokenUser.name}</span>!</h2>
-                </div> */}
+                </div> */ }
                 <br/>
                 <div className='meLinkP'>
                 <Link to='/me' className='dreamersLink'><span className='dreamerHomeButton1'>Me</span></Link>
@@ -53,41 +92,87 @@ class CustomerHome extends Component {
                 <div className='myDreamsLinkP'>
                 <Link to='/myDreams' className='dreamersLink'><span className='dreamerHomeButton4'>My Dreams</span></Link>
                 </div>
+                {/* /////////////////////////// Dreamer's Dreams //////////////////////////////////// */}
                 <div className='dreamerForum'>
                     <h2>Dreamer's Dreams</h2>
                    
-                        {/* <iframe src={<DreamerViewAllPostedDreams/>} frameborder="0"> */}
+                        { /* <iframe src={<DreamerViewAllPostedDreams/>} frameborder="0"> */ }
                         <div className='dreamPostDisplay'>
                 {
-                    this.state.dreams.map((dream) => {
-                        return(
-                            <div key={dream._id} className='eachPost'>
-                            {/* <Link to={`/dreams/posted/view/one/${dream._id}`} className='linkLink'> */}
+      this.state.dreams.map((dream) => {
+        return (
+          <div key={dream._id} className='eachPost'>
+                            { /* <Link to={`/dreams/posted/view/one/${dream._id}`} className='linkLink'> */ }
                             <p className='listedDataPostType'>{dream.type}</p>
                             <p className='listedDataPost'>{dream.dreamDescription}</p>
                             {
-                                dream.dreamer.map((dreamer) => {
-                                    return(
-                                        <div key={dreamer._id}>
+          dream.dreamer.map((dreamer) => {
+            return (
+              <div key={dreamer._id}>
                                             <p className='listedDataDreamer'>{dreamer.name}</p>
                                         </div>
-                                    )
-                                })
-                            }
+            )
+          })
+          }
                           
                         </div>
-                        )
-                    })
-                }
+        )
+      })
+      }
                  </div>
-                {/* </iframe> */}
+                { /* </iframe> */ }
                
                 </div>
+                {/* /////////////////////////// Dream Knowledge //////////////////////////////////// */}
                 <div className='dreamerKnowledgeLinkP'>
-                <Link to='/dreamer/knowledge' className='dreamersLink'><span className='dreamerHomeButton5'>Knowledge</span></Link>
+                <h3>Dream Knowledge</h3>
+
+                <div className='dreamKnowledgeDisplay'>
+                {
+      this.state.knowledge.map((link) => {
+        return (
+          <div key={link._id} className='eachLink'>
+                                <a href={link.link} className='noLineLinks'target="_blank">
+                                <p className='listedDataPost'>{link.title}</p>
+                                { /* <p className='listedData'>{link.link}</p> */ }
+                                <p className='listedDataDreamer'>{link.author}</p>
+                                </a>
+                            </div>
+        )
+      })
+      }
+                </div>    
+                { /* <Link to='/dreamer/knowledge' className='dreamersLink'><span className='dreamerHomeButton5'>Knowledge</span></Link> */ }
                 </div>
+                {/* /////////////////////////// Spotlighted Dream //////////////////////////////////// */}
+
                 <div className='spotlightLinkP'>
-                <Link to='/dreamer/spotlighted' className='dreamersLink'><span className='spotlightHomeButton56'>Spotlighted</span></Link>
+                <h3>Spotlighted Dream</h3>
+
+                <div className='dreamSpotlightDisplay'>
+                {
+      this.state.spotlighted.map((dream) => {
+        return (
+          <div key={dream._id} className='eachLink'>
+                            { /* <Link to={`/dreams/spotlight/view/one/${dream._id}`} className='linkLink'> */ }
+                            <p className='listedDataPostType'>{dream.type}</p>
+                            <p className='listedDataPost'>{dream.dreamDescription}</p>
+                            {
+          dream.dreamer.map((dreamer) => {
+            return (
+              <div key={dreamer._id}>
+                                            <p className='listedDataDreamer'>{dreamer.name}</p>
+                                        </div>
+            )
+          })
+          }
+                            { /* </Link> */ }
+                        </div>
+        )
+      })
+      }
+                </div>
+                { /* <Link to='/dreamer/spotlighted' className='dreamersLink'><span className='spotlightHomeButton56'>Spotlighted</span></Link> */ }
                 </div>
                 <div className='dreamerMeaningsLinkP'>
                 <Link to='/dreamer/meanings' className='dreamersLink'><span className='meaningsAll'>Meanings</span></Link>

@@ -5,7 +5,7 @@ body{
   font-size: 18px;
   font-family: serif;
   text-align: center;
-  height: 80vh;
+  height: 70vh;
   /* width:238vh; */
 }
 
@@ -37,33 +37,34 @@ button{
   margin: 2%;
   font-family: serif;
   font-weight: bold;
-  height: 50px;
+  height: 48px;
   font-size: 16px;
   padding: 1%;
   /* box-shadow: 5px 10px 8px #6c4374; */
 }
 
 button:hover{
-  background-color: rgb(233, 179, 233);
-  color: rgba(0, 0, 0, 0.924);
+  background-color: rgba(213, 116, 216, 0.295);
+  color: rgb(233, 179, 233);
   border: 1px solid rgb(233, 179, 233);
   border-radius: 5%;
   margin-top: 3%;
   margin: 2%;
   font-family: serif;
   font-weight: bold;
-  height: 50px;
+  height: 48px;
+  font-size: 16px;
   padding: 1%;
-  /* box-shadow: 5px 10px 8px #6c4374; */
+  box-shadow: 3px 3px 3px #6c4374;
 }
 
 input{
-  background-color: rgb(233, 179, 233);
+  background-color: rgba(226, 190, 106, 0.952);
   color: rgb(21, 3, 34);
   border: 1px solid rgb(87, 20, 131);
   border-radius: 4%;
-  height: 40px;
-  margin: 6px;
+  height: 30px;
+  margin: 3%;
   width: 205px;
   padding: 1%;
   margin-bottom: 5px;
@@ -77,12 +78,14 @@ input:hover{
   border: 1px solid rgb(87, 20, 131);
   border-radius: 4%;
   padding: 1%;
-  height: 40px;
-  margin: 6px;
+  height: 30px;
+  margin: 3%;
   width: 205px;
   margin-bottom: 5px;
   font-family: serif;
   font-size: 20px;
+  box-shadow: 3px 3px 3px #6c4374;
+
 }
 
 textarea{
@@ -417,9 +420,11 @@ background-color: rgba(0, 0, 0, 0);
 /* //////// My Dreams ///////// */
 
 .myDreamsLinkP{
-  margin-top: 15%;
-  grid-column: 6/8;
+  /* margin-top: 15%; */
+  grid-column: 6;
   grid-row: 1/2;
+  margin-left: 10%;
+
 }
 
 .dreamerHomeButton4{
@@ -435,9 +440,10 @@ background-color: rgba(0, 0, 0, 0);
 /* //////// Me ///////// */
 
 .meLinkP{
-  margin-top: 15%;
-  grid-column: 2/4;
+  /* margin-top: 15%; */
+  grid-column: 4;
   grid-row: 1;
+  margin-left: 10%;
 }
 
 .dreamerHomeButton1{
@@ -450,16 +456,20 @@ background-color: rgba(0, 0, 0, 0);
   color: rgb(217, 97, 241);
 }
 
+.avatarImage:hover{
+mask-image: cross-fade();
+}
+
 /*//////// Dreamer Forum ////////*/
 
 .dreamerForum{
-  grid-column: 9/13;
+  grid-column: 8/13;
   grid-row: 1/8;
   /* overflow: scroll; */
 }
 
 .dreamersDreamsTitle{
-  font-size: 32px;
+  font-size: 24px;
 }
 
 .eachPost{
@@ -475,7 +485,7 @@ background-color: rgba(0, 0, 0, 0);
   overflow: scroll;
   grid-column: 9/13;
   grid-row: 1/8;
-  height: 70vh;
+  height: 71vh;
   margin: 1%;
 }
 
@@ -497,21 +507,24 @@ background-color: rgba(0, 0, 0, 0);
 
 /*//////// Meanings ////////*/
 
+.dreamerMeaningPosition{
+  /* margin-top: 15%; */
+  grid-column: 1/4;
+  grid-row: 1/8;
+}
+
 .dreamerMeaningsLinkP{
-  margin-top: 15%;
-  grid-column: 1/5;
-  grid-row: 3/8;
-  font-size: 24px;
+  font-size: 20px;
   background-color: rgba(0, 0, 0, 0.76);
   border: 1px solid rgb(197, 135, 221);
   padding: 1%;
   margin: 1%;
-  height: 68vh;
+  height: 86%;
 }
 
 .meaningsAll{
   color: rgb(231, 181, 238);
-  font-size: 32px;
+  font-size: 30px;
 }
 
 .meaningsAll:hover{
@@ -520,14 +533,14 @@ background-color: rgba(0, 0, 0, 0);
 
 .lettersContainer{
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(3,1fr);
 }
 
 .meaningLetters{
   color: rgb(234, 178, 241);
-  margin: 1%;
+  /* margin: 1%; */
   font-size: 34px;
-  padding: 1%;
+  /* padding: 1%; */
 }
 
 .meaningLetters:hover{
@@ -570,8 +583,8 @@ background-color: rgba(0, 0, 0, 0);
 
 .dreamerKnowledgeLinkP{
   /* margin-top: 25%; */
-  grid-column: 5/9;
-  grid-row: 3;
+  grid-column: 4/8;
+  grid-row: 2;
   /* width: 125%; */
   /* height: 20%; */
 }
@@ -579,9 +592,8 @@ background-color: rgba(0, 0, 0, 0);
 .dreamKnowledgeDisplay{
   background-color: rgba(0, 0, 0, 0.808);  
   border: 1px solid rgb(211, 150, 223);
-  /* height: 80vh; */
+  height: 35vh;
   overflow: scroll;
-  height: 27vh;
   margin: 1%;
 }
 
@@ -618,7 +630,7 @@ background-color: rgba(0, 0, 0, 0);
   grid-row: 4;
 }
 
-.spotlightHomeButton56{
+/* .spotlightHomeButton56{
   font-size: 32px;
   color: rgb(226, 178, 238);
 }
@@ -626,6 +638,12 @@ background-color: rgba(0, 0, 0, 0);
 .spotlightHomeButton56:hover{
   font-size: 32px;
   color: rgb(217, 97, 241);
+} */
+
+.eachSpotlight{
+  /* border: 1px solid rgb(231, 169, 231); */
+  margin: 1%;
+  padding: 1%;
 }
 
 .dreamSpotlightDisplay{

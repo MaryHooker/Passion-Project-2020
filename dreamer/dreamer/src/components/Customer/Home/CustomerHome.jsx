@@ -87,14 +87,15 @@ class CustomerHome extends Component {
                 </div> */ }
                 <br/>
                 <div className='meLinkP'>
-                <Link to='/me' className='dreamersLink'><span className='dreamerHomeButton1'>Me</span></Link>
+                  <h3>Me</h3>
+                <Link to='/me' className='dreamersLink'><img src="../astro2.png" alt="avatar" className='avatarImage'/></Link>
                 </div>
                 <div className='myDreamsLinkP'>
-                <Link to='/myDreams' className='dreamersLink'><span className='dreamerHomeButton4'>My Dreams</span></Link>
+                <Link to='/myDreams' className='dreamersLink'><img src="../.png" alt="myDreams"/></Link>
                 </div>
                 {/* /////////////////////////// Dreamer's Dreams //////////////////////////////////// */}
                 <div className='dreamerForum'>
-                    <h2>Dreamer's Dreams</h2>
+                    <h3>Dreamer's Dreams</h3>
                    
                         { /* <iframe src={<DreamerViewAllPostedDreams/>} frameborder="0"> */ }
                         <div className='dreamPostDisplay'>
@@ -147,14 +148,13 @@ class CustomerHome extends Component {
                 {/* /////////////////////////// Spotlighted Dream //////////////////////////////////// */}
 
                 <div className='spotlightLinkP'>
-                <h3>Spotlighted Dream</h3>
-
+                {/* <h3>Spotlighted Dream</h3> */}
+{/* 
                 <div className='dreamSpotlightDisplay'>
                 {
       this.state.spotlighted.map((dream) => {
         return (
-          <div key={dream._id} className='eachLink'>
-                            { /* <Link to={`/dreams/spotlight/view/one/${dream._id}`} className='linkLink'> */ }
+          <div key={dream._id} className='eachSpotlight'>
                             <p className='listedDataPostType'>{dream.type}</p>
                             <p className='listedDataPost'>{dream.dreamDescription}</p>
                             {
@@ -166,17 +166,18 @@ class CustomerHome extends Component {
             )
           })
           }
-                            { /* </Link> */ }
                         </div>
         )
       })
       }
-                </div>
+                </div> */}
                 { /* <Link to='/dreamer/spotlighted' className='dreamersLink'><span className='spotlightHomeButton56'>Spotlighted</span></Link> */ }
                 </div>
+                <div className='dreamerMeaningPosition'>
+               
+                <h3>Meanings</h3>
                 <div className='dreamerMeaningsLinkP'>
-                <Link to='/dreamer/meanings' className='dreamersLink'><span className='meaningsAll'>Meanings</span></Link>
-                <br/>
+                <Link to='/dreamer/meanings' className='dreamersLink'><span className='meaningsAll'>All</span></Link>
                 <br/>
                 <form>
                             <label htmlFor="word"><span> </span></label>
@@ -185,32 +186,33 @@ class CustomerHome extends Component {
                         </form>
                         <br/>
                         <div className='lettersContainer'>
-                <Link to={`/meanings/letter/${'A'}`} className='noLineLinks'><span className='meaningLetters'>A</span></Link>
-                <Link to={`/meanings/letter/${'B'}`} className='noLineLinks'><span className='meaningLetters'>B</span></Link>
-                <Link to={`/meanings/letter/${'C'}`} className='noLineLinks'><span className='meaningLetters'>C</span></Link>
-                <Link to={`/meanings/letter/${'D'}`} className='noLineLinks'><span className='meaningLetters'>D</span></Link>
-                <Link to={`/meanings/letter/${'E'}`} className='noLineLinks'><span className='meaningLetters'>E</span></Link>
-                <Link to={`/meanings/letter/${'F'}`} className='noLineLinks'><span className='meaningLetters'>F</span></Link>
-                <Link to={`/meanings/letter/${'G'}`} className='noLineLinks'><span className='meaningLetters'>G</span></Link>
-                <Link to={`/meanings/letter/${'H'}`} className='noLineLinks'><span className='meaningLetters'>H</span></Link>
-                <Link to={`/meanings/letter/${'I'}`} className='noLineLinks'><span className='meaningLetters'>I</span></Link>
-                <Link to={`/meanings/letter/${'J'}`} className='noLineLinks'><span className='meaningLetters'>J</span></Link>
-                <Link to={`/meanings/letter/${'K'}`} className='noLineLinks'><span className='meaningLetters'>K</span></Link>
-                <Link to={`/meanings/letter/${'L'}`} className='noLineLinks'><span className='meaningLetters'>L</span></Link>
-                <Link to={`/meanings/letter/${'M'}`} className='noLineLinks'><span className='meaningLetters'>M</span></Link>
-                <Link to={`/meanings/letter/${'N'}`} className='noLineLinks'><span className='meaningLetters'>N</span></Link>
-                <Link to={`/meanings/letter/${'O'}`} className='noLineLinks'><span className='meaningLetters'>O</span></Link>
-                <Link to={`/meanings/letter/${'P'}`} className='noLineLinks'><span className='meaningLetters'>P</span></Link>
-                <Link to={`/meanings/letter/${'Q'}`} className='noLineLinks'><span className='meaningLetters'>Q</span></Link>
-                <Link to={`/meanings/letter/${'R'}`} className='noLineLinks'><span className='meaningLetters'>R</span></Link>
-                <Link to={`/meanings/letter/${'S'}`} className='noLineLinks'><span className='meaningLetters'>S</span></Link>
-                <Link to={`/meanings/letter/${'T'}`} className='noLineLinks'><span className='meaningLetters'>T</span></Link>
-                <Link to={`/meanings/letter/${'U'}`} className='noLineLinks'><span className='meaningLetters'>U</span></Link>
-                <Link to={`/meanings/letter/${'V'}`} className='noLineLinks'><span className='meaningLetters'>V</span></Link>
-                <Link to={`/meanings/letter/${'W'}`} className='noLineLinks'><span className='meaningLetters'>W</span></Link>
-                <Link to={`/meanings/letter/${'X'}`} className='noLineLinks'><span className='meaningLetters'>X</span></Link>
-                <Link to={`/meanings/letter/${'Y'}`} className='noLineLinks'><span className='meaningLetters'>Y</span></Link>
-                <Link to={`/meanings/letter/${'Z'}`} className='noLineLinks'><span className='meaningLetters'>Z</span></Link>
+                <Link to={`/meanings/letter/${'A'}`} className='noLineLinks'><img src="../A2.png" alt="A"/></Link>
+                <Link to={`/meanings/letter/${'B'}`} className='noLineLinks'><img src="../B.png" alt="B"/></Link>
+                <Link to={`/meanings/letter/${'C'}`} className='noLineLinks'><img src="../C3.png" alt="C"/></Link>
+                <Link to={`/meanings/letter/${'D'}`} className='noLineLinks'><img src="../D.png" alt="D"/></Link>
+                <Link to={`/meanings/letter/${'E'}`} className='noLineLinks'><img src="../E6.png" alt="E"/></Link>
+                <Link to={`/meanings/letter/${'F'}`} className='noLineLinks'><img src="../F2.png" alt="F"/></Link>
+                <Link to={`/meanings/letter/${'G'}`} className='noLineLinks'><img src="../G2.png" alt="G"/></Link>
+                <Link to={`/meanings/letter/${'H'}`} className='noLineLinks'><img src="../H2.png" alt="H"/></Link>
+                <Link to={`/meanings/letter/${'I'}`} className='noLineLinks'><img src="../I2.png" alt="I"/></Link>
+                <Link to={`/meanings/letter/${'J'}`} className='noLineLinks'><img src="../J2.png" alt="J"/></Link>
+                <Link to={`/meanings/letter/${'K'}`} className='noLineLinks'><img src="../K2.png" alt="K"/></Link>
+                <Link to={`/meanings/letter/${'L'}`} className='noLineLinks'><img src="../L2.png" alt="L"/></Link>
+                <Link to={`/meanings/letter/${'M'}`} className='noLineLinks'><img src="../M2.png" alt="M"/></Link>
+                <Link to={`/meanings/letter/${'N'}`} className='noLineLinks'><img src="../N2.png" alt="N"/></Link>
+                <Link to={`/meanings/letter/${'O'}`} className='noLineLinks'><img src="../O2.png" alt="O"/></Link>
+                <Link to={`/meanings/letter/${'P'}`} className='noLineLinks'><img src="../P2.png" alt="P"/></Link>
+                <Link to={`/meanings/letter/${'Q'}`} className='noLineLinks'><img src="../Q2.png" alt="Q"/></Link>
+                <Link to={`/meanings/letter/${'R'}`} className='noLineLinks'><img src="../R2.png" alt="R"/></Link>
+                <Link to={`/meanings/letter/${'S'}`} className='noLineLinks'><img src="../S2.png" alt="S"/></Link>
+                <Link to={`/meanings/letter/${'T'}`} className='noLineLinks'><img src="../T2.png" alt="T"/></Link>
+                <Link to={`/meanings/letter/${'U'}`} className='noLineLinks'><img src="../U2.png" alt="U"/></Link>
+                <Link to={`/meanings/letter/${'V'}`} className='noLineLinks'><img src="../V2.png" alt="V"/></Link>
+                <Link to={`/meanings/letter/${'W'}`} className='noLineLinks'><img src="../W2.png" alt="W"/></Link>
+                <Link to={`/meanings/letter/${'X'}`} className='noLineLinks'><img src="../X2.png" alt="X"/></Link>
+                <Link to={`/meanings/letter/${'Y'}`} className='noLineLinks'><img src="../Y2.png" alt="Y"/></Link>
+                <Link to={`/meanings/letter/${'Z'}`} className='noLineLinks'><img src="../Z2.png" alt="Z"/></Link>
+                </div>
                 </div>
                 <br/>
                       

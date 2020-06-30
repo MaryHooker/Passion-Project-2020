@@ -39,7 +39,7 @@ loadMeaning = async() => {
                 {
                     this.state.meanings.map((meaning) => {
                         return(
-                            <div key={meaning._id} className='dreamersDisplayM'>
+                            <div key={meaning._id} className='meaningsDisplayM'>
                                 <p className='listedData'>{meaning.word}</p>
                                 <p className='listedData'>{meaning.meaning}</p>
                             </div>

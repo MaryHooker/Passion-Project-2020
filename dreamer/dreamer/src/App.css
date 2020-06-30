@@ -115,7 +115,7 @@ input{
   border-radius: 4%;
   height: 30px;
   margin: 3%;
-  width: 65%;
+  width: 35%;
   padding: 1%;
   margin-bottom: 5px;
   font-family: serif;
@@ -130,12 +130,41 @@ input:hover{
   padding: 1%;
   height: 30px;
   margin: 3%;
-  width: 65%;
+  width: 35%;
   margin-bottom: 5px;
   font-family: serif;
   font-size: 20px;
   box-shadow: 3px 3px 3px #6c4374;
 
+}
+
+.searchInput{
+  background-color: rgba(226, 190, 106, 0.952);
+  color: rgb(21, 3, 34);
+  border: 1px solid rgb(87, 20, 131);
+  border-radius: 4%;
+  height: 30px;
+  margin: 3%;
+  width: 65%;
+  padding: 1%;
+  margin-bottom: 5px;
+  font-family: serif;
+  font-size: 20px;
+}
+
+.searchInput:hover{
+  background-color: rgb(226, 153, 226);
+  color: rgb(21, 3, 34);
+  border: 1px solid rgb(87, 20, 131);
+  border-radius: 4%;
+  height: 30px;
+  margin: 3%;
+  width: 65%;
+  padding: 1%;
+  margin-bottom: 5px;
+  font-family: serif;
+  font-size: 20px;
+  box-shadow: 3px 3px 3px #6c4374;
 }
 
 textarea{
@@ -246,9 +275,31 @@ background-color: rgba(0, 0, 0, 0);
 /* //////////////////////////////////////////////////////////////////////////// */
 
 .adminHomeContainer{
- display: grid;
- grid-template-columns: repeat(3,1fr);
- grid-template-rows: repeat(5,1fr);
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  grid-template-rows: repeat(7,1fr);
+  height: 80vh;
+}
+
+/* ///////// Meanings //////////// */
+.meaningsDisplayAdmin{
+  background-color: rgba(0, 0, 0, 0.76);
+  color: rgb(233, 179, 233);
+  border: 1px solid rgb(231, 182, 66);
+  border-radius: 5%;
+  margin: 5%;
+  box-shadow: 5px 10px 8px #3b3b1f;
+  padding: 3%;
+}
+
+.meaningsDisplayAdmin:hover{
+  background-color: rgba(0, 0, 0, 0.979);
+  color: rgb(233, 179, 233);
+  border: 1px solid rgb(231, 182, 66);
+  border-radius: 5%;
+  margin: 5%;
+  box-shadow: 5px 10px 8px #585824;
+  padding: 3%;
 }
 
 /* .adminTitle{

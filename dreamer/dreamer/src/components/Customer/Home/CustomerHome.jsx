@@ -86,16 +86,16 @@ class CustomerHome extends Component {
                 <h2>Welcome back <span className='userName'>{this.props.tokenUser.name}</span>!</h2>
                 </div> */ }
                 <br/>
-                {/*///////////////////////////////// Me ////////////////////////////////////////*/}
+                { /*///////////////////////////////// Me ////////////////////////////////////////*/ }
                 <Link to='/me' className='meLink' className='meLinkP'>
                   <h3>Me</h3>
                 <img src="../mirror8.png" alt="avatar" className='avatarImage'/>
                 </Link>
-                {/*/////////////////////////////// My Dreams ///////////////////////////////////*/}
+                { /*/////////////////////////////// My Dreams ///////////////////////////////////*/ }
                 <Link to='/myDreams' className='dreamersLink' className='myDreamsLinkP'>
                 <h3>My Dreams</h3>
                 <img src="../astro2.png" alt="myDreams"/></Link>
-                {/* /////////////////////////// Dreamer's Dreams //////////////////////////////////// */}
+                { /* /////////////////////////// Dreamer's Dreams //////////////////////////////////// */ }
                 <div className='dreamerForum'>
                     <h3>Dreamer's Dreams</h3>
                    
@@ -126,7 +126,7 @@ class CustomerHome extends Component {
                 { /* </iframe> */ }
                
                 </div>
-                {/* /////////////////////////// Dream Knowledge //////////////////////////////////// */}
+                { /* /////////////////////////// Dream Knowledge //////////////////////////////////// */ }
                 <div className='dreamerKnowledgeLinkP'>
                 <h3>Dream Knowledge</h3>
 
@@ -147,11 +147,11 @@ class CustomerHome extends Component {
                 </div>    
                 { /* <Link to='/dreamer/knowledge' className='dreamersLink'><span className='dreamerHomeButton5'>Knowledge</span></Link> */ }
                 </div>
-                {/* /////////////////////////// Spotlighted Dream //////////////////////////////////// */}
+                { /* /////////////////////////// Spotlighted Dream //////////////////////////////////// */ }
 
                 <div className='spotlightLinkP'>
-                {/* <h3>Spotlighted Dream</h3> */}
-{/* 
+                { /* <h3>Spotlighted Dream</h3> */ }
+{ /* 
                 <div className='dreamSpotlightDisplay'>
                 {
       this.state.spotlighted.map((dream) => {
@@ -172,7 +172,7 @@ class CustomerHome extends Component {
         )
       })
       }
-                </div> */}
+                </div> */ }
                 { /* <Link to='/dreamer/spotlighted' className='dreamersLink'><span className='spotlightHomeButton56'>Spotlighted</span></Link> */ }
                 </div>
                 <div className='dreamerMeaningPosition'>
@@ -184,7 +184,7 @@ class CustomerHome extends Component {
                 <br/>
                 <form>
                             <label htmlFor="word"><span> </span></label>
-                            <input type="text" name="word" id="word" onChange={this.handleChange} />
+                            <input type="text" name="word" id="word" onChange={this.handleChange} className='searchInput'/>
                             <Link to={`/meanings/word/${this.state.word}`}><button className='searchButton'>Search</button></Link>
                         </form>
                        

@@ -81,7 +81,7 @@ class CreateDream extends Component {
                         <label htmlFor="dreamDescription"><span className='whatHappened'>What happened?</span></label>
                         <br/>
                         <br/>
-                        <textarea name="dreamDescription" id="dreamDescription" cols="30" rows="10"  onChange={this.handleChanges} value={this.state.dreamDescription} ></textarea>
+                        <textarea name="dreamDescription" id="dreamDescription" cols="50" rows="20"  onChange={this.handleChanges} value={this.state.dreamDescription} ></textarea>
                         {/* <input type="text" name='dreamDescription' id='dreamDescription' onChange={this.handleChanges} value={this.state.dreamDescription} /> */}
                     </div>
 

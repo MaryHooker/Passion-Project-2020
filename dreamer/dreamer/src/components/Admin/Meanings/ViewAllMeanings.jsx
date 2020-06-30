@@ -41,7 +41,7 @@ class ViewAllMeanings extends Component {
                 {
                     this.state.meanings.map((meaning) => {
                         return(
-                            <div key={meaning._id} className='dreamersDisplayM'>
+                            <div key={meaning._id} className='meaningsDisplayAdmin'>
                                 <Link to={`/meanings/view/one/${meaning._id}`} className='linkLink'>
                                 <p className='listedData'>{meaning.word}</p>
                                 <p className='listedData'>{meaning.meaning}</p>

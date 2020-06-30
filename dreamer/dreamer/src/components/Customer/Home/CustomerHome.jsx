@@ -129,7 +129,6 @@ class CustomerHome extends Component {
                 { /* /////////////////////////// Dream Knowledge //////////////////////////////////// */ }
                 <div className='dreamerKnowledgeLinkP'>
                 <h3>Dream Knowledge</h3>
-
                 <div className='dreamKnowledgeDisplay'>
                 {
       this.state.knowledge.map((link) => {

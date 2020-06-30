@@ -114,7 +114,7 @@ button:hover{
 
 input{
   background-color: rgba(0, 0, 0, 0.534);
-  color: rgb(21, 3, 34);
+  color: rgb(223, 198, 146);
   border: 1px solid rgb(87, 20, 131);
   border-radius: 4%;
   height: 30px;
@@ -129,7 +129,7 @@ input{
 
 input:hover{
   background-color: rgba(56, 4, 56, 0.651);
-  color: rgb(21, 3, 34);
+  color: rgb(223, 198, 146);
   border: 1px solid rgb(87, 20, 131);
   border-radius: 4%;
   padding: 1%;
@@ -144,8 +144,8 @@ input:hover{
 }
 
 .searchInput{
-  background-color: rgba(226, 190, 106, 0.952);
-  color: rgb(21, 3, 34);
+  background-color: rgba(0, 0, 0, 0.534);
+  color: rgb(235, 190, 108);
   border: 1px solid rgb(87, 20, 131);
   border-radius: 4%;
   height: 30px;
@@ -158,8 +158,8 @@ input:hover{
 }
 
 .searchInput:hover{
-  background-color: rgb(226, 153, 226);
-  color: rgb(21, 3, 34);
+  background-color: rgba(56, 4, 56, 0.651);
+  color: rgb(235, 190, 108);
   border: 1px solid rgb(87, 20, 131);
   border-radius: 4%;
   height: 30px;
@@ -283,7 +283,7 @@ box-shadow: none;
 .adminHomeContainer{
   display: grid;
   grid-template-columns: repeat(5,1fr);
-  grid-template-rows: repeat(7,1fr);
+  grid-template-rows: repeat(2,1fr);
   height: 80vh;
 }
 
@@ -306,6 +306,19 @@ box-shadow: none;
   margin: 5%;
   box-shadow: 5px 10px 8px #585824;
   padding: 3%;
+}
+
+/* /////////// Knowledge ////////// */
+
+
+.manageKnowledgeLinks{
+  text-decoration: none;
+  color: rgb(231, 182, 66);
+}
+
+.manageKnowledgeLinks:hover{
+  text-decoration: none;
+  color: rgb(165, 79, 190);
 }
 
 /* .adminTitle{
@@ -520,7 +533,7 @@ box-shadow: none;
 .dreamerHomeContainer{
   display: grid;
   grid-template-columns: repeat(5,1fr);
-  grid-template-rows: repeat(7,1fr);
+  grid-template-rows: repeat(2,1fr);
   height: 80vh;
 }
 
@@ -739,8 +752,8 @@ mask-image: cross-fade();
   /* margin-top: 25%; */
   grid-column: 2/4;
   grid-row: 2;
-  width: 97%;
-  height: 100%;
+  /* width: 97%;
+  height: 100%; */
   background-color: rgba(0, 0, 0, 0.808);  
   border: 1px solid rgb(211, 150, 223);
   margin-left: 12px;

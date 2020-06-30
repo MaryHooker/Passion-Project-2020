@@ -92,7 +92,7 @@ class AdminHome extends Component {
   
                 <Link to='/view/dreamers' className='dreamersLink' className='myDreamsLinkP'>
                   <h3>Dreamers</h3>
-                  <img src="../earth3.png" alt="dreamers"/>
+                  <img src="../earth7.png" alt="dreamers"/>
                   </Link>
       
                 <div className='dreamerMeaningPosition'>
@@ -174,13 +174,14 @@ class AdminHome extends Component {
                 { /* /////////////////////////// Dream Knowledge //////////////////////////////////// */ }
                 <div className='dreamerKnowledgeLinkP'>
                 <h3>Dream Knowledge</h3>
-
+                <Link to='/knowledge/links' className='manageKnowledgeLinks'><h4 >Manage</h4></Link>
+                {/* <Link path='/knowledge/links/create'><img src="../addSymbol2.png" alt="add"/></Link>  */}
                 <div className='dreamKnowledgeDisplay'>
                 {
       this.state.knowledge.map((link) => {
         return (
           <div key={link._id} className='eachLink'>
-                                <a href={link.link} className='noLineLinks'target="_blank">
+                                <a href={link.link} className='noLineLinks' target="_blank">
                                 <p className='listedDataPost'>{link.title}</p>
                                 { /* <p className='listedData'>{link.link}</p> */ }
                                 <p className='listedDataDreamer'>{link.author}</p>

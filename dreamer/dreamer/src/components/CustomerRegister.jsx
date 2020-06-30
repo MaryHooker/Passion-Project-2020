@@ -114,7 +114,7 @@ class CustomerRegister extends Component {
           { /* <legend><h3>Register</h3></legend> */ }
           <div className='labelPositions'>
             <label htmlFor="name">
-              <span>Name </span>{" "}
+              {/* <span>Name </span>{" "} */}
             </label>
             <input
       type="text"
@@ -123,6 +123,7 @@ class CustomerRegister extends Component {
       placeholder='name'
       value={this.state.name}
       onChange={this.handleInputs}
+      className='form-control'
       />
                     <div style={{
         fontSize: 13,
@@ -132,7 +133,7 @@ class CustomerRegister extends Component {
           </div>
           <div className='labelPositions'>
             <label htmlFor="email">
-              <span>Email </span>{" "}
+              {/* <span>Email </span>{" "} */}
             </label>
             <input
       type="email"
@@ -141,6 +142,7 @@ class CustomerRegister extends Component {
       placeholder="email"
       value={this.state.email}
       onChange={this.handleInputs}
+      className='form-control'
       required={true}
       />
                     <div style={{
@@ -151,7 +153,7 @@ class CustomerRegister extends Component {
           </div>
           <div className='labelPositions'>
             <label htmlFor="password">
-              <span>Password </span>{" "}
+              {/* <span>Password </span>{" "} */}
             </label>
             <input
       type="password"
@@ -160,6 +162,7 @@ class CustomerRegister extends Component {
       placeholder='password'
       value={this.state.password}
       onChange={this.handleInputs}
+      className='form-control'
       />
                     <div style={{
         fontSize: 13,
@@ -167,7 +170,7 @@ class CustomerRegister extends Component {
       }}>{this.state.passwordError}</div>
 
           </div>
-          <button onClick={this.handleSubmission}>Submit</button>
+          <button onClick={this.handleSubmission} className='loginButton'>Submit</button>
         </form>
       </div>
       );

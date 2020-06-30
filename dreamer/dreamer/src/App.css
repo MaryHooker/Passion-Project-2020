@@ -37,7 +37,7 @@ button{
   margin: 2%;
   font-family: serif;
   font-weight: bold;
-  width: 40%;
+  width: 20%;
   /* height: 75%; */
   font-size: 16px;
   padding: 1%;
@@ -54,10 +54,58 @@ button:hover{
   font-family: serif;
   font-weight: bold;
   /* height: 46px; */
-  width: 40%;
+  width: 20%;
   font-size: 16px;
   padding: 1%;
   box-shadow: 3px 3px 3px #6c4374;
+}
+
+.searchButton{
+  background-color: rgba(0, 0, 0, 0.726);
+  color: rgb(233, 179, 233);
+  border: 1px solid rgb(233, 179, 233);
+  border-radius: 5%;
+  margin-top: 3%;
+  margin: 2%;
+  font-family: serif;
+  font-weight: bold;
+  width: 40%;
+  /* height: 75%; */
+  font-size: 16px;
+  padding: 1%;
+  /* box-shadow: 5px 10px 8px #6c4374; */
+}
+
+.searchButton:hover{
+  background-color: rgba(0, 0, 0, 0.726);
+  color: rgb(233, 179, 233);
+  border: 1px solid rgb(233, 179, 233);
+  border-radius: 5%;
+  margin-top: 3%;
+  margin: 2%;
+  font-family: serif;
+  font-weight: bold;
+  width: 40%;
+  /* height: 75%; */
+  font-size: 16px;
+  padding: 1%;
+  /* box-shadow: 5px 10px 8px #6c4374; */
+}
+
+.form-control{
+  width: 25%;
+}
+
+.form-control:hover{
+  width: 25%;
+}
+
+.loginButton{
+  width: 20%;
+}
+
+.loginButton:hover{
+  width: 20%;
 }
 
 input{
@@ -430,6 +478,8 @@ background-color: rgba(0, 0, 0, 0);
   border: solid 1px rgb(226, 178, 238);
   height: 97%;
   width: 97%;
+  color: rgb(219, 196, 141);
+  text-decoration: none;
 }
 
 .myDreamsLinkP:hover{
@@ -465,7 +515,16 @@ background-color: rgba(0, 0, 0, 0);
   padding: 2%;
   width: 90%;
   height: 92%;
+  color: rgb(219, 196, 141);
+  text-decoration: none;
 }
+
+/* .meLink{
+  text-decoration: none;
+  color: rgb(182, 3, 137);
+  font-size: 16px;
+  font-weight: bold;
+} */
 
 .meLinkP:hover{
   /* margin-top: 1%; */
@@ -597,23 +656,24 @@ mask-image: cross-fade();
 }
 
 
-.dreamersDisplayM{
+.meaningsDisplayM{
   background-color: rgba(0, 0, 0, 0.76);
   color: rgb(233, 179, 233);
   border: 1px solid rgb(231, 182, 66);
   border-radius: 5%;
-  margin-left: 10%;
+  /* margin-left: 10%;
   margin-bottom: 10%;
-  margin-right:15%;
+  margin-right:15%; */
   /* padding: 1%; */
-  width: 75%;
+  /* width: 75%; */
+  margin: 5%;
   box-shadow: 5px 10px 8px #3b3b1f;
-  padding: 2%;
+  padding: 3%;
 }
 
 .dreamersContainerM{
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 /* /////// Knowledge /////// */
@@ -728,10 +788,10 @@ mask-image: cross-fade();
   grid-template-columns: repeat(6,1fr);
 }
 
-.dreamersContainerM{
+/* .dreamersContainerM{
   display: grid;
   grid-template-columns: repeat(6,1fr);
-}
+} */
 
 .dreamersDisplay{
   background-color: rgba(0, 0, 0, 0.76);
@@ -748,7 +808,7 @@ mask-image: cross-fade();
 
 
 .dreamersDisplay:hover{
-  background-color: rgba(0, 0, 0, 0.575);
+  background-color: rgba(0, 0, 0, 0.911);
   color: rgb(236, 161, 218);
   border: 1px solid rgb(231, 182, 66);
   border-radius: 5%;

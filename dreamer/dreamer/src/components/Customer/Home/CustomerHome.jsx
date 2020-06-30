@@ -86,14 +86,15 @@ class CustomerHome extends Component {
                 <h2>Welcome back <span className='userName'>{this.props.tokenUser.name}</span>!</h2>
                 </div> */ }
                 <br/>
-                <div className='meLinkP'>
+                {/*///////////////////////////////// Me ////////////////////////////////////////*/}
+                <Link to='/me' className='meLink' className='meLinkP'>
                   <h3>Me</h3>
-                <Link to='/me' className='dreamersLink'><img src="../mirror8.png" alt="avatar" className='avatarImage'/></Link>
-                </div>
-                <div className='myDreamsLinkP'>
+                <img src="../mirror8.png" alt="avatar" className='avatarImage'/>
+                </Link>
+                {/*/////////////////////////////// My Dreams ///////////////////////////////////*/}
+                <Link to='/myDreams' className='dreamersLink' className='myDreamsLinkP'>
                 <h3>My Dreams</h3>
-                <Link to='/myDreams' className='dreamersLink'><img src="../astro2.png" alt="myDreams"/></Link>
-                </div>
+                <img src="../astro2.png" alt="myDreams"/></Link>
                 {/* /////////////////////////// Dreamer's Dreams //////////////////////////////////// */}
                 <div className='dreamerForum'>
                     <h3>Dreamer's Dreams</h3>
@@ -184,7 +185,7 @@ class CustomerHome extends Component {
                 <form>
                             <label htmlFor="word"><span> </span></label>
                             <input type="text" name="word" id="word" onChange={this.handleChange} />
-                            <Link to={`/meanings/word/${this.state.word}`}><button>Search</button></Link>
+                            <Link to={`/meanings/word/${this.state.word}`}><button className='searchButton'>Search</button></Link>
                         </form>
                        
                         <div className='lettersContainer'>

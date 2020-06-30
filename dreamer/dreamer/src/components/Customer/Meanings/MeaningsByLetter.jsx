@@ -32,11 +32,11 @@ class MeaningsByLetter extends Component {
         return ( 
             <div>
                 {/* <h4> "{this.props.match.params.letter}" Meanings</h4> */}
-                <div className='dreamersContainer'>
+                <div className='dreamersContainerM'>
                 {
                     this.state.meanings.map((meaning) => {
                         return(
-                            <div key={meaning._id} className='dreamersDisplayM'>
+                            <div key={meaning._id} className='meaningsDisplayM'>
                                 <p className='listedData'>{meaning.word}</p>
                                 <p className='listedData'>{meaning.meaning}</p>
                             </div>

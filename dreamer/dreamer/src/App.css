@@ -923,15 +923,16 @@ mask-image: cross-fade();
   font-size: 15px;
   color: #cc8ad8;
   font-size: 26px;
-  height: 65px;
-  width: 75px;
-  margin: 5%;
+  /* height: 65px;
+  width: 75px; */
+  /* margin: 5%; */
 }
 
 .postLink:hover{
   color: rgb(219, 196, 141);
-  height: 65px;
-  width: 75px;  
+  font-size: 26px;
+  /* height: 65px;
+  width: 75px;   */
 }
 /* 
 .spotLink{

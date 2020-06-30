@@ -31,7 +31,7 @@ span{
 button{
   background-color: rgba(0, 0, 0, 0.726);
   color: rgb(233, 179, 233);
-  border: 1px solid rgb(233, 179, 233);
+  border: 1px solid rgb(231, 182, 66);
   border-radius: 5%;
   margin-top: 3%;
   margin: 2%;
@@ -45,9 +45,9 @@ button{
 }
 
 button:hover{
-  background-color: rgba(213, 116, 216, 0.295);
+  background-color: rgba(0, 0, 0, 0.959);
   color: rgb(233, 179, 233);
-  border: 1px solid rgb(233, 179, 233);
+  border: 1px solid rgb(231, 182, 66);
   border-radius: 5%;
   margin-top: 3%;
   margin: 2%;
@@ -57,7 +57,7 @@ button:hover{
   width: 20%;
   font-size: 16px;
   padding: 1%;
-  box-shadow: 3px 3px 3px #6c4374;
+  box-shadow: 3px 3px 3px #e7d63f;
 }
 
 .searchButton{
@@ -96,6 +96,10 @@ button:hover{
   width: 25%;
 }
 
+::placeholder{
+  color: rgb(235, 204, 146);
+}
+
 .form-control:hover{
   width: 25%;
 }
@@ -109,7 +113,7 @@ button:hover{
 }
 
 input{
-  background-color: rgba(226, 190, 106, 0.952);
+  background-color: rgba(0, 0, 0, 0.534);
   color: rgb(21, 3, 34);
   border: 1px solid rgb(87, 20, 131);
   border-radius: 4%;
@@ -120,10 +124,11 @@ input{
   margin-bottom: 5px;
   font-family: serif;
   font-size: 20px;
+  
 }
 
 input:hover{
-  background-color: rgb(226, 153, 226);
+  background-color: rgba(56, 4, 56, 0.651);
   color: rgb(21, 3, 34);
   border: 1px solid rgb(87, 20, 131);
   border-radius: 4%;
@@ -223,10 +228,11 @@ hr{
 }
 
 .logoutStyle:hover{
-  border: 0px;
+border: 0px;
 font-size: 20px;
 color: rgb(231, 182, 66);
 background-color: rgba(0, 0, 0, 0);
+box-shadow: none;
 }
 
 .registerComponent{
@@ -823,16 +829,14 @@ mask-image: cross-fade();
   color: rgb(233, 179, 233);
   border: 1px solid rgb(231, 182, 66);
   border-radius: 5%;
-  margin-left: 42%; 
+  margin-left: 36%; 
   margin-right:15%;
-  width: 15%;
+  width: 25%;
   padding: 1%;
   box-shadow: 5px 10px 8px #3b3b1f;
 }
 
-
 /*/// Admin View All Dreamers  ///*/
-
 
 .dreamersContainer{
   display: grid;

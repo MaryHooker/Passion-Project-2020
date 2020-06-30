@@ -85,14 +85,14 @@ class AdminHome extends Component {
                 {/* ////////////////////////////// Admin //////////////////////////////////// */}
                 <Link to='/admin/view/all' className='meLinkP'>
                   <h3>Admin</h3>
-                  <img src="../mirror8.png" alt="avatar" className='avatarImage'/>
+                  <img src="../telescope1.png" alt="admin" className='avatarImage'/>
                   </Link>
                  {/* ////////////////////////////// Dreamers //////////////////////////////////// */}
 
   
                 <Link to='/view/dreamers' className='dreamersLink' className='myDreamsLinkP'>
                   <h3>Dreamers</h3>
-                  <img src="../astro2.png" alt="myDreams"/>
+                  <img src="../earth3.png" alt="dreamers"/>
                   </Link>
       
                 <div className='dreamerMeaningPosition'>

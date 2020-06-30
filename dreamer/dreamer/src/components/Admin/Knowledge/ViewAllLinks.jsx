@@ -59,11 +59,11 @@ class ViewAllLinks extends Component {
                     this.state.knowledge.map((link) => {
                         return(
                             <div key={link._id} className='dreamersDisplay'>
-                                <a href={link.link} className='noLineLinks' target="_blank">
+                                {/* <a href={link.link} className='noLineLinks' target="_blank"> */}
                                 <p className='listedData'>{link.title}</p>
                                 {/* <p className='listedData'>{link.link}</p> */}
                                 <p className='listedData'>{link.author}</p>
-                                </a>
+                                {/* </a> */}
                                 <Link to={`/knowledge/links/details/${link._id}`} className='linkLink'><button>Details</button></Link>            
                             </div>
                         )

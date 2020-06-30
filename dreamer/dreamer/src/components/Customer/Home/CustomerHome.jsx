@@ -88,10 +88,11 @@ class CustomerHome extends Component {
                 <br/>
                 <div className='meLinkP'>
                   <h3>Me</h3>
-                <Link to='/me' className='dreamersLink'><img src="../astro2.png" alt="avatar" className='avatarImage'/></Link>
+                <Link to='/me' className='dreamersLink'><img src="../mirror8.png" alt="avatar" className='avatarImage'/></Link>
                 </div>
                 <div className='myDreamsLinkP'>
-                <Link to='/myDreams' className='dreamersLink'><img src="../.png" alt="myDreams"/></Link>
+                <h3>My Dreams</h3>
+                <Link to='/myDreams' className='dreamersLink'><img src="../astro2.png" alt="myDreams"/></Link>
                 </div>
                 {/* /////////////////////////// Dreamer's Dreams //////////////////////////////////// */}
                 <div className='dreamerForum'>
@@ -185,7 +186,7 @@ class CustomerHome extends Component {
                             <input type="text" name="word" id="word" onChange={this.handleChange} />
                             <Link to={`/meanings/word/${this.state.word}`}><button>Search</button></Link>
                         </form>
-                        <br/>
+                       
                         <div className='lettersContainer'>
                 <Link to={`/meanings/letter/${'A'}`} className='noLineLinks'><img src="../A2.png" alt="A"/></Link>
                 <Link to={`/meanings/letter/${'B'}`} className='noLineLinks'><img src="../B.png" alt="B"/></Link>

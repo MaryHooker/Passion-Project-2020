@@ -5,7 +5,7 @@ body{
   font-size: 18px;
   font-family: serif;
   text-align: center;
-  height: 70vh;
+  height: 66vh;
   /* width:238vh; */
 }
 
@@ -440,10 +440,15 @@ background-color: rgba(0, 0, 0, 0);
 /* //////// Me ///////// */
 
 .meLinkP{
-  /* margin-top: 15%; */
-  grid-column: 4;
+  margin-top: 1%;
+  grid-column: 4/6;
   grid-row: 1;
-  margin-left: 10%;
+  margin-left: 3%;
+  background-color: rgba(0, 0, 0, 0.616);
+  border: solid 1px rgb(226, 178, 238);
+  padding: 2%;
+  width: 80%;
+  height: 100%;
 }
 
 .dreamerHomeButton1{
@@ -519,7 +524,7 @@ mask-image: cross-fade();
   border: 1px solid rgb(197, 135, 221);
   padding: 1%;
   margin: 1%;
-  height: 86%;
+  height: 96%;
 }
 
 .meaningsAll{

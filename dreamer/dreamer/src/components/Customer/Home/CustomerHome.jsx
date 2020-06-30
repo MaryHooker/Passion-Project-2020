@@ -175,8 +175,9 @@ class CustomerHome extends Component {
                 </div>
                 <div className='dreamerMeaningPosition'>
                
-                <h3>Meanings</h3>
+               
                 <div className='dreamerMeaningsLinkP'>
+                <h3>Meanings</h3>
                 <Link to='/dreamer/meanings' className='dreamersLink'><span className='meaningsAll'>All</span></Link>
                 <br/>
                 <form>

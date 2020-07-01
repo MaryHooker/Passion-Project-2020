@@ -34,8 +34,8 @@ class Dreams extends Component {
         return ( 
             <div>
                 {/* <h2>Dreams</h2> */}
-                <Link to='/dreams/posted' className='linkLink'><span className='postLink'>Posted</span></Link>
-                <Link to='/dreams/spotlighted' className='linkLink'><span className='postLink'>Spotlighted</span></Link>
+                <Link to='/dreams/posted' className='linkLink'><button className='postLink'>Posted Dreams</button></Link>
+                {/* <Link to='/dreams/spotlighted' className='linkLink'><button className='postLink'>Spotlighted Dream</button></Link> */}
                 <br/>
                 <br/>
                 <div className='dreamersContainer'>

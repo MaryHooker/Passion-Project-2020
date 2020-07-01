@@ -143,9 +143,10 @@ class AdminHome extends Component {
                 { /* /////////////////////////// Dreamer's Dreams //////////////////////////////////// */ }
                 <div className='dreamerForum'>
                     <h3>Dreamer's Dreams</h3>
-                   
+                    <Link to='/dreams/view/all' className='manageKnowledgeLinks'><h4 >Manage</h4></Link>
+
                         { /* <iframe src={<DreamerViewAllPostedDreams/>} frameborder="0"> */ }
-                        <div className='dreamPostDisplay'>
+                        <div className='dreamPostDisplayAdmin'>
                 {
       this.state.dreams.map((dream) => {
         return (

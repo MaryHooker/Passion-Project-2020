@@ -55,6 +55,8 @@ import DreamerViewAllSpotlightedDreams from './Customer/Spotlight/DreamerViewAll
 import DreamerViewAllMeanings from './Customer/Meanings/DreamerViewAllMeanings';
 import MeaningsByLetter from './Customer/Meanings/MeaningsByLetter';
 import FindingWordMeaning from './Customer/Meanings/FindingWordMeaning';
+///////// TESTING
+import CustomerHomeCopy from './Customer/Home/CustomerHomeCopy';
 class AppContainer extends Component {
   constructor(props) {
     super(props);
@@ -130,7 +132,7 @@ class AppContainer extends Component {
         homePage = "/adminHome";
       //Else if the role of the user logged in is Customer, render the Customer's homepage
       } else if (this.state.tokenUser.role === "Customer") {
-        homePage = "/customerHome";
+        homePage = "/customerHomeCopy";
       }
     //Else if the user is not logged in, render the register, login components and hide the logout/ and credit artist of background picture
     } else {
@@ -182,9 +184,11 @@ class AppContainer extends Component {
 
                 { /*//////// Home ////////*/ }
                 { /* Admin  */ }
-                <Route path='/adminHome' exact component={() => <AdminHome tokenUser={this.state.tokenUser}/> }/>
+                <Route path='/adminHome' exact component={(props) => <AdminHome {...props} tokenUser={this.state.tokenUser}/> }/>
                 { /* Customer */ }
-                <Route path='/customerHome' exact component={() => <CustomerHome tokenUser={this.state.tokenUser}/> }/>
+                <Route path='/customerHome' exact component={(props) => <CustomerHome {...props} tokenUser={this.state.tokenUser}/> }/>
+                {/* TESTING */}
+                <Route path='/customerHomeCopy' exact component={(props) => <CustomerHomeCopy {...props} tokenUser={this.state.tokenUser}/> }/>
 
                 { /* ///////// Admin /////////*/ }
                 <Route path='/admin/view/all' exact component={() => <ViewAllAdmin/> }/>

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import DreamerViewAllPostedDreams from '../Posted/DreamerViewAllPostedDreams';
 
-class CustomerHome extends Component {
+class CustomerHomeCopy extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -82,9 +82,35 @@ class CustomerHome extends Component {
   render() {
     return (
       <div className='dreamerHomeContainer'>
-        <nav class="navbar navbar-dark bg-dark">
-
-      </nav>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown link
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
                 { /* <div className='adminTitle'>
                 <h2>Welcome back <span className='userName'>{this.props.tokenUser.name}</span>!</h2>
                 </div> */ }
@@ -186,7 +212,7 @@ class CustomerHome extends Component {
                 <br/>
                 <form>
                             <label htmlFor="word"><span> </span></label>
-                            <input type="text" name="word" id="word" onChange={this.handleChange} className='searchInput' placeholder="Ex. 'Apple'"/>
+                            <input type="text" name="word" id="word" onChange={this.handleChange} className='searchInput'/>
                             <Link to={`/meanings/word/${this.state.word}`}><button className='searchButton'>Search</button></Link>
                         </form>
                        
@@ -227,4 +253,4 @@ class CustomerHome extends Component {
   }
 }
 
-export default CustomerHome;
+export default CustomerHomeCopy;

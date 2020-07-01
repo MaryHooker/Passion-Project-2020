@@ -186,7 +186,7 @@ router.get('/meanings/view/:letter',(req,res) => {
 })
 
 // View one meaning by name/ for customer searchbar
-router.get('/meanings/word/:word',(req,res) => {
+router.get('/meanings/one/:word',(req,res) => {
   console.log(`Viewing all meanings by letter!`);
   // res.send(`Viewing all meanings by letter!`);
   MeaningCollection.findOne({word:req.params.word},(errors,results) => {

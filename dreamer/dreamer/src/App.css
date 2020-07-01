@@ -97,7 +97,8 @@ button:hover{
 }
 
 ::placeholder{
-  color: rgb(235, 204, 146);
+  color: rgba(235, 204, 146, 0.568);
+  padding: 2%;
 }
 
 .form-control:hover{
@@ -648,8 +649,18 @@ mask-image: cross-fade();
   /* height: 80vh; */
   overflow: scroll;
   grid-column: 9/13;
-  grid-row: 1/8;
+  grid-row: 1/3;
   height: 70vh;
+  width: 98%;
+  margin: 1%;
+}
+
+.dreamPostDisplayAdmin{
+  /* height: 80vh; */
+  overflow: scroll;
+  grid-column: 9/13;
+  grid-row: 1/3;
+  height: 66vh;
   width: 98%;
   margin: 1%;
 }

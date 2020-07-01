@@ -44,6 +44,27 @@ router.put('/dream/relate/:email', async (req, res) => {
   })
 })
 
+//Find the dream & the user and push said users id into the liked dreams 'likes' property array
+router.put('/dream/like/:id', authenticateToken, async (req, res) => {
+
+  let dream,
+    dreamer;
+
+  await DreamCollection.findById(req.params.id, (errors, results1) => {
+    errors ? res.json(errors) : dream = results1;
+    console.log(dream);
+
+    DreamerCollection.findOne({email:req.user.email}
+  , (errors, results2) => {
+      errors ? res.json(errors) : dreamer = results2;
+
+      dream.likes.user.push(dreamer._id)
+      dream.save();
+      res.send(dream);
+    });
+  })
+})
+
 // Create a dream
 router.post('/dream', (req, res) => {
   DreamCollection.create(req.body, (errors, results) => {
@@ -313,7 +334,7 @@ router.get('/dreams/all/spotlight/true', (req, res) => {
 //AUthorize route middleware
 function authenticateToken(req,res,next){
   //pull encrypted token from header
-  let header = req.heqaders["authorization"];
+  let header = req.headers["authorization"];
   //if token passed in to header
   if(header){
     //pull encrypted token from bearer token

@@ -186,7 +186,7 @@ class AppContainer extends Component {
                 { /* Admin  */ }
                 <Route path='/adminHome' exact component={(props) => <AdminHome {...props} tokenUser={this.state.tokenUser}/> }/>
                 { /* Customer */ }
-                <Route path='/customerHome' exact component={(props) => <CustomerHome {...props} tokenUser={this.state.tokenUser}/> }/>
+                {/* <Route path='/customerHome' exact component={(props) => <CustomerHome {...props} tokenUser={this.state.tokenUser}/> }/> */}
                 {/* TESTING */}
                 <Route path='/customerHomeCopy' exact component={(props) => <CustomerHomeCopy {...props} tokenUser={this.state.tokenUser}/> }/>
 

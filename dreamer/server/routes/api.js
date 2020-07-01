@@ -186,11 +186,21 @@ router.get('/meanings/view/:letter',(req,res) => {
 })
 
 // View one meaning by name/ for customer searchbar
-router.get('/meanings/one/:word',(req,res) => {
+router.get('/meanings/search/:word',(req,res) => {
   console.log(`Viewing all meanings by letter!`);
   // res.send(`Viewing all meanings by letter!`);
-  MeaningCollection.findOne({word:req.params.word},(errors,results) => {
-    errors ? res.send(errors) : res.send(results);
+  let searchResults=[];
+  MeaningCollection.find((errors,results) => {
+    errors ? res.send(errors) : results.forEach(
+      (meaning) => {
+        // If the word entered is in any word in the database, send associated word
+        if(meaning.word.includes(req.params.word)){
+          searchResults.push(meaning);
+          console.log(meaning);
+        }
+      }
+    );
+    res.send(searchResults);
   })
 })
 

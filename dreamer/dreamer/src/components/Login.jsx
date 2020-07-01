@@ -83,7 +83,7 @@ export default class Login extends Component {
       if (this.props.tokenUser.role === "Admin") {
         return <Redirect to='/adminHome' />
       } else if (this.props.tokenUser.role === "Customer") {
-        return <Redirect to='/customerHome' />
+        return <Redirect to='/customerHomeCopy' />
       }}
     return (
       <div>

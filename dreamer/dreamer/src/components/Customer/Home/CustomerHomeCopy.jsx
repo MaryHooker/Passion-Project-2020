@@ -212,7 +212,7 @@ class CustomerHomeCopy extends Component {
                 <br/>
                 <form>
                             <label htmlFor="word"><span> </span></label>
-                            <input type="text" name="word" id="word" onChange={this.handleChange} className='searchInput'/>
+                            <input type="text" name="word" id="word" onChange={this.handleChange} className='searchInput' placeholder="Ex. 'Apple'"/>
                             <Link to={`/meanings/word/${this.state.word}`}><button className='searchButton'>Search</button></Link>
                         </form>
                        

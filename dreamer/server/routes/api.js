@@ -315,14 +315,40 @@ router.get('/dreams/all/posted/true', (req, res) => {
 //      Spotlight
 /////////////////////////////////////////////////////////////////////
 
-//View all spotlighted dreams
-router.get('/dreams/all/spotlight/true', (req, res) => {
+//View all dreams & spotlight whichever has the most likes
+router.get('/dreams/all/spotlight/likes',async (req, res) => {
   console.log(`Viewing all spotlighted Dreams`);
+  let dream;
+  let spotlight;
   // res.send(`Viewing all spotlighted Dreams`);
-  DreamCollection.find({
-    spotlight: "true"
-  }, (errors, results) => {
-    errors ? res.send(errors) : res.send(results);
+  await DreamCollection.find({}, (errors, results1) => {
+    errors ? res.send(errors) : dream=results1;
+    // let liked = "";
+    let maxValue = dream[0].likes.user.length;
+    spotlight = dream[0];
+    for(let i = 0; i < dream.length; i++){
+      if(dream[i].likes.user.length > maxValue){
+        maxValue = dream[i].likes.user.length;
+        spotlight = dream[i];
+        console.log(spotlight);
+      }
+    }
+    res.send(spotlight);
+    //map through the all dreams
+    // dream.forEach((liked) => {
+    //   //set maxValue to be the length of the first positions number of likes
+    //   let maxValue = dream[0].likes.user.length;
+    //   console.log(maxValue);
+    //   //If any other dreams likes is greater than the max value
+    //   if(liked.likes.user.length > maxValue){
+    //     //than set that dream to be the new value of maxValue
+    //     maxValue= liked.likes.user.length;
+    //     //set the dream with the most likes in spotlight
+    //     spotlight = liked;
+    //     console.log(spotlight);
+    //   }
+    //   res.send(spotlight)
+    // })
   }).populate('dreams')
     .populate('dreamer')
 })

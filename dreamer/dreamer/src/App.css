@@ -669,6 +669,15 @@ mask-image: cross-fade();
   padding: 1%;
 }
 
+.eachPost:hover{
+  background-color: black;
+  border: 1px solid rgb(231, 169, 231);
+  margin: 1%;
+  padding: 1%;
+  box-shadow: 2px 4px 2px #c48ce9;
+
+}
+
 .dreamPostDisplay{
   /* height: 80vh; */
   overflow: scroll;

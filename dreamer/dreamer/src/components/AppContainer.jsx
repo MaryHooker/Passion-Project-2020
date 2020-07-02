@@ -27,8 +27,9 @@ import EditMeaning from './Admin/Meanings/EditMeaning';
 import PostedDreams from './Admin/Posted/PostedDreams';
 import ViewOnePostedDream from './Admin/Posted/ViewOnePostedDream';
 //Spotlight
-import SpotlightedDreams from './Admin/SpotLight/SpotlightedDreams';
-import ViewOneSpotlightedDream from './Admin/SpotLight/ViewOneSpotlightedDream';
+// import SpotlightedDreams from './Admin/SpotLight/SpotlightedDreams';
+// import ViewOneSpotlightedDream from './Admin/SpotLight/ViewOneSpotlightedDream';
+// import DreamerViewAllSpotlightedDreams from './Customer/Spotlight/DreamerViewAllSpotlightedDreams';
 //Links
 import ViewAllLinks from './Admin/Knowledge/ViewAllLinks';
 import CreateLink from './Admin/Knowledge/CreateLink';
@@ -51,7 +52,6 @@ import DreamerViewAllPostedDreams from './Customer/Posted/DreamerViewAllPostedDr
 import DreamerViewOtherPostedDream from './Customer/Posted/DreamerViewOtherPostedDream';
 //Knowledge
 import DreamerKnowledge from './Customer/Knowledge/DreamerKnowledge';
-import DreamerViewAllSpotlightedDreams from './Customer/Spotlight/DreamerViewAllSpotlightedDreams';
 import EditKnowledgeLink from './Admin/Knowledge/EditKnowledgeLink';
 //Meanings
 import DreamerViewAllMeanings from './Customer/Meanings/DreamerViewAllMeanings';
@@ -237,14 +237,14 @@ class AppContainer extends Component {
                   <Route path='/dreams/posted/mine' exact component={(props) => <MyPosted {...props} tokenUser={this.state.tokenUser} /> }/>
                   <Route path='/dreamer/posted/view/one/:id' exact component={(props) => <DreamerOnePosted {...props} /> } />
                   <Route path='/dreamer/dreams/posted' exact component={() => <DreamerViewAllPostedDreams/> }/>
-                  <Route path='/dreamer/posted/view/like/:id' exact component={(props) => <DreamerViewOtherPostedDream {...props} /> } />
+                  <Route path='/dreamer/posted/view/like/:id' exact component={(props) => <DreamerViewOtherPostedDream {...props} tokenUser={this.state.tokenUser} token={this.state.token} /> } />
 
                   {/*//////// Spotlight ////////*/}
                   {/* Admin */}
-                  <Route path='/dreams/spotlighted' exact component={() => <SpotlightedDreams/> } />
-                  <Route path='/dreams/spotlight/view/one/:id' exact component={(props) => <ViewOneSpotlightedDream {...props} /> } />
+                  {/* <Route path='/dreams/spotlighted' exact component={() => <SpotlightedDreams/> } /> */}
+                  {/* <Route path='/dreams/spotlight/view/one/:id' exact component={(props) => <ViewOneSpotlightedDream {...props} /> } /> */}
                   {/* Dreamer */}
-                  <Route path='/dreamer/spotlighted' exact component={() => <DreamerViewAllSpotlightedDreams/> }/>
+                  {/* <Route path='/dreamer/spotlighted' exact component={() => <DreamerViewAllSpotlightedDreams/> }/> */}
 
                   {/*////////// Knowledge/Links //////////*/}
                   {/* Admin */}

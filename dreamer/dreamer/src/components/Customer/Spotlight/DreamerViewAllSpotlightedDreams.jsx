@@ -10,25 +10,25 @@ class DreamerViewAllSpotlightedDreams extends Component {
 
     //when component mounts, run inner function to show all spotlighted dreams
     componentDidMount(){
-        this.loadSpotlight();
+        // this.loadSpotlight();
     }
 
-    //function to fetch method to render all spotlighted dreams
-    loadSpotlight = async() => {
-        let response = await fetch(`/api/dreams/all/spotlight/true`,{
-            method:"GET",
+    // //function to fetch method to render all spotlighted dreams
+    // loadSpotlight = async() => {
+    //     let response = await fetch(`/api/dreams/all/spotlight/true`,{
+    //         method:"GET",
            
-        })
-        let json = await response.json();
-        //sanity
-        console.log(`All Spotlighted Dreams ${JSON.stringify(json)}`)
-        //place in state
-        this.setState(
-            {
-                spotlighted:json
-            }
-        )
-    }
+    //     })
+    //     let json = await response.json();
+    //     //sanity
+    //     console.log(`All Spotlighted Dreams ${JSON.stringify(json)}`)
+    //     //place in state
+    //     this.setState(
+    //         {
+    //             spotlighted:json
+    //         }
+    //     )
+    // }
 
     render() { 
         return ( 

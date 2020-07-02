@@ -19,7 +19,7 @@ class CustomerHomeCopy extends Component {
   componentDidMount() {
     this.allDreams();
     this.loadKnowledge();
-    this.loadSpotlight();
+    // this.loadSpotlight();
   }
 
   //Function to fetch all posted dreams from database
@@ -55,22 +55,22 @@ class CustomerHomeCopy extends Component {
   }
 
 
-  //function to fetch method to render all spotlighted dreams
-  loadSpotlight = async() => {
-    let response = await fetch(`/api/dreams/all/spotlight/true`, {
-      method: "GET",
+  // //function to fetch method to render all spotlighted dreams
+  // loadSpotlight = async() => {
+  //   let response = await fetch(`/api/dreams/all/spotlight/true`, {
+  //     method: "GET",
 
-    })
-    let json = await response.json();
-    //sanity
-    // console.log(`All Spotlighted Dreams ${JSON.stringify(json)}`)
-    //place in state
-    this.setState(
-      {
-        spotlighted: json
-      }
-    )
-  }
+  //   })
+  //   let json = await response.json();
+  //   //sanity
+  //   // console.log(`All Spotlighted Dreams ${JSON.stringify(json)}`)
+  //   //place in state
+  //   this.setState(
+  //     {
+  //       spotlighted: json
+  //     }
+  //   )
+  // }
 
   // handle changes to fields
   handleChange = (event) => {
@@ -79,21 +79,7 @@ class CustomerHomeCopy extends Component {
     });
   }
 
-  // function to fetch method in order to update dream likes array
-  likedPost = async(dreamId) => {
-    //updated dream to be passed into the database
-    let response = await fetch(`/api/dream/like/${dreamId}`,{
-      method:'PUT',
-      headers:{
-        "Authorization": this.props.token,
-        "Accept":"application/json",
-        "Content-Type":"application/json",
-      }
-    })
-    let json = await response.json();
-    //sanity
-    console.log(`Liking Post ${JSON.stringify(json)}`);
-  }
+
 
   render() {
     return (
@@ -123,9 +109,9 @@ class CustomerHomeCopy extends Component {
         return (
           <div key={dream._id} className='eachPost'>
                             <Link to={`/dreamer/posted/view/like/${dream._id}`} className='linkLink'>
-                            <p className='listedDataPostType'>{dream.type}</p>
+                            {/* <p className='listedDataPostType'>{dream.type}</p> */}
                             <p className='listedDataPost'>{dream.dreamDescription}</p>
-
+                            <p className='listedDataPost'>{dream.likes.user.length}</p>
                             {
           dream.dreamer.map((dreamer) => {
             return (

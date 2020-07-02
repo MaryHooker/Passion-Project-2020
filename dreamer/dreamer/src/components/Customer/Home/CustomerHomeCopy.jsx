@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import DreamerViewAllPostedDreams from '../Posted/DreamerViewAllPostedDreams';
+// import DreamerViewAllPostedDreams from '../Posted/DreamerViewAllPostedDreams';
 
 class CustomerHomeCopy extends Component {
   constructor(props) {
@@ -34,7 +34,7 @@ class CustomerHomeCopy extends Component {
       dreams: json
     })
     //sanity
-    console.log(json)
+    // console.log(json)
 
   }
 
@@ -45,13 +45,13 @@ class CustomerHomeCopy extends Component {
     })
     let json = await response.json();
     //sanity
-    console.table(json)
+    // console.table(json)
     //place data in state
     this.setState({
       knowledge: json
     })
     //sanity
-    console.table(`Admin : Knowledge Links ${JSON.stringify(json)}`)
+    // console.table(`Admin : Knowledge Links ${JSON.stringify(json)}`)
   }
 
 
@@ -63,7 +63,7 @@ class CustomerHomeCopy extends Component {
     })
     let json = await response.json();
     //sanity
-    console.log(`All Spotlighted Dreams ${JSON.stringify(json)}`)
+    // console.log(`All Spotlighted Dreams ${JSON.stringify(json)}`)
     //place in state
     this.setState(
       {
@@ -79,38 +79,26 @@ class CustomerHomeCopy extends Component {
     });
   }
 
+  // function to fetch method in order to update dream likes array
+  likedPost = async(dreamId) => {
+    //updated dream to be passed into the database
+    let response = await fetch(`/api/dream/like/${dreamId}`,{
+      method:'PUT',
+      headers:{
+        "Authorization": this.props.token,
+        "Accept":"application/json",
+        "Content-Type":"application/json",
+      }
+    })
+    let json = await response.json();
+    //sanity
+    console.log(`Liking Post ${JSON.stringify(json)}`);
+  }
+
   render() {
     return (
       <div className='dreamerHomeContainer'>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown link
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-    </ul>
-  </div>
-</nav>
+ 
                 { /* <div className='adminTitle'>
                 <h2>Welcome back <span className='userName'>{this.props.tokenUser.name}</span>!</h2>
                 </div> */ }
@@ -134,18 +122,21 @@ class CustomerHomeCopy extends Component {
       this.state.dreams.map((dream) => {
         return (
           <div key={dream._id} className='eachPost'>
-                            { /* <Link to={`/dreams/posted/view/one/${dream._id}`} className='linkLink'> */ }
+                            <Link to={`/dreamer/posted/view/like/${dream._id}`} className='linkLink'>
                             <p className='listedDataPostType'>{dream.type}</p>
                             <p className='listedDataPost'>{dream.dreamDescription}</p>
+
                             {
           dream.dreamer.map((dreamer) => {
             return (
               <div key={dreamer._id}>
                                             <p className='listedDataDreamer'>{dreamer.name}</p>
+                                            {/* <button onClick={this.likedPost(dream._id)}>Heart</button> */}
                                         </div>
             )
           })
           }
+          </Link>
                           
                         </div>
         )

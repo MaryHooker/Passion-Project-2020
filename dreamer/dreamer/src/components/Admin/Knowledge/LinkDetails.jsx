@@ -1,24 +1,21 @@
 import React,{Component} from 'react';
-// import {Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 class LinkDetails extends Component {
     constructor(props) {
         super(props);
         this.state = { 
-            title:"",
-            link:"",
-            author:"",
-            date:""
+           knowledge:{},
          }
     }
 
-    //When component mounts, run inner function
-    componentDidMount(){
-        this.linkData();
-    }
+          //When component mounts, run inner function
+          componentDidMount(){
+            this.linkData();
+        }
 
-    //Function to run fetch method in order to view specific link to update or delete
-    linkData = async() => {
+             //Function to run fetch method in order to view specific link to update or delete
+      linkData = async() => {
         let response = await fetch(`/api/links/${this.props.match.params.id}`,{
             method:"GET"
         })
@@ -27,16 +24,13 @@ class LinkDetails extends Component {
         //place specific dreamer in state
         this.setState(
             {
-                title:json.title,
-                link:json.link,
-                author:json.author,
-                date:json.date
+               knowledge:json
             }
         )
-        console.log(this.state.title)
+        console.log(this.state.knowledge.title)
     }
 
-         // go back one page
+         //go back one page
          goBack = () => {
             window.history.back();
         }
@@ -52,6 +46,8 @@ class LinkDetails extends Component {
 
         this.goBack();
     }
+    
+
 
     render() { 
         return ( 
@@ -59,12 +55,12 @@ class LinkDetails extends Component {
                 {/* <h2>Dream Link</h2> */}
                 <br/>
                 <br/>
-                <div className='linkDisplay'>
-                <p className='listedData'>{this.state.title}</p>
-                <p className='listedData'>{this.state.link}</p>
-                <p className='listedData'>{this.state.author}</p>
+                <div className='dreamerDisplay'>
+                  <p className='listedData'>{this.state.knowledge.title}</p>
+                  <p className='listedData'>{this.state.knowledge.link}</p>
+                  <p className='listedData'>{this.state.knowledge.author}</p>
                 </div>
-                {/* <Link to={`/meanings/edit/${this.state.link._id}`}><button>Edit</button></Link> */}
+                <Link to={`/links/edit/${this.state.knowledge._id}`}><button>Edit</button></Link>
                 <button onClick={this.deleteLink}>Delete</button>
             </div>
          );

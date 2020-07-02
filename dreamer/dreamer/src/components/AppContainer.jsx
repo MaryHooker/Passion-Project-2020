@@ -48,9 +48,11 @@ import EditMe from './Customer/Me/EditMe';
 import MyPosted from './Customer/Posted/MyPosted';
 import DreamerOnePosted from './Customer/Posted/DreamerOnePosted';
 import DreamerViewAllPostedDreams from './Customer/Posted/DreamerViewAllPostedDreams';
+import DreamerViewOtherPostedDream from './Customer/Posted/DreamerViewOtherPostedDream';
 //Knowledge
 import DreamerKnowledge from './Customer/Knowledge/DreamerKnowledge';
 import DreamerViewAllSpotlightedDreams from './Customer/Spotlight/DreamerViewAllSpotlightedDreams';
+import EditKnowledgeLink from './Admin/Knowledge/EditKnowledgeLink';
 //Meanings
 import DreamerViewAllMeanings from './Customer/Meanings/DreamerViewAllMeanings';
 import MeaningsByLetter from './Customer/Meanings/MeaningsByLetter';
@@ -188,7 +190,7 @@ class AppContainer extends Component {
                 { /* Customer */ }
                 {/* <Route path='/customerHome' exact component={(props) => <CustomerHome {...props} tokenUser={this.state.tokenUser}/> }/> */}
                 {/* TESTING */}
-                <Route path='/customerHomeCopy' exact component={(props) => <CustomerHomeCopy {...props} tokenUser={this.state.tokenUser}/> }/>
+                <Route path='/customerHomeCopy' exact component={(props) => <CustomerHomeCopy {...props} tokenUser={this.state.tokenUser} token={this.state.token} /> }/>
 
                 { /* ///////// Admin /////////*/ }
                 <Route path='/admin/view/all' exact component={() => <ViewAllAdmin/> }/>
@@ -235,6 +237,7 @@ class AppContainer extends Component {
                   <Route path='/dreams/posted/mine' exact component={(props) => <MyPosted {...props} tokenUser={this.state.tokenUser} /> }/>
                   <Route path='/dreamer/posted/view/one/:id' exact component={(props) => <DreamerOnePosted {...props} /> } />
                   <Route path='/dreamer/dreams/posted' exact component={() => <DreamerViewAllPostedDreams/> }/>
+                  <Route path='/dreamer/posted/view/like/:id' exact component={(props) => <DreamerViewOtherPostedDream {...props} /> } />
 
                   {/*//////// Spotlight ////////*/}
                   {/* Admin */}
@@ -248,6 +251,7 @@ class AppContainer extends Component {
                   <Route path='/knowledge/links' exact component={() => <ViewAllLinks/> }/>
                   <Route path='/knowledge/links/create' exact component={() => <CreateLink/> }/>
                   <Route path='/knowledge/links/details/:id' exact component={(props) => <LinkDetails {...props} /> }/>
+                  <Route path='/links/edit/:id' exact component={(props) => <EditKnowledgeLink {...props} /> }/>
                   {/* Customer */}
                   <Route path='/dreamer/knowledge' exact component={() => <DreamerKnowledge/> }/>
                 </Router>

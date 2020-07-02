@@ -54,7 +54,7 @@ class CreateLink extends Component {
                 <form action="">
                     <div className="form-group">
                         <label htmlFor="title"><span>Title:</span></label>
-                        <input type="text" name='title' id='title' onChange={this.handleChanges} value={this.state.title} />
+                        <input type="text" name='title' id='title' onChange={this.handleChanges} value={this.state.title} maxlength="50"/>
                     </div>
 
                     <div className="form-group">

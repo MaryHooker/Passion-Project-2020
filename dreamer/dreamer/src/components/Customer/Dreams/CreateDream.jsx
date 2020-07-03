@@ -57,21 +57,21 @@ class CreateDream extends Component {
     return (
       <div>
                 {/* <h2>Dream Form</h2> */}
+             
 
                 <form action="">
                     <div className="form-group">
-                    {/* <label for="type">Dream Type</label> */}
-
+                      {/*Tool Tip Works in firefox */}
                         <select name="type" id="type" onChange={this.handleChanges} value={this.state.type}>
                         <option >Dream Type</option>
-                        <option value="Daydream" data-toggle='tooltip' title='Hooray!'>Daydream</option>
-                        <option value="Lucid">Lucid</option>
-                        <option value="Nightmare">Nightmare</option>
-                        <option value="Recurring">Recurring</option>
-                        <option value="Healing">Healing</option>
-                        <option value="Prophetic">Prophetic</option>
-                        <option value="Signal">Signal</option>
-                        <option value="Epic">Epic</option>
+                        <option value="Daydream" data-toggle='tooltip' title='Day dreaming is classified as a level of consciousness between sleep and wakefulness.'>Daydream</option>
+                        <option value="Lucid" data-toggle='tooltip' title='Lucid dreams occur when you realize you are dreaming.'>Lucid</option>
+                        <option value="Nightmare" data-toggle='tooltip' title='A nightmare is a disturbing dream that causes the dreamer to wake up feeling anxious and frightened.'>Nightmare</option>
+                        <option value="Recurring" data-toggle='tooltip' title='Recurring dreams repeat themselves with little variation in story or theme.'>Recurring</option>
+                        <option value="Healing" data-toggle='tooltip' title='Healing dreams serve as messages for the dreamer in regards to their health.'>Healing</option>
+                        <option value="Prophetic" data-toggle='tooltip' title='Prophetic dreams also referred to as precognitive or psychic dreams are dreams that seemingly foretell the future.'>Prophetic</option>
+                        <option value="Signal" data-toggle='tooltip' title='Signal dreams help you how to solve problems or make decisions in your waking life.'>Signal</option>
+                        <option value="Epic" data-toggle='tooltip' title='Epic dreams (or Great dreams) are so huge, so compelling, and so vivid that you cannot ignore them.'>Epic</option>
                         </select>
                     <br/>
                     <br/>

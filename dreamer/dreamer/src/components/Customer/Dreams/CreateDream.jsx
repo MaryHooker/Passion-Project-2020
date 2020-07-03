@@ -64,7 +64,7 @@ class CreateDream extends Component {
 
                         <select name="type" id="type" onChange={this.handleChanges} value={this.state.type}>
                         <option >Dream Type</option>
-                        <option value="Daydream">Daydream</option>
+                        <option value="Daydream" data-toggle='tooltip' title='Hooray!'>Daydream</option>
                         <option value="Lucid">Lucid</option>
                         <option value="Nightmare">Nightmare</option>
                         <option value="Recurring">Recurring</option>

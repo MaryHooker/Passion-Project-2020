@@ -108,10 +108,10 @@ class CustomerHomeCopy extends Component {
       this.state.dreams.map((dream) => {
         return (
           <div key={dream._id} className='eachPost'>
-                            <Link to={`/dreamer/posted/view/like/${dream._id}`} className='linkLink'>
-                            {/* <p className='listedDataPostType'>{dream.type}</p> */}
+                            {/* <Link to={`/dreamer/posted/view/like/${dream._id}`} className='linkLink'> */}
+                            <p className='listedDataPostType'>{dream.type}</p>
                             <p className='listedDataPost'>{dream.dreamDescription}</p>
-                            <p className='listedDataPost'>{dream.likes.user.length}</p>
+                            {/* <p className='listedDataPost'>{dream.likes.user.length}</p> */}
                             {
           dream.dreamer.map((dreamer) => {
             return (
@@ -122,7 +122,7 @@ class CustomerHomeCopy extends Component {
             )
           })
           }
-          </Link>
+          {/* </Link> */}
                           
                         </div>
         )

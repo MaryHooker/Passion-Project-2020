@@ -68,7 +68,7 @@ button{
   /* box-shadow: 5px 10px 8px #6c4374; */
 }
 
-button:hover{
+/* button:hover{
   background-color: rgba(0, 0, 0, 0.959);
   color: rgb(233, 179, 233);
   border: 1px solid rgb(231, 182, 66);
@@ -77,12 +77,11 @@ button:hover{
   margin: 2%;
   font-family: serif;
   font-weight: bold;
-  /* height: 46px; */
   width: 20%;
   font-size: 16px;
   padding: 1%;
   box-shadow: 3px 3px 3px #e7d63f;
-}
+} */
 
 .searchButton{
   background-color: rgba(0, 0, 0, 0.726);

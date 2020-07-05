@@ -54,18 +54,18 @@ class CreateLink extends Component {
 
                 <form action="">
                     <div className="form-group">
-                        <label htmlFor="title"><span>Title:</span></label>
-                        <input type="text" name='title' id='title' onChange={this.handleChanges} value={this.state.title} maxlength="50"/>
+                        {/* <label htmlFor="title"><span>Title:</span></label> */}
+                        <input type="text" name='title' id='title' onChange={this.handleChanges} value={this.state.title} maxlength="50" placeholder='Title'/>
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="link"><span>Link:</span></label>
-                        <input type="text" name='link' id='link' onChange={this.handleChanges} value={this.state.link} />
+                        {/* <label htmlFor="link"><span>Link:</span></label> */}
+                        <input type="text" name='link' id='link' onChange={this.handleChanges} value={this.state.link} placeholder='Link'/>
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="author"><span>Author:</span></label>
-                        <input type="text" name='author' id='author' onChange={this.handleChanges} value={this.state.author} />
+                        {/* <label htmlFor="author"><span>Author:</span></label> */}
+                        <input type="text" name='author' id='author' onChange={this.handleChanges} value={this.state.author} placeholder='Author'/>
                     </div>
 
 

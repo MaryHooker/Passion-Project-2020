@@ -135,7 +135,7 @@ button{
 .allButton:hover{
   width: 20%;
   box-shadow: 3px 3px 3px #8c86e2;
-  background-color: rgba(7, 7, 58, 0.562);
+  background-color: rgba(7, 7, 58, 0.678);
 }
  
 input{
@@ -318,6 +318,7 @@ box-shadow: none;
   text-decoration: none;
   font-weight: bold;
   font-size: 20px;
+  text-decoration: none;
 }
 
 /* Application Title */
@@ -332,6 +333,7 @@ box-shadow: none;
 
 .noLineHome:hover{
   color: rgb(165, 79, 190);
+  text-decoration: none;
 }
 
 /* ////////////////////////////////////////////////////////////////////////// */
@@ -741,17 +743,22 @@ mask-image: cross-fade();
 .listedDataPostType{
   color: rgb(223, 140, 218);
   font-size: 12px;
+  padding: 1%;
 }
 
 .listedDataPost{
   color: rgb(224, 169, 224);
   font-size: 15px;
   font-weight: bold;
+  padding: 1%;
+
 }
 
 .listedDataDreamer{
   color: rgb(148, 162, 241);
   font-size: 12px;
+  padding: 1%;
+
 }
 
 /*//////// Meanings ////////*/
@@ -983,8 +990,14 @@ mask-image: cross-fade();
 
 .linkLink{
   text-decoration: none;
+  padding:2%;
 }
 
+
+.linkLink:hover{
+  text-decoration: none;
+  padding:2%;
+}
 
 /* //////////////// */
 /*  Dreams */
@@ -1045,6 +1058,12 @@ mask-image: cross-fade();
 
 .noLineLinks{
   text-decoration: none;
+  padding: 2%;
+}
+
+.noLineLinks:hover{
+  text-decoration: none;
+  padding: 2%;
 }
 
 .linksContainer{

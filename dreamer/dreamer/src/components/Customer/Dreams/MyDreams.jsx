@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import {Link} from 'react-router-dom';
-
+import {Button} from 'react-bootstrap';
 class MyDreams extends Component {
     constructor(props) {
         super(props);
@@ -35,7 +35,7 @@ class MyDreams extends Component {
             <div>
                 {/* <h2 className='dreamersPageTitle'>My Dreams</h2> */}
                 {/* <br/> */}
-                <Link to='/dreams/posted/mine' className='linkLink'><button className='postLink'>My Posted Dreams</button></Link>
+                <Link to='/dreams/posted/mine' className='linkLink'><Button className='allButton'>My Posted Dreams</Button></Link>
                 
                 <br/>
                 <Link to={`/create/dream/${this.props.tokenUser.email}`} className='linkLink' ><img src="./addSymbol2.png" title="Add Dream" alt="addSymbol"/></Link>
@@ -47,8 +47,8 @@ class MyDreams extends Component {
                         return(
                             <div key={dream._id} className='dreamersDisplay'>
                                <Link to={`dreamers/dreams/view/one/${dream._id}`} className='noLineLinks'>
-                                <p className='listedData'>{dream.type}</p>
-                                <p className='listedData'>{dream.dreamDescription}</p>
+                                <p className='listedDataType'>{dream.type}</p>
+                                <p className='listedDataPost'>{dream.dreamDescription}</p>
                                 </Link>
                             </div>
                         )

@@ -33,7 +33,7 @@ class Dreamers extends Component {
     render() { 
         return ( 
             <div>
-                <h3 className='dreamersPageTitle'>Dreamers</h3>
+                {/* <h3 className='dreamersPageTitle'>Dreamers</h3> */}
                 <br/>
                 <div className='dreamersContainer'>
                 {

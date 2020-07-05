@@ -72,7 +72,7 @@ class DreamerViewOtherPostedDream extends Component {
                 <p className='listedData'>{this.state.posted.dreamDescription}</p>
                 <p className='listedData'>Likes: {this.state.user.length}</p>
                 </div>
-                <Button onClick={this.likeDream}>Like</Button>
+                <Button onClick={this.likeDream} className='allButton'>Like</Button>
             </div>
          );
     }

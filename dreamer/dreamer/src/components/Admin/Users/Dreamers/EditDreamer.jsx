@@ -87,7 +87,7 @@ class EditDreamer extends Component {
                         <label htmlFor="email"><span>Email:</span> </label>
                         <input type="email" name='email' id='email' value={this.state.email} onChange={this.handleInputs}/>
                     </div>
-                    <Button onClick={this.handleSubmission}>Submit</Button>
+                    <Button onClick={this.handleSubmission} className='allButton'>Submit</Button>
                 </form>
             </div>
          );

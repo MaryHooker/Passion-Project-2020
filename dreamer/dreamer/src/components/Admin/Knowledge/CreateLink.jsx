@@ -50,7 +50,7 @@ class CreateLink extends Component {
         
         return (
             <div>
-                <h2>Knowledge/Link Form</h2>
+                {/* <h2>Knowledge/Link Form</h2> */}
 
                 <form action="">
                     <div className="form-group">
@@ -70,7 +70,7 @@ class CreateLink extends Component {
 
 
                     <div className="form-group">
-                        <Button type='submit' onClick={this.handleSubmission}>Submit</Button>
+                        <Button type='submit' onClick={this.handleSubmission} className='allButton'>Submit</Button>
                     </div>
                 </form>
             </div>

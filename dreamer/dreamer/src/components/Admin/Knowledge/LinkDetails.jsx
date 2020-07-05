@@ -61,8 +61,8 @@ class LinkDetails extends Component {
                   <p className='listedData'>{this.state.knowledge.link}</p>
                   <p className='listedData'>{this.state.knowledge.author}</p>
                 </div>
-                <Link to={`/links/edit/${this.state.knowledge._id}`}><button>Edit</button></Link>
-                <Button onClick={this.deleteLink}>Delete</Button>
+                <Link to={`/links/edit/${this.state.knowledge._id}`}><Button className='allButton'>Edit</Button></Link>
+                <Button onClick={this.deleteLink} className='allButton'>Delete</Button>
             </div>
          );
     }

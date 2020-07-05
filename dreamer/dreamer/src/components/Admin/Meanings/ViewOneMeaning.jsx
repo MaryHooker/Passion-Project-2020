@@ -61,8 +61,8 @@ class ViewOneMeaning extends Component {
                 <p className='listedData'>{this.state.meaning.word}</p>
                 <p className='listedData'>{this.state.meaning.meaning}</p>
                 </div>
-                <Link to={`/meanings/edit/${this.state.meaning._id}`}><button>Edit</button></Link>
-                <Button onClick={this.deleteMeaning}>Delete</Button>
+                <Link to={`/meanings/edit/${this.state.meaning._id}`}><Button className='allButton'>Edit</Button></Link>
+                <Button onClick={this.deleteMeaning} className='allButton'>Delete</Button>
             </div>
          );
     }

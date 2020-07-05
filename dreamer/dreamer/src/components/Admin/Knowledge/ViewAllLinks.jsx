@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import {Button} from 'react-bootstrap';
 
 class ViewAllLinks extends Component {
   constructor(props) {
@@ -60,7 +61,7 @@ class ViewAllLinks extends Component {
           <div key={link._id} className='dreamersDisplay'>
                                 <p className='listedData'>{link.title}</p>
                                 <p className='listedData'>{link.author}</p>
-                                <Link to={`/knowledge/links/details/${link._id}`} className='linkLink'><button>Details</button></Link>  
+                                <Link to={`/knowledge/links/details/${link._id}`} className='linkLink'><Button className='allButton'>Details</Button></Link>  
                             </div>
                                                           
           

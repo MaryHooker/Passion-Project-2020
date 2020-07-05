@@ -103,7 +103,7 @@ class EditMe extends Component {
                         <label htmlFor="password"><span>Password:</span> </label>
                         <input type="password" name='password' id='password' value={this.state.password} onChange={this.handleInputs}/>
                     </div>
-                    <Button onClick={this.handleSubmission}>Submit</Button>
+                    <Button onClick={this.handleSubmission} className='allButton'>Submit</Button>
                 </form>
             </div>
          );

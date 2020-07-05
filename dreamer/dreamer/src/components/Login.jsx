@@ -117,7 +117,7 @@ export default class Login extends Component {
               <div style={{ fontSize: 13, color:"red"}}>{this.state.passwordError}</div>
             </div>
             <div>
-              <Button onClick={this.handleSubmission} className='loginButton'>Submit</Button>
+              <Button onClick={this.handleSubmission} className='allButton'>Submit</Button>
             </div>
           </form>
       </div>

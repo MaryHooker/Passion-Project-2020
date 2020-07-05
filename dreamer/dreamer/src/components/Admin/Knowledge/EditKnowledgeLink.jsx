@@ -81,7 +81,7 @@ class EditKnowledgeLink extends Component {
                         <br/>
                         <input type="text" id='author' name='author' value={this.state.author} onChange={this.handleChange}/>
                         <br/>
-                        <Button onClick={this.handleSubmission}>Submit</Button>
+                        <Button onClick={this.handleSubmission} className='allButton'>Submit</Button>
                     </form>
             </div>
          );

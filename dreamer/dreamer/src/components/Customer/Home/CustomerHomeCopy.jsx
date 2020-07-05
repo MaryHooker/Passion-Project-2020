@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 // import DreamerViewAllPostedDreams from '../Posted/DreamerViewAllPostedDreams';
+import {Button} from 'react-bootstrap';
 
 class CustomerHomeCopy extends Component {
   constructor(props) {
@@ -90,12 +91,12 @@ class CustomerHomeCopy extends Component {
                 </div> */ }
                 <br/>
                 { /*///////////////////////////////// Me ////////////////////////////////////////*/ }
-                <Link to='/me' className='meLink' className='meLinkP'>
+                <Link to='/me' className='meLinkP'>
                   <h3>Me</h3>
                 <img src="../mirror8.png" alt="avatar" className='avatarImage'/>
                 </Link>
                 { /*/////////////////////////////// My Dreams ///////////////////////////////////*/ }
-                <Link to='/myDreams' className='dreamersLink' className='myDreamsLinkP'>
+                <Link to='/myDreams' className='myDreamsLinkP'>
                 <h3>Memories</h3>
                 <img src="../astro2.png" alt="myDreams"/></Link>
                 { /* /////////////////////////// Dreamer's Dreams //////////////////////////////////// */ }
@@ -190,7 +191,7 @@ class CustomerHomeCopy extends Component {
                 <form>
                             <label htmlFor="word"><span> </span></label>
                             <input type="text" name="word" id="word" onChange={this.handleChange} className='searchInput' placeholder="Ex. 'Apple'"/>
-                            <Link to={`/meanings/word/${this.state.word}`}><button className='searchButton'>Search</button></Link>
+                            <Link to={`/meanings/word/${this.state.word}`}><Button className='searchButton'>Search</Button></Link>
                         </form>
                        
                         <div className='lettersContainer'>

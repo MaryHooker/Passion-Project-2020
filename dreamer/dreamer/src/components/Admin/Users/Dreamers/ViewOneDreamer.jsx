@@ -63,7 +63,7 @@ class ViewOneDreamer extends Component {
                 <p className='listedData'>{this.state.dreamer.email}</p>
                 </div>
                 <Link to={`/dreamers/edit/${this.state.dreamer.email}`}><button>Edit</button></Link>
-                <Button onClick={this.deleteDreamer}>Delete</Button>
+                <Button onClick={this.deleteDreamer} className='allButton'>Delete</Button>
             </div>
          );
     }

@@ -103,7 +103,7 @@ class DreamerOnePosted extends Component {
                 <p className='listedData'>{this.state.posted.type}</p>
                 <p className='listedData'>{this.state.posted.dreamDescription}</p>
                 </div>
-                <Button onClick={this.removeDream}>Remove</Button>
+                <Button onClick={this.removeDream} className='allButton'>Remove</Button>
             </div>
          );
     }

@@ -170,7 +170,7 @@ class CustomerRegister extends Component {
       }}>{this.state.passwordError}</div>
 
           </div>
-          <Button onClick={this.handleSubmission} className='loginButton'>Submit</Button>
+          <Button onClick={this.handleSubmission} className='allButton'>Submit</Button>
         </form>
       </div>
       );

@@ -96,7 +96,7 @@ class EditMeaning extends Component {
                         <textarea name='meaning' id='meaning' onChange={this.handleChanges} value={this.state.meaning}  cols="30" rows="10"/>
                     </div>
 
-                    <Button onClick={this.handleSubmission}>Submit</Button>
+                    <Button onClick={this.handleSubmission} className='allButton'>Submit</Button>
                 </form>
             </div>
          );

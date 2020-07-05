@@ -74,7 +74,7 @@ class AdminViewOneDream extends Component {
                 <p className='listedData'>{this.state.spotlight.type}</p>
                 <p className='listedData'>{this.state.spotlight.dreamDescription}</p>
                 </div>
-                <Button onClick={this.removeDream}>Remove</Button>
+                <Button onClick={this.removeDream} className='allButton'>Remove</Button>
             </div>
          );
     }

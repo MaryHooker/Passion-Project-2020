@@ -89,7 +89,7 @@ class EditOwnDream extends Component {
                     </div>
 
                     <div className="form-group">
-                        <Button type='submit' onClick={this.handleSubmission}>Submit</Button>
+                        <Button type='submit' onClick={this.handleSubmission} className='allButton'>Submit</Button>
                     </div>
                 </form>
             </div>

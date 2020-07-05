@@ -103,8 +103,8 @@ class ViewOnePostedDream extends Component {
                 <p className='listedData'>{this.state.posted.type}</p>
                 <p className='listedData'>{this.state.posted.dreamDescription}</p>
                 </div>
-                <Button onClick={this.spotlightDream}>Spotlight</Button>
-                <Button onClick={this.removeDream}>Remove</Button>
+                <Button onClick={this.spotlightDream} className='allButton'>Spotlight</Button>
+                <Button onClick={this.removeDream} className='allButton'>Remove</Button>
             </div>
          );
     }

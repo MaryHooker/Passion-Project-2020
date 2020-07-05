@@ -126,13 +126,13 @@ button{
   width: 25%;
 }
 
-.loginButton{
+.allButton{
   width: 20%;
   background-color: rgba(0, 0, 0, 0.596);
   color: rgb(226, 222, 170);
 }
 
-.loginButton:hover{
+.allButton:hover{
   width: 20%;
   box-shadow: 3px 3px 3px #8c86e2;
   background-color: rgba(7, 7, 58, 0.562);
@@ -253,7 +253,6 @@ hr{
 .homeContainer{
   display: grid;
   grid-template-columns: repeat(12,1fr);
-
 }
 
 .homeTitle{
@@ -620,6 +619,8 @@ box-shadow: none;
   border: solid 1px rgb(226, 178, 238);
   height: 97%;
   width: 97%;
+  color: rgb(219, 196, 141);
+  text-decoration: none;
 }
 
 .dreamerHomeButton4{
@@ -663,6 +664,8 @@ box-shadow: none;
   background-color: rgba(0, 0, 0, 0.911);
     border: solid 1px rgb(226, 178, 238);
   padding: 2%;
+  color: rgb(219, 196, 141);
+  text-decoration: none;
 }
 
 .dreamerHomeButton1{

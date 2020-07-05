@@ -62,7 +62,7 @@ class AdminViewOneDream extends Component {
                 {/* <p className='listedData'>{this.state.dream.dreamer[0].name}</p> */}
                 </div>
                 
-                <Button onClick={this.deleteDream}>Delete</Button>
+                <Button onClick={this.deleteDream} className='allButton'>Delete</Button>
             </div>
          );
     }

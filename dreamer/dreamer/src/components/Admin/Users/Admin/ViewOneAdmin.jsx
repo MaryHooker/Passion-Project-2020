@@ -60,7 +60,7 @@ class ViewOneAdmin extends Component {
                 <p className='listedData'>{this.state.admin.email}</p>
                 </div>
                 {/* <Link to={`/admin/edit/${this.state.admin.email}`}><button>Edit</button></Link> */}
-                <Button onClick={this.deleteAdmin}>Delete</Button>
+                <Button onClick={this.deleteAdmin} className='allButton'>Delete</Button>
             </div>
          );
     }

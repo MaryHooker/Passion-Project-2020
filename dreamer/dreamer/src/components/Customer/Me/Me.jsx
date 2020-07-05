@@ -53,7 +53,7 @@ class Me extends Component {
                 <p className='listedData'>{this.state.dreamer.email}</p>
                 </div>
                 <Link to={`/me/edit/${this.state.dreamer.email}`}><button>Edit</button></Link>
-                <Button onClick={this.deleteMe}>Delete</Button>
+                <Button onClick={this.deleteMe} className='allButton'>Delete</Button>
             </div>
          );
     }

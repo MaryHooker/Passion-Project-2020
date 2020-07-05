@@ -606,6 +606,7 @@ box-shadow: none;
   margin-left: 1%;
   background-color: rgba(0, 0, 0, 0.616);
   border: solid 1px rgb(226, 178, 238);
+  padding: 2%;
   height: 97%;
   width: 97%;
   color: rgb(219, 196, 141);
@@ -692,6 +693,8 @@ mask-image: cross-fade();
   /* overflow: scroll; */
   background-color: rgba(0, 0, 0, 0.808); 
   border: 1px solid rgb(211, 150, 223);
+  padding: 2%;
+
   width: 97%;
   margin-left: 1%;
 }
@@ -743,22 +746,21 @@ mask-image: cross-fade();
 .listedDataPostType{
   color: rgb(223, 140, 218);
   font-size: 12px;
-  padding: 1%;
+  /* padding: 1%; */
 }
 
 .listedDataPost{
   color: rgb(224, 169, 224);
   font-size: 15px;
   font-weight: bold;
-  padding: 1%;
+  /* padding: 1%; */
 
 }
 
 .listedDataDreamer{
   color: rgb(148, 162, 241);
   font-size: 12px;
-  padding: 1%;
-
+  /* padding: 1%; */
 }
 
 /*//////// Meanings ////////*/
@@ -845,6 +847,7 @@ mask-image: cross-fade();
   grid-row: 2;
   /* width: 97%;
   height: 100%; */
+  padding: 2%;
   background-color: rgba(0, 0, 0, 0.808);  
   border: 1px solid rgb(211, 150, 223);
   margin-left: 12px;
@@ -990,13 +993,13 @@ mask-image: cross-fade();
 
 .linkLink{
   text-decoration: none;
-  padding:2%;
+  /* padding:2%; */
 }
 
 
 .linkLink:hover{
   text-decoration: none;
-  padding:2%;
+  /* padding:2%; */
 }
 
 /* //////////////// */
@@ -1064,6 +1067,14 @@ mask-image: cross-fade();
 .noLineLinks:hover{
   text-decoration: none;
   padding: 2%;
+}
+
+.noLineLinksK{
+  text-decoration: none;
+}
+
+.noLineLinksK:hover{
+  text-decoration: none;
 }
 
 .linksContainer{

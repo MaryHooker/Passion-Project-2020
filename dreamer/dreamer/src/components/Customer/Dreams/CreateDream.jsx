@@ -58,7 +58,7 @@ class CreateDream extends Component {
     return (
       <div>
                 { /* <h2>Dream Form</h2> */ }
-                <DropdownButton id="dropdown-item-button" title="Dream Type">
+                {/* <DropdownButton id="dropdown-item-button" title="Dream Type">
   <Dropdown.Item as="button" value="Daydream" data-toggle='tooltip' title='Day dreaming is classified as a level of consciousness between sleep and wakefulness.'>Daydream</Dropdown.Item>
   <Dropdown.Item as="button" value="Lucid" data-toggle='tooltip' title='Lucid dreams occur when you realize you are dreaming.'>Lucid</Dropdown.Item>
   <Dropdown.Item as="button" value="Nightmare" data-toggle='tooltip' title='A nightmare is a disturbing dream that causes the dreamer to wake up feeling anxious and frightened.'>Nightmare</Dropdown.Item>
@@ -67,12 +67,12 @@ class CreateDream extends Component {
   <Dropdown.Item as="button" value="Prophetic" data-toggle='tooltip' title='Prophetic dreams also referred to as precognitive or psychic dreams are dreams that seemingly foretell the future.'>Prophetic</Dropdown.Item>
   <Dropdown.Item as="button" value="Signal" data-toggle='tooltip' title='Signal dreams help you how to solve problems or make decisions in your waking life.'>Signal</Dropdown.Item>
   <Dropdown.Item as="button" value="Epic" data-toggle='tooltip' title='Epic dreams (or Great dreams) are so huge, so compelling, and so vivid that you cannot ignore them.'>Epic</Dropdown.Item>
-</DropdownButton>
+</DropdownButton> */}
 
                 <form action="">
                     <div className="form-group">
-                      { //////////*Tool Tip Works in firefox *////////// }
-                        /* <select name="type" id="type" onChange={this.handleChanges} value={this.state.type}>
+                     
+                        <select name="type" id="type" onChange={this.handleChanges} value={this.state.type}>
                         <option >Dream Type</option>
                         <option value="Daydream" data-toggle='tooltip' title='Day dreaming is classified as a level of consciousness between sleep and wakefulness.'>Daydream</option>
                         <option value="Lucid" data-toggle='tooltip' title='Lucid dreams occur when you realize you are dreaming.'>Lucid</option>
@@ -82,17 +82,15 @@ class CreateDream extends Component {
                         <option value="Prophetic" data-toggle='tooltip' title='Prophetic dreams also referred to as precognitive or psychic dreams are dreams that seemingly foretell the future.'>Prophetic</option>
                         <option value="Signal" data-toggle='tooltip' title='Signal dreams help you how to solve problems or make decisions in your waking life.'>Signal</option>
                         <option value="Epic" data-toggle='tooltip' title='Epic dreams (or Great dreams) are so huge, so compelling, and so vivid that you cannot ignore them.'>Epic</option>
-                        </select> */}
-                    <br/>
+                        </select> 
                     <br/>
                     </div>
 
                     <div className="form-group">
                         <label htmlFor="dreamDescription"><span className='whatHappened'>What happened?</span></label>
                         <br/>
-                        <br/>
-                        <textarea name="dreamDescription" id="dreamDescription" cols="50" rows="20"  onChange={this.handleChanges} value={this.state.dreamDescription} ></textarea>
-                        { /* <input type="text" name='dreamDescription' id='dreamDescription' onChange={this.handleChanges} value={this.state.dreamDescription} /> */ }
+                        <textarea name="dreamDescription" id="dreamDescription" cols="50" rows="14"  onChange={this.handleChanges} value={this.state.dreamDescription} ></textarea>
+                       
                     </div>
 
                     <div className="form-group">

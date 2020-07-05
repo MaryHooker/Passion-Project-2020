@@ -141,7 +141,7 @@ class CustomerHomeCopy extends Component {
       this.state.knowledge.map((link) => {
         return (
           <div key={link._id} className='eachLink'>
-                                <a href={link.link} className='noLineLinks'target="_blank">
+                                <a href={link.link} className='linkLink'target="_blank">
                                 <p className='listedDataPost'>{link.title}</p>
                                 { /* <p className='listedData'>{link.link}</p> */ }
                                 <p className='listedDataDreamer'>{link.author}</p>

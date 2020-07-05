@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+import {Button} from 'react-bootstrap';
 
 class EditMe extends Component {
     constructor(props) {
@@ -102,7 +103,7 @@ class EditMe extends Component {
                         <label htmlFor="password"><span>Password:</span> </label>
                         <input type="password" name='password' id='password' value={this.state.password} onChange={this.handleInputs}/>
                     </div>
-                    <button onClick={this.handleSubmission}>Submit</button>
+                    <Button onClick={this.handleSubmission}>Submit</Button>
                 </form>
             </div>
          );

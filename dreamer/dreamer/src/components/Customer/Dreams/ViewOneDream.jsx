@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import {Link} from 'react-router-dom';
+import {Button} from 'react-bootstrap';
 
 class ViewOneDream extends Component {
     constructor(props) {
@@ -86,7 +87,7 @@ class ViewOneDream extends Component {
                 </div>
                 <button onClick={this.postDream}>Post</button>
                 <Link to={`/dreamer/dream/edit/${this.state.dream._id}`}><button>Edit</button></Link>
-                <button onClick={this.deleteDream}>Delete</button>
+                <Button onClick={this.deleteDream}>Delete</Button>
             </div>
          );
     }

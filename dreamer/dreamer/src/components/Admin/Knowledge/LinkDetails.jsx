@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import {Link} from 'react-router-dom';
+import {Button} from 'react-bootstrap';
 
 class LinkDetails extends Component {
     constructor(props) {
@@ -61,7 +62,7 @@ class LinkDetails extends Component {
                   <p className='listedData'>{this.state.knowledge.author}</p>
                 </div>
                 <Link to={`/links/edit/${this.state.knowledge._id}`}><button>Edit</button></Link>
-                <button onClick={this.deleteLink}>Delete</button>
+                <Button onClick={this.deleteLink}>Delete</Button>
             </div>
          );
     }

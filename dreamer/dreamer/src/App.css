@@ -99,7 +99,7 @@ button{
   /* box-shadow: 5px 10px 8px #6c4374; */
 }
 
-.searchButton:hover{
+/* .searchButton:hover{
   background-color: rgba(0, 0, 0, 0.726);
   color: rgb(233, 179, 233);
   border: 1px solid rgb(233, 179, 233);
@@ -109,11 +109,9 @@ button{
   font-family: serif;
   font-weight: bold;
   width: 40%;
-  /* height: 75%; */
   font-size: 16px;
   padding: 1%;
-  /* box-shadow: 5px 10px 8px #6c4374; */
-}
+} */
 
 .form-control{
   width: 25%;
@@ -130,12 +128,16 @@ button{
 
 .loginButton{
   width: 20%;
+  background-color: rgba(0, 0, 0, 0.596);
+  color: rgb(226, 222, 170);
 }
 
 .loginButton:hover{
   width: 20%;
+  box-shadow: 3px 3px 3px #8c86e2;
+  background-color: rgba(7, 7, 58, 0.562);
 }
-
+ 
 input{
   background-color: rgba(0, 0, 0, 0.534);
   color: rgb(223, 198, 146);
@@ -148,7 +150,40 @@ input{
   margin-bottom: 5px;
   font-family: serif;
   font-size: 20px;
-  
+  text-align: center;
+}
+
+.form-control{
+  background-color: rgba(0, 0, 0, 0.534);
+  color: rgb(223, 198, 146);
+  border: 1px solid rgb(87, 20, 131);
+  border-radius: 4%;
+  height: 30px;
+  margin: 3%;
+  width: 35%;
+  margin-left: 32%;
+  padding: 1%;
+  margin-bottom: 5px;
+  font-family: serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+.form-control:hover{
+  background-color: rgba(56, 4, 56, 0.651);
+  color: rgb(223, 198, 146);
+  border: 1px solid rgb(87, 20, 131);
+  border-radius: 4%;
+  padding: 1%;
+  height: 30px;
+  margin: 3%;
+  width: 35%;
+  margin-bottom: 5px;
+  margin-left: 32%;
+  font-family: serif;
+  font-size: 20px;
+  box-shadow: 3px 3px 3px #6c4374;
+  text-align: center;
 }
 
 input:hover{
@@ -164,7 +199,7 @@ input:hover{
   font-family: serif;
   font-size: 20px;
   box-shadow: 3px 3px 3px #6c4374;
-
+  text-align: center;
 }
 
 .searchInput{
@@ -607,8 +642,8 @@ box-shadow: none;
   background-color: rgba(0, 0, 0, 0.616);
   border: solid 1px rgb(226, 178, 238);
   padding: 2%;
-  width: 90%;
-  height: 92%;
+  width: 93%;
+  height: 97%;
   color: rgb(219, 196, 141);
   text-decoration: none;
 }
@@ -628,8 +663,6 @@ box-shadow: none;
   background-color: rgba(0, 0, 0, 0.911);
     border: solid 1px rgb(226, 178, 238);
   padding: 2%;
-  width: 90%;
-  height: 92%;
 }
 
 .dreamerHomeButton1{

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {DropdownButton,Dropdown} from 'react-bootstrap';
-
+import {Button} from 'react-bootstrap';
 class CreateDream extends Component {
   constructor(props) {
     super(props);
@@ -96,7 +96,7 @@ class CreateDream extends Component {
                     </div>
 
                     <div className="form-group">
-                        <button type='submit' onClick={this.handleSubmission}>Submit</button>
+                        <Button type='submit' onClick={this.handleSubmission}>Submit</Button>
                     </div>
                 </form>
             </div>

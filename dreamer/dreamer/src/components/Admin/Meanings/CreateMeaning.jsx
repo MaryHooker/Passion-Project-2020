@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Button} from 'react-bootstrap';
 
 class CreateMeaning extends Component {
     constructor(props) {
@@ -69,7 +70,7 @@ class CreateMeaning extends Component {
 
 
                     <div className="form-group">
-                        <button type='submit' onClick={this.handleSubmission}>Submit</button>
+                        <Button type='submit' onClick={this.handleSubmission}>Submit</Button>
                     </div>
                 </form>
             </div>

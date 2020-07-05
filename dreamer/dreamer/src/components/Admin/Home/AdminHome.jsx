@@ -99,7 +99,7 @@ class AdminHome extends Component {
                
                
                <div className='dreamerMeaningsLinkP'>
-               <h3>Meanings</h3>
+               <h3>Symbolism</h3>
                <Link to='/view/meanings' className='dreamersLink'><span className='meaningsAll'>All</span></Link>
                <br/>
                <form>
@@ -142,7 +142,7 @@ class AdminHome extends Component {
                 </div>
                 { /* /////////////////////////// Dreamer's Dreams //////////////////////////////////// */ }
                 <div className='dreamerForum'>
-                    <h3>Dreamer's Dreams</h3>
+                    <h3>The Collective</h3>
                     <Link to='/dreams/view/all' className='manageKnowledgeLinks'><h4 >Manage</h4></Link>
 
                         { /* <iframe src={<DreamerViewAllPostedDreams/>} frameborder="0"> */ }
@@ -174,7 +174,7 @@ class AdminHome extends Component {
                 </div>
                 { /* /////////////////////////// Dream Knowledge //////////////////////////////////// */ }
                 <div className='dreamerKnowledgeLinkP'>
-                <h3>Dream Knowledge</h3>
+                <h3>Knowledge</h3>
                 <Link to='/knowledge/links' className='manageKnowledgeLinks'><h4 >Manage</h4></Link>
                 {/* <Link path='/knowledge/links/create'><img src="../addSymbol2.png" alt="add"/></Link>  */}
                 <div className='dreamKnowledgeDisplay'>

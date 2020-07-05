@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+import {Button} from 'react-bootstrap';
 
 class EditKnowledgeLink extends Component {
     constructor(props) {
@@ -80,7 +81,7 @@ class EditKnowledgeLink extends Component {
                         <br/>
                         <input type="text" id='author' name='author' value={this.state.author} onChange={this.handleChange}/>
                         <br/>
-                        <button onClick={this.handleSubmission}>Submit</button>
+                        <Button onClick={this.handleSubmission}>Submit</Button>
                     </form>
             </div>
          );

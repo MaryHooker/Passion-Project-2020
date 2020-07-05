@@ -96,11 +96,11 @@ class CustomerHomeCopy extends Component {
                 </Link>
                 { /*/////////////////////////////// My Dreams ///////////////////////////////////*/ }
                 <Link to='/myDreams' className='dreamersLink' className='myDreamsLinkP'>
-                <h3>My Dreams</h3>
+                <h3>Memories</h3>
                 <img src="../astro2.png" alt="myDreams"/></Link>
                 { /* /////////////////////////// Dreamer's Dreams //////////////////////////////////// */ }
                 <div className='dreamerForum'>
-                    <h3>Dreamer's Dreams</h3>
+                    <h3>The Collective</h3>
                    
                         { /* <iframe src={<DreamerViewAllPostedDreams/>} frameborder="0"> */ }
                         <div className='dreamPostDisplay'>
@@ -134,7 +134,7 @@ class CustomerHomeCopy extends Component {
                 </div>
                 { /* /////////////////////////// Dream Knowledge //////////////////////////////////// */ }
                 <div className='dreamerKnowledgeLinkP'>
-                <h3>Dream Knowledge</h3>
+                <h3>Knowledge</h3>
                 <div className='dreamKnowledgeDisplay'>
                 {
       this.state.knowledge.map((link) => {
@@ -184,7 +184,7 @@ class CustomerHomeCopy extends Component {
                
                
                 <div className='dreamerMeaningsLinkP'>
-                <h3>Meanings</h3>
+                <h3>Symbolism</h3>
                 <Link to='/dreamer/meanings' className='dreamersLink'><span className='meaningsAll'>All</span></Link>
                 <br/>
                 <form>

@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-
+import {Button} from 'react-bootstrap';
 class EditOwnDream extends Component {
     constructor(props) {
         super(props);
@@ -89,7 +89,7 @@ class EditOwnDream extends Component {
                     </div>
 
                     <div className="form-group">
-                        <button type='submit' onClick={this.handleSubmission}>Submit</button>
+                        <Button type='submit' onClick={this.handleSubmission}>Submit</Button>
                     </div>
                 </form>
             </div>

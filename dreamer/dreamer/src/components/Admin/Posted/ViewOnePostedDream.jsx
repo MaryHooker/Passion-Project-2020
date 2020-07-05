@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import {Redirect} from 'react-router-dom';
+import {Button} from 'react-bootstrap';
 
 class ViewOnePostedDream extends Component {
     constructor(props) {
@@ -102,8 +103,8 @@ class ViewOnePostedDream extends Component {
                 <p className='listedData'>{this.state.posted.type}</p>
                 <p className='listedData'>{this.state.posted.dreamDescription}</p>
                 </div>
-                <button onClick={this.spotlightDream}>Spotlight</button>
-                <button onClick={this.removeDream}>Remove</button>
+                <Button onClick={this.spotlightDream}>Spotlight</Button>
+                <Button onClick={this.removeDream}>Remove</Button>
             </div>
          );
     }

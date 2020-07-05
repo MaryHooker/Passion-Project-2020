@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
- 
+import {Button} from 'react-bootstrap';
+
 class ViewOneAdmin extends Component {
     constructor(props) {
         super(props);
@@ -59,7 +60,7 @@ class ViewOneAdmin extends Component {
                 <p className='listedData'>{this.state.admin.email}</p>
                 </div>
                 {/* <Link to={`/admin/edit/${this.state.admin.email}`}><button>Edit</button></Link> */}
-                <button onClick={this.deleteAdmin}>Delete</button>
+                <Button onClick={this.deleteAdmin}>Delete</Button>
             </div>
          );
     }

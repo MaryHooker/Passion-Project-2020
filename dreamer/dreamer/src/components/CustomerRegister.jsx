@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Redirect } from 'react-router-dom';
-
+import {Button} from 'react-bootstrap';
 
 class CustomerRegister extends Component {
   constructor(props) {
@@ -170,7 +170,7 @@ class CustomerRegister extends Component {
       }}>{this.state.passwordError}</div>
 
           </div>
-          <button onClick={this.handleSubmission} className='loginButton'>Submit</button>
+          <Button onClick={this.handleSubmission} className='loginButton'>Submit</Button>
         </form>
       </div>
       );

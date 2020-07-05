@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import {Link} from 'react-router-dom';
+import {Button} from 'react-bootstrap';
 
 class ViewOneMeaning extends Component {
     constructor(props) {
@@ -61,7 +62,7 @@ class ViewOneMeaning extends Component {
                 <p className='listedData'>{this.state.meaning.meaning}</p>
                 </div>
                 <Link to={`/meanings/edit/${this.state.meaning._id}`}><button>Edit</button></Link>
-                <button onClick={this.deleteMeaning}>Delete</button>
+                <Button onClick={this.deleteMeaning}>Delete</Button>
             </div>
          );
     }

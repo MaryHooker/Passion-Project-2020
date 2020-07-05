@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+import {Button} from 'react-bootstrap';
 
 class EditDreamer extends Component {
     constructor(props) {
@@ -86,7 +87,7 @@ class EditDreamer extends Component {
                         <label htmlFor="email"><span>Email:</span> </label>
                         <input type="email" name='email' id='email' value={this.state.email} onChange={this.handleInputs}/>
                     </div>
-                    <button onClick={this.handleSubmission}>Submit</button>
+                    <Button onClick={this.handleSubmission}>Submit</Button>
                 </form>
             </div>
          );

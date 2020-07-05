@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+import {Button} from 'react-bootstrap';
 
 class EditMeaning extends Component {
     constructor(props) {
@@ -95,7 +96,7 @@ class EditMeaning extends Component {
                         <textarea name='meaning' id='meaning' onChange={this.handleChanges} value={this.state.meaning}  cols="30" rows="10"/>
                     </div>
 
-                    <button onClick={this.handleSubmission}>Submit</button>
+                    <Button onClick={this.handleSubmission}>Submit</Button>
                 </form>
             </div>
          );

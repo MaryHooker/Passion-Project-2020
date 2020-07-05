@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
+import {Button} from 'react-bootstrap';
 
 export default class Login extends Component {
   constructor(props) {
@@ -116,7 +117,7 @@ export default class Login extends Component {
               <div style={{ fontSize: 13, color:"red"}}>{this.state.passwordError}</div>
             </div>
             <div>
-              <button onClick={this.handleSubmission} className='loginButton'>Submit</button>
+              <Button onClick={this.handleSubmission} className='loginButton'>Submit</Button>
             </div>
           </form>
       </div>

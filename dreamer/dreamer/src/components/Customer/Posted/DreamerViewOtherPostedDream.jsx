@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import {Redirect} from 'react-router-dom';
+import {Button} from 'react-bootstrap';
 
 class DreamerViewOtherPostedDream extends Component {
     constructor(props) {
@@ -71,7 +72,7 @@ class DreamerViewOtherPostedDream extends Component {
                 <p className='listedData'>{this.state.posted.dreamDescription}</p>
                 <p className='listedData'>Likes: {this.state.user.length}</p>
                 </div>
-                <button onClick={this.likeDream}>Like</button>
+                <Button onClick={this.likeDream}>Like</Button>
             </div>
          );
     }

@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 // import {Link} from 'react-router-dom';
+import {Button} from 'react-bootstrap';
 
 class AdminViewOneDream extends Component {
     constructor(props) {
@@ -73,7 +74,7 @@ class AdminViewOneDream extends Component {
                 <p className='listedData'>{this.state.spotlight.type}</p>
                 <p className='listedData'>{this.state.spotlight.dreamDescription}</p>
                 </div>
-                <button onClick={this.removeDream}>Remove</button>
+                <Button onClick={this.removeDream}>Remove</Button>
             </div>
          );
     }

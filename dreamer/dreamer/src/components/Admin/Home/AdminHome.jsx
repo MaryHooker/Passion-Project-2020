@@ -142,8 +142,7 @@ class AdminHome extends Component {
                 </div>
                 { /* /////////////////////////// Dreamer's Dreams //////////////////////////////////// */ }
                 <div className='dreamerForum'>
-                    <h3>The Collective</h3>
-                    <Link to='/dreams/view/all' className='manageKnowledgeLinks'><h4 >Manage</h4></Link>
+                <Link to='/dreams/view/all' className='manageKnowledgeLinks' ><h3>The Collective</h3></Link>
 
                         { /* <iframe src={<DreamerViewAllPostedDreams/>} frameborder="0"> */ }
                         <div className='dreamPostDisplayAdmin'>
@@ -174,8 +173,7 @@ class AdminHome extends Component {
                 </div>
                 { /* /////////////////////////// Dream Knowledge //////////////////////////////////// */ }
                 <div className='dreamerKnowledgeLinkP'>
-                <h3>Knowledge</h3>
-                <Link to='/knowledge/links' className='manageKnowledgeLinks'><h4 >Manage</h4></Link>
+                <Link to='/knowledge/links' className='manageKnowledgeLinks'><h3>Knowledge</h3></Link>
                 {/* <Link path='/knowledge/links/create'><img src="../addSymbol2.png" alt="add"/></Link>  */}
                 <div className='dreamKnowledgeDisplay'>
                 {

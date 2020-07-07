@@ -87,9 +87,9 @@ class CreateDream extends Component {
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="dreamDescription"><span className='whatHappened'>What happened?</span></label>
+                        {/* <label htmlFor="dreamDescription"><span className='whatHappened' required>What happened?</span></label> */}
                         <br/>
-                        <textarea name="dreamDescription" id="dreamDescription" cols="50" rows="14"  onChange={this.handleChanges} value={this.state.dreamDescription} ></textarea>
+                        <textarea name="dreamDescription" id="dreamDescription" cols="50" rows="14"  onChange={this.handleChanges} value={this.state.dreamDescription} className='creationArea' placeholder='What happened?' ></textarea>
                        
                     </div>
 

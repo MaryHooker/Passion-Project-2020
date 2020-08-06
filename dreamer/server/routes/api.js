@@ -22,21 +22,23 @@ const LinkCollection = require('../models/LinkSchema');
 
 //Create a dream & relate to dreamer
 router.put('/dream/relate/:email', async (req, res) => {
-
+// initialize to empty variables 
   let dream,
     dreamer;
 
+    //asyncronous function to create a dream and save the results of dream
   await DreamCollection.create(req.body, (errors, results1) => {
     errors ? res.json(errors) : dream = results1;
     console.log(dream);
-
+    //Use the findOne method by email on the dreamer collection/ save results in dreamer
     DreamerCollection.findOne({
       email: req.params.email
     }, (errors, results2) => {
       errors ? res.json(errors) : dreamer = results2;
-
+      //push related dreamer into its property inside the newly created dream
       dream.dreamer.push(dreamer._id)
       dream.save();
+      //push the new dream into its property for the dreamer
       dreamer.dreams.push(dream._id);
       dreamer.save();
       res.send(dream);

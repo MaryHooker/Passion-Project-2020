@@ -17,9 +17,6 @@ class MeaningsByLetter extends Component {
     meaningsByLetter = async() => {
         let response = await fetch(`/api/meanings/view/${this.props.match.params.letter}`,{
             method:"GET",
-            headers:{
-
-            }
         })
         let json = await response.json();
         //sanity
@@ -31,7 +28,6 @@ class MeaningsByLetter extends Component {
     render() { 
         return ( 
             <div>
-                {/* <h4> "{this.props.match.params.letter}" Meanings</h4> */}
                 <div className='dreamersContainerM'>
                 {
                     this.state.meanings.map((meaning) => {

@@ -56,7 +56,7 @@ class LinkDetails extends Component {
                 {/* <h2>Dream Link</h2> */}
                 <br/>
                 <br/>
-                <div className='dreamerDisplay'>
+                <div className='dreamerKDisplay'>
                   <p className='listedData'>{this.state.knowledge.title}</p>
                   <p className='listedData'>{this.state.knowledge.link}</p>
                   <p className='listedData'>{this.state.knowledge.author}</p>

@@ -19,10 +19,21 @@ let mongoose = require('mongoose');
 mongoose.set('useCreateIndex',true)
 // connect to database
 let mongoDB = require('./config/keys').mongoURI
-mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
+mongoose.connect(process.env.MONGODB_URI ||mongoDB, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
 // connection error message
 let db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+
+
+//When build is in production environment 
+if (process.env.NODE_ENV === 'production') {           
+    app.use(express.static('../dreamer/build'));
+  
+    app.get('*', (req, res) => {
+      res.sendFile(path.resolve(__dirname, 'dreamer', 'build', 'index.html'));
+    });
+  }
+
 
 // listen to server
 const port = require('./config/keys').port;

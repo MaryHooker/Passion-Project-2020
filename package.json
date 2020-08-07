@@ -1,8 +1,8 @@
 {
   "main": "server/index.js",
   "scripts": {
-    "build": "cd client && npm run build",
-    "install-client": "cd client && npm install",
+    "build": "cd dreamer && npm run build",
+    "install-client": "cd dreamer && npm install",
     "heroku-postbuild": "npm run install-client && npm run build",
     "start": "cd server && node index.js"
   },

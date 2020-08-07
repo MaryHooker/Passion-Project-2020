@@ -1,0 +1,1173 @@
+body{
+  background-image: url('/unsplash3.jpeg');
+  /* background-image: url('/unsplash5.jpeg'); */
+  color: rgb(219, 196, 141);
+  font-size: 18px;
+  font-family: serif;
+  text-align: center;
+  height: 66vh;
+}
+
+.photo{
+  grid-column: 1/3;
+  grid-row: 1;
+  /* background-color: rgba(0, 0, 0, 0.575); */
+  /* width: 15%; */
+  height: 35%;
+}
+
+span{
+  font-size: 15px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.userName{
+  font-size: 22px;
+  color: rgb(182, 3, 137);
+}
+
+button{
+  background-color: rgba(0, 0, 0, 0.726);
+  color: rgb(233, 179, 233);
+  border: 1px solid rgb(231, 182, 66);
+  border-radius: 5%;
+  margin-top: 3%;
+  margin: 2%;
+  font-family: serif;
+  font-weight: bold;
+  width: 20%;
+  /* height: 75%; */
+  font-size: 16px;
+  padding: 1%;
+  /* box-shadow: 5px 10px 8px #6c4374; */
+}
+
+/* button:hover{
+  background-color: rgba(0, 0, 0, 0.959);
+  color: rgb(233, 179, 233);
+  border: 1px solid rgb(231, 182, 66);
+  border-radius: 5%;
+  margin-top: 3%;
+  margin: 2%;
+  font-family: serif;
+  font-weight: bold;
+  width: 20%;
+  font-size: 16px;
+  padding: 1%;
+  box-shadow: 3px 3px 3px #e7d63f;
+} */
+
+.searchButton{
+  background-color: rgba(0, 0, 0, 0.726);
+  color: rgb(233, 179, 233);
+  border: 1px solid rgb(233, 179, 233);
+  border-radius: 5%;
+  margin-top: 3%;
+  margin: 2%;
+  font-family: serif;
+  font-weight: bold;
+  width: 40%;
+  /* height: 75%; */
+  font-size: 16px;
+  padding: 1%;
+  /* box-shadow: 5px 10px 8px #6c4374; */
+}
+
+/* .searchButton:hover{
+  background-color: rgba(0, 0, 0, 0.726);
+  color: rgb(233, 179, 233);
+  border: 1px solid rgb(233, 179, 233);
+  border-radius: 5%;
+  margin-top: 3%;
+  margin: 2%;
+  font-family: serif;
+  font-weight: bold;
+  width: 40%;
+  font-size: 16px;
+  padding: 1%;
+} */
+
+input:focus:invalid{
+  background-color: rgba(255, 0, 0, 0.384);
+  color: yellow;
+}
+
+.form-control{
+  width: 25%;
+}
+
+::placeholder{
+  color: rgba(235, 204, 146, 0.568);
+  padding: 2%;
+  font-size: 18px;
+}
+
+.form-control:hover{
+  width: 25%;
+}
+
+.allButton{
+  width: 20%;
+  background-color: rgba(0, 0, 0, 0.596);
+  color: rgb(226, 222, 170);
+}
+
+.allButton:hover{
+  width: 20%;
+  box-shadow: 3px 3px 3px #8c86e2;
+  background-color: rgba(7, 7, 58, 0.678);
+}
+ 
+input{
+  background-color: rgba(0, 0, 0, 0.534);
+  color: rgb(223, 198, 146);
+  border: 1px solid rgb(87, 20, 131);
+  border-radius: 4%;
+  height: 30px;
+  margin: 3%;
+  width: 35%;
+  padding: 1%;
+  margin-bottom: 5px;
+  font-family: serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+.form-control{
+  background-color: rgba(0, 0, 0, 0.534);
+  color: rgb(223, 198, 146);
+  border: 1px solid rgb(87, 20, 131);
+  border-radius: 4%;
+  height: 30px;
+  margin: 3%;
+  width: 35%;
+  margin-left: 32%;
+  padding: 1%;
+  margin-bottom: 5px;
+  font-family: serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+.form-control:hover{
+  background-color: rgba(56, 4, 56, 0.651);
+  color: rgb(223, 198, 146);
+  border: 1px solid rgb(87, 20, 131);
+  border-radius: 4%;
+  padding: 1%;
+  height: 30px;
+  margin: 3%;
+  width: 35%;
+  margin-bottom: 5px;
+  margin-left: 32%;
+  font-family: serif;
+  font-size: 20px;
+  box-shadow: 3px 3px 3px #6c4374;
+  text-align: center;
+}
+
+input:hover{
+  background-color: rgba(56, 4, 56, 0.651);
+  color: rgb(223, 198, 146);
+  border: 1px solid rgb(87, 20, 131);
+  border-radius: 4%;
+  padding: 1%;
+  height: 30px;
+  margin: 3%;
+  width: 35%;
+  margin-bottom: 5px;
+  font-family: serif;
+  font-size: 20px;
+  box-shadow: 3px 3px 3px #6c4374;
+  text-align: center;
+}
+
+.searchInput{
+  background-color: rgba(0, 0, 0, 0.534);
+  color: rgb(235, 190, 108);
+  border: 1px solid rgb(87, 20, 131);
+  border-radius: 4%;
+  height: 30px;
+  margin: 3%;
+  width: 65%;
+  padding: 1%;
+  margin-bottom: 5px;
+  font-family: serif;
+  font-size: 20px;
+}
+
+.searchInput:hover{
+  background-color: rgba(56, 4, 56, 0.651);
+  color: rgb(235, 190, 108);
+  border: 1px solid rgb(87, 20, 131);
+  border-radius: 4%;
+  height: 30px;
+  margin: 3%;
+  width: 65%;
+  padding: 1%;
+  margin-bottom: 5px;
+  font-family: serif;
+  font-size: 20px;
+  box-shadow: 3px 3px 3px #6c4374;
+}
+
+textarea{
+  background-color: rgb(233, 179, 233);
+  color: rgb(87, 20, 131);
+  border: 1px solid rgb(87, 20, 131);
+  border-radius: 4%;
+  margin-bottom: 5px;
+  font-family: serif;
+  font-size: 15px;
+}
+
+hr{
+  border: 1px solid rgb(94, 26, 94);
+  width: 90px;
+}
+
+/* ///////////////////////// */
+/*   Opening Home Page  */
+/* ///////////////////////// */
+
+.homeContainer{
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+}
+
+.homeTitle{
+  margin-top: 10%;
+  grid-column: 6/8;
+  grid-row: 1;
+}
+
+.registerLink{
+  margin-top: 2%;
+  grid-column: 11;
+  grid-row: 1;
+}
+
+.loginLink{
+  margin-top: 2%;
+  grid-column: 12;
+  grid-row: 1;
+}
+
+.logoutButton{
+  grid-column: 12;
+  grid-row: 1;
+}
+
+.logoutStyle{
+  border: 0px;
+  color: rgb(231, 182, 66);
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 18px;
+}
+
+.logoutStyle:hover{
+border: 0px;
+font-size: 20px;
+color: rgb(231, 182, 66);
+background-color: rgba(0, 0, 0, 0);
+box-shadow: none;
+}
+
+.registerComponent{
+  grid-column: 5/9;
+  grid-row: 2;
+}
+
+.loginComponent{
+  grid-column: 5/9;
+  grid-row: 2;
+}
+
+/* //////////////////////// */
+/*    Opening Home Page Links */
+/* //////////////////////// */
+
+.noLine{
+  text-decoration: none;
+  color: rgb(231, 182, 66);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.noLine:hover{
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+/* Application Title */
+
+.noLineHome{
+ color: rgb(231, 182, 66);
+ text-decoration: none;
+ font-size: 46px;
+ font-weight: bold;
+ padding: 2%;
+}
+
+.noLineHome:hover{
+  color: rgb(165, 79, 190);
+  text-decoration: none;
+}
+
+/* ////////////////////////////////////////////////////////////////////////// */
+/*                              Admin Home Page */
+/* //////////////////////////////////////////////////////////////////////////// */
+
+.adminHomeContainer{
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  grid-template-rows: repeat(2,1fr);
+  height: 80vh;
+}
+
+/* ///////// Meanings //////////// */
+.meaningsDisplayAdmin{
+  background-color: rgba(0, 0, 0, 0.76);
+  color: rgb(233, 179, 233);
+  border: 1px solid rgb(231, 182, 66);
+  border-radius: 5%;
+  margin: 5%;
+  box-shadow: 5px 10px 8px #3b3b1f;
+  padding: 3%;
+}
+
+.meaningsDisplayAdmin:hover{
+  background-color: rgba(0, 0, 0, 0.979);
+  color: rgb(233, 179, 233);
+  border: 1px solid rgb(231, 182, 66);
+  border-radius: 5%;
+  margin: 5%;
+  box-shadow: 5px 10px 8px #585824;
+  padding: 3%;
+}
+
+/* /////////// Knowledge ////////// */
+
+
+.manageKnowledgeLinks{
+  text-decoration: none;
+  color: rgb(231, 182, 66);
+}
+
+.manageKnowledgeLinks:hover{
+  text-decoration: none;
+  color: rgb(165, 79, 190);
+}
+
+/* .adminTitle{
+  grid-column: 4;
+  grid-row: 1;
+} */
+
+.dreamersLink{
+  text-decoration: none;
+  color: rgb(182, 3, 137);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.dreamersLink:hover{
+  text-decoration: none;
+  color: rgb(83, 28, 81);
+  font-weight: bold;
+}
+
+.adminLink{
+  text-decoration: none;
+  color: rgb(182, 3, 137);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.adminLink:hover{
+  text-decoration: none;
+  color: rgb(83, 28, 81);
+  font-weight: bold;
+}
+
+.meaningsLink{
+  text-decoration: none;
+  color: rgb(182, 3, 137);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.meaningsLink:hover{
+  text-decoration: none;
+  color:rgb(83, 28, 81);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.dreamsLink{
+  text-decoration: none;
+  color: rgb(182, 3, 137);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.dreamsLink:hover{
+  text-decoration: none;
+  color:rgb(83, 28, 81);
+  font-weight: bold;
+}
+
+.adminHomeButton1{
+  font-size: 18px;
+  /* background-color: rgb(22, 1, 18);
+  border: 1px solid rgb(22, 1, 18); */
+  border-radius: 25%;
+  height: 65px;
+  width: 100px;
+  padding: 1%;
+}
+
+.adminHomeButton1:hover{
+  font-size: 18px;
+  /* background-color: rgb(182, 3, 137);
+  border: 1px solid rgb(182, 3, 137); */
+  border-radius: 25%;
+  height: 65px;
+  width: 100px;
+  padding: 1%;
+}
+
+.adminHomeButton2{
+  font-size: 18px;
+  /* background-color: rgb(71, 9, 112);
+  border: 1px solid rgb(71, 9, 112); */
+  border-radius: 25%;
+  height: 75px;
+  width: 100px;
+  padding: 1%;
+}
+
+.adminHomeButton2:hover{
+  font-size: 18px;
+  /* background-color: rgb(182, 3, 137);
+  border: 1px solid rgb(182, 3, 137); */
+  border-radius: 25%;
+  height: 75px;
+  width: 100px;
+  padding: 1%;
+}
+
+.adminHomeButton3{
+  font-size: 18px;
+  /* background-color: rgb(126, 6, 170);
+  border: 1px solid rgb(126, 6, 170); */
+  border-radius: 25%;
+  height: 75px;
+  width: 100px;
+  padding: 1%;
+}
+
+.adminHomeButton3:hover{
+  font-size: 18px;
+  /* background-color: rgb(182, 3, 137);
+  border: 1px solid rgb(182, 3, 137); */
+  border-radius: 25%;
+  height: 75px;
+  width: 100px;
+  padding: 1%;
+}
+
+.adminHomeButton4{
+  font-size: 18px;
+  /* background-color: rgb(175, 60, 190);
+  border: 1px solid rgb(175, 60, 190); */
+  border-radius: 25%;
+  height: 75px;
+  width: 100px;
+  padding: 1%;
+}
+
+.adminHomeButton4:hover{
+  font-size: 18px;
+  /* background-color: rgb(182, 3, 137);
+  border: 1px solid rgb(182, 3, 137); */
+  border-radius: 25%;
+  height: 75px;
+  width: 100px;
+  padding: 1%;
+}
+
+.adminHomeButton5{
+  font-size: 18px;
+  /* background-color: rgb(183, 21, 204);
+  border: 1px solid rgb(183, 21, 204); */
+  border-radius: 25%;
+  height: 75px;
+  width: 100px;
+  padding: 1%;
+}
+
+.adminHomeButton5:hover{
+  font-size: 18px;
+  /* background-color: rgb(182, 3, 137);
+  border: 1px solid rgb(182, 3, 137); */
+  border-radius: 25%;
+  height: 75px;
+  width: 100px;
+  padding: 1%;
+}
+
+.adminHomeButton56{
+  font-size: 18px;
+  /* background-color: rgb(131, 20, 235);
+  border: 1px solid rgb(131, 20, 235); */
+  border-radius: 25%;
+  height: 65px;
+  width: 84px;
+  padding: 1%;
+}
+
+.adminHomeButton56:hover{
+  font-size: 18px;
+  /* background-color: rgb(182, 3, 137);
+  border: 1px solid rgb(182, 3, 137); */
+  border-radius: 25%;
+  height: 65px;
+  width: 84px;
+  padding: 1%;
+}
+
+.dreamsLinkP{
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.dreamersLinkP{
+  /* margin-top: 5%; */
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.adminLinkP{
+  /* margin-top: 5%; */
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.meaningsLinkP{
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.knowledgeLinkP{
+  grid-column: 2;
+  grid-row: 5;
+}
+
+/* ////////////////////////////////////////////////////////////////////////// */
+/*                              Dreamer Home Page */
+/* //////////////////////////////////////////////////////////////////////////// */
+
+.dreamerHomeContainer{
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  grid-template-rows: repeat(2,1fr);
+  height: 80vh;
+}
+
+/* //////// My Dreams ///////// */
+
+.myDreamsLinkP{
+  /* margin-top: 15%; */
+  grid-column: 3;
+  grid-row: 1/2;
+  margin-left: 1%;
+  background-color: rgba(0, 0, 0, 0.616);
+  border: solid 1px rgb(226, 178, 238);
+  padding: 2%;
+  height: 97%;
+  width: 97%;
+  color: rgb(219, 196, 141);
+  text-decoration: none;
+}
+
+.myDreamsLinkP:hover{
+  /* margin-top: 15%; */
+  grid-column: 3;
+  grid-row: 1/2;
+  margin-left: 1%;
+  background-color: rgba(0, 0, 0, 0.911);
+  border: solid 1px rgb(226, 178, 238);
+  height: 97%;
+  width: 97%;
+  color: rgb(219, 196, 141);
+  text-decoration: none;
+}
+
+.dreamerHomeButton4{
+  font-size: 32px;
+  color: rgb(226, 178, 238);
+}
+
+.dreamerHomeButton4:hover{
+  font-size: 32px;
+  color: rgb(217, 97, 241);
+}
+
+/* //////// Me ///////// */
+
+.meLinkP{
+  /* margin-top: 1%; */
+  grid-column: 2;
+  grid-row: 1;
+  margin-left: 4%;
+  background-color: rgba(0, 0, 0, 0.616);
+  border: solid 1px rgb(226, 178, 238);
+  padding: 2%;
+  width: 93%;
+  height: 97%;
+  color: rgb(219, 196, 141);
+  text-decoration: none;
+}
+
+/* .meLink{
+  text-decoration: none;
+  color: rgb(182, 3, 137);
+  font-size: 16px;
+  font-weight: bold;
+} */
+
+.meLinkP:hover{
+  /* margin-top: 1%; */
+  grid-column: 2;
+  grid-row: 1;
+  margin-left: 4%;
+  background-color: rgba(0, 0, 0, 0.911);
+    border: solid 1px rgb(226, 178, 238);
+  padding: 2%;
+  color: rgb(219, 196, 141);
+  text-decoration: none;
+}
+
+.dreamerHomeButton1{
+  font-size: 32px;
+  color: rgb(226, 178, 238);
+}
+
+.dreamerHomeButton1:hover{
+  font-size: 32px;
+  color: rgb(217, 97, 241);
+}
+
+/* .avatarImage:hover{
+mask-image: cross-fade();
+} */
+
+/*//////// Dreamer Forum ////////*/
+
+.dreamerForum{
+  grid-column: 4/6;
+  grid-row: 1/8;
+  /* overflow: scroll; */
+  background-color: rgba(0, 0, 0, 0.808); 
+  border: 1px solid rgb(211, 150, 223);
+  padding: 2%;
+
+  width: 97%;
+  margin-left: 1%;
+}
+
+.dreamersDreamsTitle{
+  font-size: 24px;
+}
+
+.eachPost{
+  border: 1px solid rgb(231, 169, 231);
+  margin: 1%;
+  padding: 1%;
+}
+
+/* .eachPost:hover{
+  background-color: black;
+  border: 1px solid rgb(231, 169, 231);
+  margin: 1%;
+  padding: 1%;
+  box-shadow: 2px 4px 2px #c48ce9;
+} */
+
+.dreamPostDisplay{
+  /* height: 80vh; */
+  overflow: scroll;
+  
+  grid-column: 9/13;
+  grid-row: 1/3;
+  height: 70vh;
+  width: 98%;
+  margin: 1%;
+  
+}
+
+::-webkit-scrollbar{
+  width: none;
+}
+
+.dreamPostDisplayAdmin{
+  /* height: 80vh; */
+  overflow: scroll;
+  grid-column: 9/13;
+  grid-row: 1/3;
+  height: 68vh;
+  width: 98%;
+  margin: 1%;
+}
+
+.listedDataPostType{
+  color: rgb(223, 140, 218);
+  font-size: 12px;
+  /* padding: 1%; */
+}
+
+.listedDataPost{
+  color: rgb(224, 169, 224);
+  font-size: 15px;
+  font-weight: bold;
+  /* padding: 1%; */
+
+}
+
+.listedDataDreamer{
+  color: rgb(148, 162, 241);
+  font-size: 12px;
+  /* padding: 1%; */
+}
+
+/*//////// Meanings ////////*/
+
+.dreamerMeaningPosition{
+  /* margin-top: 15%; */
+  grid-column: 1;
+  grid-row: 1/8;
+  background-color: rgba(0, 0, 0, 0.76);
+  border: 1px solid rgb(197, 135, 221);
+  margin-left: 2%;
+}
+
+.dreamerMeaningsLinkP{
+  font-size: 20px;
+  padding: 1%;
+  margin: 1%;
+  height: 95%;
+}
+
+.meaningsAll{
+  color: rgb(231, 181, 238);
+  font-size: 24px;
+}
+
+.meaningsAll:hover{
+  color: rgb(217, 97, 241);
+}
+
+.lettersContainer{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+
+.meaningLetters{
+  color: rgb(234, 178, 241);
+  /* margin: 1%; */
+  font-size: 34px;
+  /* padding: 1%; */
+}
+
+.meaningLetters:hover{
+  color: rgb(217, 97, 241);
+}
+
+.oneMeaningDisplay{
+  background-color: rgba(0, 0, 0, 0.76);
+  color: rgb(233, 179, 233);
+  border: 1px solid rgb(231, 182, 66);
+  border-radius: 2%;
+  width: 35%;
+  margin-left: 32%;
+  padding: 2%;
+  text-align: center;
+  box-shadow: 5px 10px 8px #3b3b1f;
+}
+
+
+.meaningsDisplayM{
+  background-color: rgba(0, 0, 0, 0.76);
+  color: rgb(233, 179, 233);
+  border: 1px solid rgb(231, 182, 66);
+  border-radius: 5%;
+  /* margin-left: 10%;
+  margin-bottom: 10%;
+  margin-right:15%; */
+  /* padding: 1%; */
+  /* width: 75%; */
+  margin: 5%;
+  box-shadow: 5px 10px 8px #3b3b1f;
+  padding: 3%;
+}
+
+.dreamersContainerM{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* /////// Knowledge /////// */
+
+.dreamerKnowledgeLinkP{
+  /* margin-top: 25%; */
+  grid-column: 2/4;
+  grid-row: 2;
+  /* width: 97%;
+  height: 100%; */
+  padding: 2%;
+  margin-right: 1%;
+  background-color: rgba(0, 0, 0, 0.808);  
+  border: 1px solid rgb(211, 150, 223);
+  margin-left: 12px;
+}
+
+.dreamKnowledgeDisplay{
+  height: 33vh;
+  overflow: scroll;
+  margin: 1%;
+}
+
+.eachLink{
+  border: 1px solid rgb(231, 169, 231);
+  margin: 1%;
+  padding: 1%;
+}
+
+.eachLink:hover{
+  background-color: rgba(0, 0, 0, 0.911);
+    border: 1px solid rgb(231, 169, 231);
+  margin: 1%;
+  padding: 1%;
+}
+
+/* 
+.dreamerHomeButton5{
+  font-size: 32px;
+  color: rgb(226, 178, 238);
+}
+
+.dreamerHomeButton5:hover{
+  font-size: 32px;
+  color: rgb(217, 97, 241);
+} */
+
+
+/* /////// Spotlight /////// */
+
+.spotlightLinkP{
+  /* margin-top: 25%; */
+  grid-column: 5/9;
+  grid-row: 4;
+}
+
+/* .spotlightHomeButton56{
+  font-size: 32px;
+  color: rgb(226, 178, 238);
+}
+
+.spotlightHomeButton56:hover{
+  font-size: 32px;
+  color: rgb(217, 97, 241);
+} */
+
+.eachSpotlight{
+  /* border: 1px solid rgb(231, 169, 231); */
+  margin: 1%;
+  padding: 1%;
+}
+
+.dreamSpotlightDisplay{
+  background-color: rgba(0, 0, 0, 0.808);  
+  border: 1px solid rgb(211, 150, 223);
+  /* height: 80vh; */
+  overflow: scroll;
+  height: 24vh;
+  margin: 1%;
+}
+
+/*////// Admin Knowledge //////*/
+.dreamerKDisplay{
+  background-color: rgba(0, 0, 0, 0.76);
+  color: rgb(233, 179, 233);
+  border: 1px solid rgb(231, 182, 66);
+  border-radius: 5%;
+  margin-left: 37%; 
+  margin-right:15%;
+  width: 25%;
+  padding: 1%;
+  box-shadow: 5px 10px 8px #3b3b1f;
+}
+
+
+/* ///////////////////////////////////////////////////////////////////////// */
+/*                            Components                                     */
+/* ///////////////////////////////////////////////////////////////////////// */
+
+
+/*////////////////////////////   Admin    ////////////////////////////////// */
+
+/* //////////////// */
+/*  Dreamers */
+/* //////////////// */
+
+/*/// Admin View One Dreamer  ///*/
+
+.dreamerDisplay{
+  background-color: rgba(0, 0, 0, 0.76);
+  color: rgb(233, 179, 233);
+  border: 1px solid rgb(231, 182, 66);
+  border-radius: 5%;
+  margin-left: 36%; 
+  margin-right:15%;
+  width: 25%;
+  padding: 1%;
+  box-shadow: 5px 10px 8px #3b3b1f;
+}
+
+/*/// Admin View All Dreamers  ///*/
+
+.dreamersContainer{
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+}
+
+/* .dreamersContainerM{
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+} */
+
+.dreamersDisplay{
+  background-color: rgba(0, 0, 0, 0.76);
+  color: rgb(233, 179, 233);
+  border: 1px solid rgb(231, 182, 66);
+  border-radius: 5%;
+  margin-left: 10%;
+  margin-bottom: 10%;
+  margin-right:15%;
+  padding: 1%;
+  width: 75%;
+  box-shadow: 5px 10px 8px #3b3b1f;
+}
+
+
+.dreamersDisplay:hover{
+  background-color: rgba(0, 0, 0, 0.911);
+  color: rgb(236, 161, 218);
+  border: 1px solid rgb(231, 182, 66);
+  border-radius: 5%;
+  margin-left: 10%;
+  margin-bottom: 10%;
+  margin-right:15%;
+  width: 75%;
+  box-shadow: 5px 10px 8px #5c5c30;
+}
+
+.dreamersPageTitle{
+  font-size: 20px;
+  color:rgb(231, 182, 66);
+}
+
+.listedData{
+  color: rgb(233, 179, 233);
+}
+
+
+.linkLink{
+  text-decoration: none;
+  /* padding:2%; */
+}
+
+
+.linkLink:hover{
+  text-decoration: none;
+  /* padding:2%; */
+}
+
+/* //////////////// */
+/*  Dreams */
+/* //////////////// */
+
+/*/// Admin View Dreamer's Dreams  ///*/
+
+.dreamDisplay{
+  background-color: rgba(0, 0, 0, 0.76);
+  color: rgb(236, 161, 218);
+  border: 1px solid rgb(231, 182, 66);
+  border-radius: 5%;
+  margin-left: 10%;
+  margin-right:15%;
+  width: 75%;
+  box-shadow: 5px 10px 8px #3b3b1f;
+}
+
+.postLink{
+  font-size: 15px;
+  color: #cc8ad8;
+  font-size: 26px;
+  /* height: 65px;
+  width: 75px; */
+  /* margin: 5%; */
+}
+
+.postLink:hover{
+  color: rgb(219, 196, 141);
+  font-size: 26px;
+  /* height: 65px;
+  width: 75px;   */
+}
+/* 
+.spotLink{
+  font-size: 15px;
+  background-color: rgb(26, 81, 82);
+  border: 1px solid rgb(26, 81, 82);
+  border-radius: 25%;
+  height: 65px;
+  width: 90px;
+}
+
+.spotLink:hover{
+  font-size: 15px;
+  background-color: rgb(105, 23, 211);
+  border: 1px solid rgb(105, 23, 211);
+  border-radius: 25%;
+  height: 65px;
+  width: 90px;
+} */
+
+/* //////////////// */
+/*  Knowledge */
+/* //////////////// */
+
+/*/// Admin Knowledge/Links ///*/
+
+.noLineLinks{
+  text-decoration: none;
+  padding: 2%;
+}
+
+.noLineLinks:hover{
+  text-decoration: none;
+  padding: 2%;
+}
+
+.noLineLinksK{
+  text-decoration: none;
+}
+
+.noLineLinksK:hover{
+  text-decoration: none;
+}
+
+.linksContainer{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+
+.linkDisplay{
+  background-color: rgba(0, 0, 0, 0.76);
+  color: rgb(233, 179, 233);
+  border: 1px solid rgb(231, 182, 66);
+  border-radius: 5%;
+  margin-left: 37%; 
+  width: 25%;
+  box-shadow: 5px 10px 8px #3b3b1f;
+}
+
+.dreamersDisplayK{
+  background-color: rgba(0, 0, 0, 0.76);
+  color: rgb(233, 179, 233);
+  border: 1px solid rgb(231, 182, 66);
+  border-radius: 5%;
+  margin-left: 10%;
+  margin-bottom: 10%;
+  margin-right:15%;
+  /* padding: 1%; */
+  width: 75%;
+  box-shadow: 5px 10px 8px #3b3b1f;
+}
+
+
+/*////////////////////////////   Customer    ////////////////////////////////// */
+
+
+
+/* //////////////// */
+/*  Create Dream */
+/* //////////////// */
+
+select{
+  color: rgb(226, 181, 238);
+  background-color: rgba(0, 0, 0, 0.76);
+  border: 1px solid rgb(236, 201, 236);
+  height: 15%;
+  padding: 1%;
+  font-family: serif;
+  font-size: 16px;
+  border-radius: 5%;
+}
+select:hover{
+  background-color: rgb(39, 4, 39);
+}
+
+.whatHappened{
+  font-size: 18px;
+}
+
+
+/* //////////////// */
+/*  Knowledge */
+/* //////////////// */
+
+/* /// Dreamer Knowledge ///*/
+.knowledgeDisplay{
+  background-color: rgba(0, 0, 0, 0.76);
+  color: rgb(236, 161, 218);
+  border: 1px solid rgb(231, 182, 66);
+  border-radius: 5%;
+  margin-bottom: 10%;
+  margin-left: 10%;
+  margin-right:15%;
+  width: 75%;
+  box-shadow: 5px 10px 8px #3b3b1f;
+}
+
+.knowledgeDisplay:hover{
+  background-color: rgba(0, 0, 0, 0.575);
+  color: rgb(236, 161, 218);
+  border: 1px solid rgb(231, 182, 66);
+  border-radius: 5%;
+  margin-left: 10%;
+  margin-bottom: 10%;
+  margin-right:15%;
+  width: 75%;
+  box-shadow: 5px 10px 8px #5c5c30;
+}
+
+/* ///////////////// */
+/*  Dream Creation */
+/* //////////////// */
+
+.creationArea{
+  background-color: rgba(0, 0, 0, 0.431);
+  color: rgb(233, 187, 195);
+}
+
+.creationArea:hover{
+  background-color: rgba(0, 0, 0, 0.643);
+  box-shadow: 5px 10px 8px #af7abd;
+
+}

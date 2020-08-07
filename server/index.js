@@ -37,7 +37,7 @@ if (process.env.NODE_ENV === 'production') {
 
 // listen to server
 const port = require('./config/keys').port;
-const host = 'localhost';
-app.listen(port, host, () => {
+// const host = 'localhost';
+app.listen(port, () => {
     console.log(`listening to port ${port}`);
 })
